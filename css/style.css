@@ -18,7 +18,7 @@ body{
 article{
     width: 300px;
     
-    border: 5px solid #ccc;
+    border: 9px double #ccc;
     
     text-align: center;
 }
