@@ -1,3 +1,65 @@
 body{
-    background-color: pink;
+    box-sizing: border-box;
+    border: 30px solid #ccc;
+    height: 100vh;
+    
+    margin: 0;
+    padding: 0;
+    
+    display: flex;
+    flex-flow: wrap column;
+    justify-content: center;
+    align-items: center;
+    
+    font-family: futura;
+    color: #333;
 }
+
+article{
+    width: 300px;
+    
+    border: 5px solid #ccc;
+    
+    text-align: center;
+}
+
+section{
+    background-color: #ccc;
+    padding: 20px;
+}
+
+.contact{
+    height: 300px;
+    
+    display: flex;
+    flex-flow: wrap column;
+    justify-content: center;
+    align-items: center;
+}
+
+a{
+    color: #333;
+}
+
+a:hover{
+    color: #41A317;
+}
+
+h1{
+    font-size: 2em;
+    margin: 0;
+}
+
+h3{
+    margin: 20px 0 0 0;
+}
+
+h4{
+    font-size: 1.2em;
+    margin: 0 0 20px 0;
+}
+
+p{
+    margin: 5px 0;
+}
+
