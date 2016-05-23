@@ -1,6 +1,110 @@
+/* PERMANENT BORDER */
+.border-top, .border-bottom, .border-left, .border-right {
+	background: #ccc;
+	position: fixed;
+    z-index: 2;
+}
+.border-left, .border-right{
+    width: 30px;
+}
+.border-left{
+    left: 0;
+    bottom: 0;
+    
+    animation: border-right .2s linear .6s forwards;
+}
+.border-right{
+    right: 0;
+    top: 0;
+    
+    animation: border-right .2s linear .2s forwards;
+}
+		
+.border-top, .border-bottom{
+    height: 30px;
+}
+.border-top{
+    top: 0;
+    left: 0;
+    right: 0;
+    
+    animation: border-top .2s linear 0s;
+}
+.border-bottom{
+    bottom: 0;
+    right: 0;
+    
+    animation: border-bottom .2s linear .4s forwards;
+}
+
+@keyframes border-top{
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 100%;
+    }
+}
+
+@keyframes border-right{
+    0%{
+        height: 0%;
+        
+    }
+    100%{
+        height: 100%;
+    }
+}
+
+@keyframes border-bottom{
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 100%;
+    }
+}
+
+@keyframes border-left{
+    0%{
+        height: 0%;
+    }
+    100%{
+        heigt: 100%;
+    }
+}
+/*************/
+
+
+/* OMBRA */
+.ombra{
+    width: 600px;
+    height: 200px;
+    
+    position: absolute;
+    top: -200px;
+    left: -450px;
+    
+    /*border: 1px solid red;*/
+    background-color: rgba(255,255,255,.3);
+    
+    transform: rotate(-45deg);
+    
+    animation: shadow .8s ease-in-out 1.3s forwards;
+}
+
+@keyframes shadow{
+    100%{
+        top: 420px;
+        left: 200px;
+    }
+}
+/*************/
+
+
+
 body{
     box-sizing: border-box;
-    border: 30px solid #ccc;
     height: 100vh;
     
     margin: 0;
@@ -16,11 +120,29 @@ body{
 }
 
 article{
+    position: relative;
+    overflow: hidden;
+    
     width: 300px;
     
     border: 9px double #ccc;
     
     text-align: center;
+    
+    transform: scale(0,0);
+    animation: article-appear .5s ease .8s forwards;
+}
+
+@keyframes article-appear{
+    0%{
+        transform: scale(0,0);
+    }
+    80%{
+        transform: scale(1.2,1.2);
+    }
+    100%{
+        transform: scale(1,1);
+    }
 }
 
 section{
@@ -35,6 +157,8 @@ section{
     flex-flow: wrap column;
     justify-content: center;
     align-items: center;
+    
+    background-color: #eee;
 }
 
 a{
@@ -62,4 +186,5 @@ h4{
 p{
     margin: 5px 0;
 }
+
 
