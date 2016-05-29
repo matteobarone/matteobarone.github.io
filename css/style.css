@@ -1,0 +1,208 @@
+/* COLORS:
+    - text:                         #4a4a4a
+    - dark gray:                    #9b9b9b
+    - medium gray (work color):     #c0c0c0
+    - light gray (about color):     #d8d8d8
+    - white:                        #f5f5f5
+    - green:                        #41A317 - RGB: 65 163 23
+    - green with opacity:           #97cc80
+*/
+
+/**** GLOBAL SELECTORS ****/
+
+body{
+    background-color: #f5f5f5;
+    color: #4a4a4a;
+    
+    font-family: futura, monospace;
+    font-weight: lighter;
+    font-size: 18px;
+}
+
+h1{
+    font-size: 3em;
+}
+
+h3{
+    font-size: 1.2em;
+}
+
+a{
+    color: #4a4a4a;
+}
+
+a:hover{
+    color: #41A317;
+}
+
+
+/**** HELPER SELECTORS ****/
+
+/* class for the permanent border */
+.border-top, .border-bottom, .border-left, .border-right{
+	background: #f5f5f5;
+	position: fixed;
+    z-index: 2;
+}
+.border-left, .border-right{
+    top: 0; bottom: 0;
+    width: 40px;
+}
+.border-left{
+    left: 0;
+}
+.border-right{
+    right: 0;
+}
+.border-top, .border-bottom{
+    left: 0;
+    right: 0;
+    height: 40px;
+}
+.border-top{
+    top: 0;
+}
+.border-bottom{
+    bottom: 0;
+}
+
+
+
+/**** HOME ****/
+
+.wrapper{
+    height: 100vh;
+    
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+header{
+    height: 40px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    
+    line-height: 40px;
+    
+    z-index: 3;
+}
+
+.logo{
+    margin-left: 40px;
+}
+
+header h2{
+    display: inline-block;
+    font-size: .7em;
+}
+
+header nav{
+    display: inline-block;
+    float: right;
+    margin-right: 40px;
+}
+
+header nav ul{
+    display: inline-block;
+    padding-right: 10px;
+    background-color: #c0c0c0;
+}
+
+header nav ul li{
+    display: inline-block;
+    margin-left: 10px;
+}
+
+
+.description{
+    display: inline-flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    
+    padding: 20px;
+    
+    background-color: #f5f5f5;
+    
+    text-align: center;
+    
+    z-index: 3;
+}
+
+.about, .work{
+    position: absolute;
+    top:0;
+    height: 100vh;
+    width: 50%;
+    
+    overflow: hidden;
+}
+
+.work{
+    left: 50%;
+}
+
+.sx, .dx{
+    display: block;
+    height: 100vh;
+}
+
+.sx{
+    background-color: #d8d8d8;
+}
+
+.dx{
+    background-color: #c0c0c0;
+}
+
+.homepage .about h2{
+    font-size: 260px;
+    position: absolute;
+    top: -400px;
+    
+    transform-origin: left bottom;
+    transform: rotate(90deg);
+    color: #f5f5f5;
+}
+
+.homepage .work h2{
+    font-size: 260px;
+    position: absolute;
+    bottom: 660px;
+    right: 0px;
+    
+    transform-origin: right bottom;
+    transform: rotate(-90deg);
+    color: #f5f5f5;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
