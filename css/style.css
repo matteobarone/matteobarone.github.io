@@ -8,6 +8,8 @@
     - green with opacity:           #97cc80
 */
 
+
+
 /**** GLOBAL SELECTORS ****/
 
 body{
@@ -23,8 +25,12 @@ h1{
     font-size: 3em;
 }
 
+h2{
+    font-size: 2em;
+}
+
 h3{
-    font-size: 1.2em;
+    font-size: 1em;
 }
 
 a{
@@ -34,6 +40,7 @@ a{
 a:hover{
     color: #41A317;
 }
+
 
 
 /**** HELPER SELECTORS ****/
@@ -68,7 +75,7 @@ a:hover{
 
 
 
-/**** HOME ****/
+/**** FOR EVERY PAGE ****/
 
 .wrapper{
     height: 100vh;
@@ -107,15 +114,12 @@ header nav{
 
 header nav ul{
     display: inline-block;
-    padding-right: 10px;
-    background-color: #c0c0c0;
 }
 
 header nav ul li{
     display: inline-block;
     margin-left: 10px;
 }
-
 
 .description{
     display: inline-flex;
@@ -132,30 +136,41 @@ header nav ul li{
     z-index: 3;
 }
 
-.about, .work{
+.sx, .dx{
     position: absolute;
     top:0;
     height: 100vh;
     width: 50%;
-    
-    overflow: hidden;
+   
 }
 
-.work{
+.sx{
+    padding: 60px 80px;
+}
+
+.dx{
     left: 50%;
 }
 
-.sx, .dx{
+.about, .work{
     display: block;
     height: 100vh;
 }
 
-.sx{
+.about{
     background-color: #d8d8d8;
 }
 
-.dx{
+.work{
     background-color: #c0c0c0;
+}
+
+
+
+/**** HOME ****/
+.homepage .sx, .homepage .dx{
+    overflow: hidden;
+    padding: 0;
 }
 
 .homepage .about h2{
