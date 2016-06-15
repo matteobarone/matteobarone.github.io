@@ -1,69 +1,156 @@
-<!doctype html>
+<!-- Change based on the time of the day:
+     - 8.00/14.00: dirty white background;
+     - 14.00/20.00: orange;
+     - 20.00/8.00: night blue.
+     (if i can, change always every minute from the lighter colors to the darker)
+-->
+
+
+<!DOCTYPE html>
 <html lang="en">
 
     <head>
-        <title>Portfolio</title>
-        
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+        <!-- title and meta -->
         <meta charset="utf-8" />
-        
-        <!-- css -->
-        <link rel="stylesheet" href="css/sanitize.css" />
+        <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+        <title>MATTEO BARONE</title>
+
+        <!-- CSS -->
         <link rel="stylesheet" href="css/style.css" />
+        <link rel="stylesheet" href="css/sanitize.css" />
+
+        <!-- font -->
+        <link href='https://fonts.googleapis.com/css?family=Alegreya+Sans:400,300,100' rel='stylesheet' type='text/css'>
         
-        <!-- js 
-        <script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
-        -->
     </head>
 
-    <body class="homepage">
+    <body>
         
-        <div class="border-left"></div>
-        <div class="border-right"></div>
-        <div class="border-top"></div>
-        <div class="border-bottom"></div>
+        <a class="piu" id="piu" href="#">
+            <div class="top-left"></div>
+            <div class="top-right"></div>
+            <div class="bottom-left"></div>
+            <div class="bottom-right"></div>
+        </a>
         
-        <!-- wraps around the whole site -->
-        <div class="wrapper height-full">
-        
-            <header>
-                <!-- Logo -->
-                <a href="index.html" class="logo">
-                    <h2>Matteo Barone</h2>
-                </a>
-                
-                <!-- Navigation -->
-                <nav>
-                    <ul>
-                        <li><a href="about.html">Abount</a></li>
-                        <li><a href="projects.html">Projects</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
-                </nav>
-            </header>
-            
-            <!-- Description -->
-            <div class="description">
-                <h1>Matteo Barone</h1>
-                <h3>Web developer with a strong<br/>passion for UX</h3>
-            </div>
-            
-            <!-- About -->
-            <section class="sx overflow-hidden height-full">
-                <a href="about.html" class="about height-full">
-                    <h2>About</h2>
-                </a>
-            </section>
-            
-            <!-- Work -->
-            <section class="dx">
-                <a href="#" class="work height-full">
-                    <h2>Projects</h2>
-                </a>
-            </section>
-            
+        <div class="bio">
+            <h1>MATTEO BARONE</h1>
+            <p>Web developer from Pordenone, Italy. Actually based in Milan.<br/>
+    My background is mainly coding and programming,<br/>
+    but I have a strong passion for UX.<br/>
+    I’m a nature and sport lover.</p>
+            <p>Feel free to contact me on <a href="#">LinkedIn</a> or <a href="#">Instagram</a></p>
         </div>
+        
+        <span class="close-X" id="close-X"></span>
+        
+        
+        
+        <section>
+            
+            <h2>PROJECTS</h2>
+            
+            <article></article>
+            <article class="no-margin-right"></article>
+            <article></article>
+            <article class="no-margin-right"></article>
+            <article></article>
+            <article class="no-margin-right"></article>
+            <article></article>
+            <article class="no-margin-right"></article>
+            
+            <h2>ABOUT</h2>
+            <h3>EDUCATION</h3>
+            <p><strong>oct. 2015 - dec. 2016</strong><br/>
+            MASTER IN WEB DESIGN at <a href="#">SPD - Scuola politecnica di design</a> of Milan</p>
+            <p><strong>2010 - 2015</strong><br/>
+            WEB TECHNOLOGIES DEGREE at <a href="#">Università degli Studi di Udine</a></p>
+            
+            <h3>WORK HISTORY</h3>
+            <p><strong>mar. 2015 - oct. 2016</strong><br/>
+            INTERNSHIP - SALESFORCE PROGRAMMER at <a href="#">New Energy Group</a> of Milan</p>
+            <p><strong>feb. 2010 - dec. 2010</strong><br/>
+            INTERNSHIP - WEB DEVELOPER at <a href="#">Actiongroupcommunication</a> of Pordenone</p>
+            
+            <h3>SKILLS</h3>
+            <p>
+                HTML<br/>
+                CSS<br/>
+                Javascript/JQuery<br/>
+                PHP<br/>
+                Wordpress<br/>
+            </p>
+            <p>
+                Photoshop<br/>
+                Sketch<br/>
+                Illustrator<br/>
+                After Effects<br/>
+                InDesign<br/>
+            </p>
+            <p>
+                Github
+            </p>
+            
+            <h3><a href="#">DOWNLOAD MY CV</a></h3>
+            
+            
+            <h2>CONTACT</h2>
+            <p><a href="#">LinkedIn</a></p>
+            <p><a href="#">Instagram</a></p>
+        
+        </section>
+        
+        
+        
+        
+        
+        <!-- js -->
+        <script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                $("#piu").click(function(){
+                    $(".top-left").removeClass("animate-top-left-off");
+                    $(".top-right").removeClass("animate-top-right-off");
+                    $(".bottom-left").removeClass("animate-bottom-left-off");
+                    $(".bottom-right").removeClass("animate-bottom-right-off");
+                    $(".bio").removeClass("animate-bio-off");
+                    $(".close-X").removeClass("animate-close-X-off");
+                    $("section").removeClass("animate-section-off");
+                    $("body").removeClass("animate-body-off");
+                    
+                    $(".top-left").addClass("animate-top-left");
+                    $(".top-right").addClass("animate-top-right");
+                    $(".bottom-left").addClass("animate-bottom-left");
+                    $(".bottom-right").addClass("animate-bottom-right");
+                    $(".bio").addClass("animate-bio");
+                    $(".close-X").addClass("animate-close-X");
+                    $("section").addClass("animate-section");
+                    $("body").addClass("animate-body");
+                });
+                
+                $("#close-X").click(function(){
+                    $(".top-left").removeClass("animate-top-left");
+                    $(".top-right").removeClass("animate-top-right");
+                    $(".bottom-left").removeClass("animate-bottom-left");
+                    $(".bottom-right").removeClass("animate-bottom-right");
+                    $(".bio").removeClass("animate-bio");
+                    $(".close-X").removeClass("animate-close-X");
+                    $("section").removeClass("animate-section");
+                    $("body").removeClass("animate-body");
+                    
+                    $(".top-left").addClass("animate-top-left-off");
+                    $(".top-right").addClass("animate-top-right-off");
+                    $(".bottom-left").addClass("animate-bottom-left-off");
+                    $(".bottom-right").addClass("animate-bottom-right-off");
+                    $(".bio").addClass("animate-bio-off");
+                    $(".close-X").addClass("animate-close-X-off");
+                    $("section").addClass("animate-section-off");
+                    $("body").addClass("animate-body-off");
+                });
+            });
+        </script>
 
     </body>
-
+    
 </html>
