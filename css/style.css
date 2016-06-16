@@ -265,6 +265,65 @@ a:hover{
     }
 }
 
+.circle{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -35px;
+    margin-left: -35px;
+    width: 80px;
+    height: 80px;
+    
+    background: url(../img/circle.png) center no-repeat;
+    background-size: cover;
+    
+    opacity: 1;
+    
+    z-index: 1;
+}
+
+.animate-circle-movement{
+    animation: circle-movement .8s ease 1s infinite alternate;
+}
+
+@keyframes circle-movement{
+    0%{
+    }
+    
+    100%{
+        transform: scale(1.1);
+    }
+}
+
+.animate-circle-opacity{
+    animation: circle-opacity .5s forwards;
+}
+
+@keyframes circle-opacity{
+    0%{
+        opacity: 1;
+    }
+    
+    100%{
+        opacity: 0;
+    }
+}
+
+.animate-circle-opacity-off{
+    animation: circle-opacity-off .5s forwards;
+}
+
+@keyframes circle-opacity-off{
+    0%{
+        opacity: 0;
+    }
+    
+    100%{
+        opacity: 1;
+    }
+}
+
+
 .bio{
     position: absolute;
     bottom: 0;
