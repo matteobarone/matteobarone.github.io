@@ -3,6 +3,27 @@
      - 14.00/20.00: orange;
      - 20.00/8.00: night blue.
      (if i can, change always every minute from the lighter colors to the darker)
+
+    SCRIPT:
+
+    data = new Date();
+
+    ora = data.getHours();
+
+    alert(ora);
+
+    function loadjscssfile(filename, filetype){
+        if (filetype=="css"){ //if filename is an external CSS file
+            var fileref=document.createElement("link")
+            fileref.setAttribute("rel", "stylesheet")
+            fileref.setAttribute("type", "text/css")
+            fileref.setAttribute("href", filename)
+        }
+        if (typeof fileref!="undefined")
+            document.getElementsByTagName("head")[0].appendChild(fileref)
+    }
+
+    loadjscssfile("mystyle.css", "css") ////dynamically load and add this .css file
 -->
 
 
