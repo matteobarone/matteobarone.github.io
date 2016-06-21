@@ -3,29 +3,7 @@
      - 14.00/20.00: orange;
      - 20.00/8.00: night blue.
      (if i can, change always every minute from the lighter colors to the darker)
-
-    SCRIPT:
-
-    data = new Date();
-
-    ora = data.getHours();
-
-    alert(ora);
-
-    function loadjscssfile(filename, filetype){
-        if (filetype=="css"){ //if filename is an external CSS file
-            var fileref=document.createElement("link")
-            fileref.setAttribute("rel", "stylesheet")
-            fileref.setAttribute("type", "text/css")
-            fileref.setAttribute("href", filename)
-        }
-        if (typeof fileref!="undefined")
-            document.getElementsByTagName("head")[0].appendChild(fileref)
-    }
-
-    loadjscssfile("mystyle.css", "css") ////dynamically load and add this .css file
 -->
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -38,21 +16,24 @@
         <title>MATTEO BARONE</title>
 
         <!-- CSS -->
-        <link rel="stylesheet" href="css/style.css" />
         <link rel="stylesheet" href="css/sanitize.css" />
+        <link rel="stylesheet" href="css/style.css" />
+        <!-- <link rel="stylesheet" href="css/style-blue.css" /> -->
 
         <!-- font -->
         <link href='https://fonts.googleapis.com/css?family=Alegreya+Sans:400,300,100' rel='stylesheet' type='text/css'>
-        
+        <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Josefin+Sans:400,600' rel='stylesheet' type='text/css'>
     </head>
 
     <body>
         
         <a class="piu" id="piu" href="#">
-            <div class="top-left"></div>
-            <div class="top-right"></div>
-            <div class="bottom-left"></div>
-            <div class="bottom-right"></div>
+            <div class="top-left transition-for-plus"></div>
+            <div class="top-right transition-for-plus"></div>
+            <div class="bottom-left transition-for-plus"></div>
+            <div class="bottom-right transition-for-plus"></div>
         </a>
         
         <div class="circle animate-circle-movement"></div>
@@ -63,7 +44,14 @@
     My background is mainly coding and programming,<br/>
     but I have a strong passion for UX.<br/>
     I’m a nature and sport lover.</p>
-            <p>Feel free to contact me on <a href="#">LinkedIn</a> or <a href="#">Instagram</a></p>
+            <p>Feel free to contact me on 
+                <a href="https://it.linkedin.com/in/matteo-barone-6128556">LinkedIn</a>, 
+                <a href="https://www.instagram.com/matteobarone90/">Instagram</a> or 
+                <a href="https://github.com/matteobarone/matteobarone.github.io">Github</a></p>
+        </div>
+        
+        <div class="version-box">
+            This is the <span>Day</span> version.<br/>Is missing <span class="hours">2</span> hours and <span class="minutes">50</span> minutes to the shift of the version.
         </div>
         
         <span class="close-X" id="close-X"></span>
@@ -71,6 +59,7 @@
         
         
         <section class="projects">
+            
             
             <h2>PROJECTS</h2>
             
@@ -81,7 +70,7 @@
                     <div class="piu-projects"></div>
                     <div class="circle-projects"></div>
                 </a>
-                <h3>Ray-ban Restyle</h3>
+                <h3>Ray-ban Restyling</h3>
                 <p>Responsive Design and Prototyping<br/>2016</p>
             </article>
             
@@ -152,99 +141,59 @@
                 <p>Design and Developing - Desktop<br/>2010</p>
             </article>
             
+            
             <h2>ABOUT</h2>
-            <h3>EDUCATION</h3>
-            <p><strong>oct. 2015 - dec. 2016</strong><br/>
-            MASTER IN WEB DESIGN at <a href="#">SPD - Scuola politecnica di design</a> of Milan</p>
-            <p><strong>2010 - 2015</strong><br/>
-            WEB TECHNOLOGIES DEGREE at <a href="#">Università degli Studi di Udine</a></p>
             
-            <h3>WORK HISTORY</h3>
-            <p><strong>mar. 2015 - oct. 2016</strong><br/>
-            INTERNSHIP - SALESFORCE PROGRAMMER at <a href="#">New Energy Group</a> of Milan</p>
-            <p><strong>feb. 2010 - dec. 2010</strong><br/>
-            INTERNSHIP - WEB DEVELOPER at <a href="#">Actiongroupcommunication</a> of Pordenone</p>
+            <div class="about-div">
+                <img src="img/about-img.jpg" alt="Matteo Barone" />
+            </div>
             
-            <h3>SKILLS</h3>
-            <p>
-                HTML<br/>
-                CSS<br/>
-                Javascript/JQuery<br/>
-                PHP<br/>
-                Wordpress<br/>
-            </p>
-            <p>
-                Photoshop<br/>
-                Sketch App 3<br/>
-                Illustrator<br/>
-                After Effects<br/>
-                InDesign<br/>
-            </p>
-            <p>
-                Github
-            </p>
+            <div class="about-div">
+                <h3>Education</h3>
+                <p><strong>oct. 2015 - dec. 2016</strong><br/>
+                MASTER IN WEB DESIGN<br/><a href="#">SPD - Scuola politecnica di design</a><br/>Milan</p>
+                <p><strong>2010 - 2015</strong><br/>
+                WEB TECHNOLOGIES DEGREE<br/><a href="#">Università degli Studi di Udine</a><br/>Udine</p>            
+            </div>
+            
+            <div class="about-div">
+                <h3>Work History</h3>
+                <p><strong>mar. 2015 - oct. 2016</strong><br/>
+                INTERNSHIP - SALESFORCE PROGRAMMER<br/><a href="#">New Energy Group</a><br/>Milan</p>
+                <p><strong>feb. 2010 - dec. 2010</strong><br/>
+                INTERNSHIP - WEB DEVELOPER<br/><a href="#">Actiongroupcommunication</a><br/>Pordenone</p>            
+            </div>
+            
+            <div class="about-div">
+                <h3>Skills</h3>
+                <p>
+                    HTML<br/>
+                    CSS<br/>
+                    Javascript/JQuery<br/>
+                    PHP<br/>
+                    Wordpress<br/>
+                </p>
+                <p>
+                    Photoshop<br/>
+                    Sketch App 3<br/>
+                    Illustrator<br/>
+                    After Effects<br/>
+                    InDesign<br/>
+                </p>
+            </div>
                         
-            <h3>CONTACT</h3>
-            <p><a href="#">LinkedIn</a></p>
-            <p><a href="#">Instagram</a></p>
+            <h2>CONTACT</h2>
+            <p><a href="https://it.linkedin.com/in/matteo-barone-61285561">LinkedIn</a></p>
+            <p><a href="https://www.instagram.com/matteobarone90/">Instagram</a></p>
+            <p><a href="https://github.com/matteobarone/matteobarone.github.io">Github</a></p>
         
-            <h3><a href="#">DOWNLOAD MY CV</a></h3>
+            <p><strong><a href="#">Download my cv</a></strong></p>
             
         </section>
         
-        
-        
-        
-        
         <!-- js -->
         <script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
-        <script>
-            $(document).ready(function(){
-                $("#piu").click(function(){
-                    $(".top-left").removeClass("animate-top-left-off");
-                    $(".top-right").removeClass("animate-top-right-off");
-                    $(".bottom-left").removeClass("animate-bottom-left-off");
-                    $(".bottom-right").removeClass("animate-bottom-right-off");
-                    $(".circle").removeClass("animate-circle-movement");
-                    $(".bio").removeClass("animate-bio-off");
-                    $(".close-X").removeClass("animate-close-X-off");
-                    $("section").removeClass("animate-section-off");
-                    $("body").removeClass("animate-body-off");
-                    
-                    $(".top-left").addClass("animate-top-left");
-                    $(".top-right").addClass("animate-top-right");
-                    $(".bottom-left").addClass("animate-bottom-left");
-                    $(".bottom-right").addClass("animate-bottom-right");
-                    $(".circle").addClass("animate-circle-opacity");
-                    $(".bio").addClass("animate-bio");
-                    $(".close-X").addClass("animate-close-X");
-                    $("section").addClass("animate-section");
-                    $("body").addClass("animate-body");
-                });
-                
-                $("#close-X").click(function(){
-                    $(".top-left").removeClass("animate-top-left");
-                    $(".top-right").removeClass("animate-top-right");
-                    $(".bottom-left").removeClass("animate-bottom-left");
-                    $(".bottom-right").removeClass("animate-bottom-right");
-                    $(".circle").removeClass("animate-circle-opacity");
-                    $(".bio").removeClass("animate-bio");
-                    $(".close-X").removeClass("animate-close-X");
-                    $("section").removeClass("animate-section");
-                    $("body").removeClass("animate-body");
-                    
-                    $(".top-left").addClass("animate-top-left-off");
-                    $(".top-right").addClass("animate-top-right-off");
-                    $(".bottom-left").addClass("animate-bottom-left-off");
-                    $(".bottom-right").addClass("animate-bottom-right-off");
-                    $(".circle").addClass("animate-circle-movement");
-                    $(".bio").addClass("animate-bio-off");
-                    $(".close-X").addClass("animate-close-X-off");
-                    $("section").addClass("animate-section-off");
-                    $("body").addClass("animate-body-off");
-                });
-            });
-        </script>
+        <script src="js/script.js"></script>
 
     </body>
     

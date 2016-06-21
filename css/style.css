@@ -1,7 +1,6 @@
 /* COLORS:
     - dirty white: #fff5de
     - night blue: #050047
-
 */
 
 html{
@@ -16,13 +15,21 @@ body{
     border: 10px solid #050047;
     
     font-family: Helvetica, sans-serif;
-    font-size: 13px;
+    font-weight: 100;
+    font-size: 14px;
     line-height: 1.2em;
     
     color: #050047;
+    
+    transition: all .5s ease;
 }
 
-.animate-body{
+.noBorderBody{
+    border: 0px solid #050047;
+    height: auto;
+}
+
+/*.animate-body{
     animation: body-border-none 1s forwards;
 }
 
@@ -50,21 +57,21 @@ body{
         border: 10px solid #050047;
         height: 100%;
     }
-}
+}*/
 
 h1, h2, h3{
-    font-family: 'Alegreya Sans', sans-serif;
-    font-weight: 100;
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
     line-height: 1.5em;
-    letter-spacing: 8px;
+    letter-spacing: 10px;
 }
 
 h1{
-    font-size: 2.5em;
+    font-size: 2em;
 }
 
 h2{
-    font-size: 2.5em;
+    font-size: 2em;
     text-align: center;
     line-height: 100px;
 }
@@ -97,172 +104,68 @@ a:hover{
     z-index: 2;
 }
 
+.transition-for-plus{
+    transition: all 1.5s ease;
+}
+
 .top-left{
     border-top: 10px solid #050047;
     border-left: 10px solid #050047;
+    
     top: 50%;
     left: 50%;
-}
-
-.animate-top-left{
-    animation: top-left 1.5s forwards;
-}
-
-.animate-top-left-off{
-    animation: top-left-off 1s forwards;
 }
 
 .top-right{
     border-top: 10px solid #050047;
     border-right: 10px solid #050047;
+    
     top: 50%;
     left: 50%;
     margin-left: -25px;
-}
-
-.animate-top-right{
-    animation: top-right 1.5s forwards;
-}
-
-.animate-top-right-off{
-    animation: top-right-off 1s forwards;
 }
 
 .bottom-left{
     border-bottom: 10px solid #050047;
     border-left: 10px solid #050047;
+    
     top: 50%;
     left: 50%;
     margin-top: -25px;
 }
 
-.animate-bottom-left{
-    animation: bottom-left 1.5s forwards;
-}
-
-.animate-bottom-left-off{
-    animation: bottom-left-off 1s forwards;
-}
-
 .bottom-right{
     border-bottom: 10px solid #050047;
     border-right: 10px solid #050047;
+    
     top: 50%;
     left: 50%;
     margin-left: -25px;
     margin-top: -25px;
 }
 
-.animate-bottom-right{
-    animation: bottom-right 1.5s forwards;
+.expandPlus .top-left{
+    top: 20px;
+    left: 20px;
 }
 
-.animate-bottom-right-off{
-    animation: bottom-right-off 1s forwards;
+.expandPlus .top-right{
+    top: 20px;
+    left: 100%;
+    margin-left: -55px;
 }
 
-@keyframes top-left{
-    0%{
-        top: 50%;
-        left: 50%;
-    }
-    100%{
-        top: 20px;
-        left: 20px;
-    }
+.expandPlus .bottom-left{
+    top: 100%;
+    left: 20px;
+    margin-top: -55px;
 }
 
-@keyframes top-right{
-    0%{
-        top: 50%;
-        left: 50%;
-        margin-left: -25px;
-    }
-    100%{
-        top: 20px;
-        left: 100%;
-        margin-left: -55px;
-    }
-}
-
-@keyframes bottom-left{
-    0%{
-        top: 50%;
-        left: 50%;
-        margin-top: -25px;
-    }
-    100%{
-        top: 100%;
-        left: 20px;
-        margin-top: -55px;
-    }
-}
-
-@keyframes bottom-right{
-    0%{
-        top: 50%;
-        left: 50%;
-        margin-left: -25px;
-        margin-top: -25px;
-    }
-    100%{
-        top: 100%;
-        left: 100%;
-        margin-left: -55px;
-        margin-top: -55px;
-    }
-}
-
-@keyframes top-left-off{
-    0%{
-        top: 20px;
-        left: 20px;
-    }
-    100%{
-        top: 50%;
-        left: 50%;
-    }
-}
-
-@keyframes top-right-off{
-    0%{
-        top: 20px;
-        left: 100%;
-        margin-left: -55px;
-    }
-    100%{
-        top: 50%;
-        left: 50%;
-        margin-left: -25px;
-    }
-}
-
-@keyframes bottom-left-off{
-    0%{
-        top: 100%;
-        left: 20px;
-        margin-top: -55px;
-    }
-    100%{
-        top: 50%;
-        left: 50%;
-        margin-top: -25px;
-    }
-}
-
-@keyframes bottom-right-off{
-    0%{
-        top: 100%;
-        left: 100%;
-        margin-left: -55px;
-        margin-top: -55px;
-    }
-    100%{
-        top: 50%;
-        left: 50%;
-        margin-left: -25px;
-        margin-top: -25px;
-    }
+.expandPlus .bottom-right{
+    top: 100%;
+    left: 100%;
+    margin-left: -55px;
+    margin-top: -55px;
 }
 
 .circle{
@@ -280,6 +183,12 @@ a:hover{
     opacity: 1;
     
     z-index: 1;
+    
+    transition: all .5s;
+}
+
+.hideCircle{
+    opacity: 0;
 }
 
 .animate-circle-movement{
@@ -295,73 +204,44 @@ a:hover{
     }
 }
 
-.animate-circle-opacity{
-    animation: circle-opacity .5s forwards;
-}
-
-@keyframes circle-opacity{
-    0%{
-        opacity: 1;
-    }
-    
-    100%{
-        opacity: 0;
-    }
-}
-
-.animate-circle-opacity-off{
-    animation: circle-opacity-off .5s forwards;
-}
-
-@keyframes circle-opacity-off{
-    0%{
-        opacity: 0;
-    }
-    
-    100%{
-        opacity: 1;
-    }
-}
-
-
 .bio{
     position: absolute;
     bottom: 0;
     
     padding: 20px;
+    
     opacity: 1;
     
     z-index: 2;
+    
+    transition: all .5s;
+}
+
+.hideBio{
+    opacity: 0;
 }
 
 .bio a{
     text-decoration: underline;
 }
 
-.animate-bio{
-    animation: bio .5s forwards;
+.version-box{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    
+    padding: 20px;
+    
+    opacity: 1;
+    
+    z-index: 2;
+    
+    transition: all .5s;
+    font-size: 0.7em
 }
 
-.animate-bio-off{
-    animation: bio-off .5s forwards;
-}
-
-@keyframes bio{
-    0%{
-        opacity: 1;
-    }
-    100%{
-        opacity: 0;
-    }
-}
-
-@keyframes bio-off{
-    0%{
-        opacity: 0;
-    }
-    100%{
-        opacity: 1;
-    }
+.hideVersionBox{
+    opacity: 0;
 }
 
 .close-X{
@@ -410,6 +290,7 @@ a:hover{
 section{
     height: 100%;
     overflow: hidden;
+    visibility: hidden;
     
     padding: 50px;
     opacity: 0;
@@ -420,15 +301,16 @@ section{
 }
 
 section h2{
-    font-size: 32.5px;
+    font-size: 28px;
 }
 
 section h3{
-    font-size: 19.5px;
+    font-size: 21px;
+    letter-spacing: 3px;
 }
 
 section p{
-    font-size: 13px;
+    font-size: 14px;
     text-align: center;
 }
 
@@ -445,11 +327,13 @@ section a{
         opacity: 0;
         height: 100%;
         overflow: hidden;
+        visibility: visible;
     }
     100%{
         opacity: 1;
         height: auto;
         overflow: visible;
+        visibility: visible;
     }
 }
 
@@ -554,6 +438,17 @@ section a{
 .projects article a:hover .circle-projects{
     animation: circle-movement .8s ease .5s infinite alternate;
     opacity: 1;
+}
+
+.about-div{
+    text-align: center;
+    width: 25%;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.about-div img{
+    width: 80%;
 }
 
 
