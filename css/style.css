@@ -283,7 +283,7 @@ a:hover{
 }
 
 .animate-circle-movement{
-    animation: circle-movement .8s ease 1s infinite alternate;
+    animation: circle-movement .8s ease .5s infinite alternate;
 }
 
 @keyframes circle-movement{
@@ -328,7 +328,7 @@ a:hover{
     position: absolute;
     bottom: 0;
     
-    padding: 10px;
+    padding: 20px;
     opacity: 1;
     
     z-index: 2;
@@ -470,19 +470,90 @@ section a{
     }
 }
 
-article{
+.projects article{
     display: inline-block;
     width: 47.5%;
-    height: 350px;
+    min-height: 350px;
     
     margin-bottom: 4%;
     margin-right: 5%;
-    
-    background-color: cadetblue;
 }
 
-article.no-margin-right{
+.projects article.no-margin-right{
     margin-right: 0;
+}
+
+.projects article a{
+    position: relative;
+    display: block;
+}
+
+.projects article img{
+    width: 100%;
+}
+
+.projects .bg-hover{
+    position: absolute;
+    top: 0;
+    
+    width: 100%;
+    height: 100%;
+    
+    background-color: #050047;
+    opacity: 0;
+    
+    transition: all .2s linear;
+}
+
+.piu-projects{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -15px;
+    margin-left: -15px;
+    width: 30px;
+    height: 30px;
+    
+    background: url(../img/piu-porjects.png) center no-repeat;
+    background-size: cover;
+    
+    opacity: 0;
+    
+    z-index: 1;
+    
+    transition: all .2s linear;
+}
+
+.circle-projects{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -25px;
+    margin-left: -25px;
+    width: 50px;
+    height: 50px;
+    
+    background: url(../img/circle-projects.png) center no-repeat;
+    background-size: cover;
+    
+    opacity: 0;
+    
+    z-index: 1;
+    
+    transition: all .2s linear;
+}
+
+.projects article a:hover .bg-hover{
+    opacity: .5;
+}
+
+.projects article a:hover .piu-projects{
+    opacity: 1;
+}
+
+.projects article a:hover .circle-projects{
+    animation: circle-movement .8s ease .5s infinite alternate;
+    opacity: 1;
 }
 
 
