@@ -439,7 +439,6 @@ section a{
     width: 30%;
     margin-right: 5%;
     
-    border: 1px solid red;
     
     text-align: left;
 }
@@ -456,18 +455,33 @@ section a{
     margin: 10px 0;
 }
 
-.single-project .cover-project{
+.single-project .content-project{
     display: inline-block;
     width: 65%;
     
     vertical-align: top;
+    text-align: center;
 }
 
-.single-project .cover-project img{
+.single-project .content-project img{
     width: 100%;
 }
 
 
+.single-project .video-box{
+    display: inline-block;
+    position: relative;
+    width: 310px;
+    height: 633px;
+    background-image: url(../img/iphone6-mockup.png);
+    background-size: contain;
+}
+
+.single-project .video-box video{
+    position: absolute;
+    top: 75px;
+    left: 17px;
+}
 
 
 
