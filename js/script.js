@@ -4,15 +4,16 @@ $(document).ready(function(){
         $("#piu").toggleClass("expandPlus");
 
         $(".circle").toggleClass("hideCircle");
-        $(".bio").toggleClass("hideBio");
+        $(".bio").toggleClass("hide");
+        $(".version-box").toggleClass("hide");
+        
+        $(".projects").toggleClass("showProjects");
 
         $("body").toggleClass("noBorderBody");
 
         //to fix
         $(".close-X").removeClass("animate-close-X-off");
-        $("section").removeClass("animate-section-off");
         $(".close-X").addClass("animate-close-X");
-        $("section").addClass("animate-section");
         //
     });
 
@@ -21,15 +22,16 @@ $(document).ready(function(){
         $("#piu").toggleClass("expandPlus");
 
         $(".circle").toggleClass("hideCircle");
-        $(".bio").toggleClass("hideBio");
+        $(".bio").toggleClass("hide");
+        $(".version-box").toggleClass("hide");
+        
+        $(".projects").toggleClass("showProjects");
 
         $("body").toggleClass("noBorderBody");
 
         //to fix
         $(".close-X").removeClass("animate-close-X");
-        $("section").removeClass("animate-section");
         $(".close-X").addClass("animate-close-X-off");
-        $("section").addClass("animate-section-off");
         //
     });
 });
