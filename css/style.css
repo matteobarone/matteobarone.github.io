@@ -430,9 +430,27 @@ section a{
 
 /* PROJECT PAGE */
 
+
+
+
+
+
 .single-project{
     vertical-align: top;
 }
+
+.intro-project{
+    width: 100%;
+    text-align: center;
+}
+
+.intro-project img{
+    width: 60%;
+    margin: 0 auto;
+    
+}
+
+/* 
 
 .single-project .description-project{
     display: inline-block;
@@ -483,7 +501,7 @@ section a{
     left: 17px;
 }
 
-
+*/
 
 
 
