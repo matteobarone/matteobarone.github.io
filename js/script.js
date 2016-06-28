@@ -35,6 +35,20 @@ function closePiu(){
 
 
 
+//Video Controller
+
+var mobileAtmVideo = document.getElementById("mobile-atm-video");
+var mobileAtmController = document.getElementById("mobile-atm-controller");
+
+mobileAtmController.addEventListener("click", playVid);
+
+function playVid() {
+    mobileAtmVideo.play();
+    mobileAtmController.classList.add("hide");
+} 
+
+
+
 
 
 

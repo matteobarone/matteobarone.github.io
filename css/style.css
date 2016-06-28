@@ -237,6 +237,12 @@ section{
     z-index: 0;
 }
 
+section h1{
+    font-size: 28px;
+    text-align: center;
+    line-height: 100px;
+}
+
 section h2{
     font-size: 28px;
 }
@@ -259,7 +265,7 @@ section a{
     opacity: 0;
     height: 100%;
     overflow: hidden;
-    visibility: visible;
+    visibility: hidden;
     
     transition: all .5s ease;
 }
@@ -295,7 +301,7 @@ section a{
     width: 100%;
 }
 
-.projects .bg-hover{
+.bg-hover{
     position: absolute;
     top: 0;
     
@@ -377,12 +383,14 @@ section a{
 /* PROJECT PAGE */
 
 
-
+.back-to-projects{
+    text-align: left;
+    position: fixed;
+}
 
 
 
 .single-project{
-    vertical-align: top;
 }
 
 .intro-project{
@@ -393,46 +401,34 @@ section a{
 .intro-project img{
     width: 60%;
     margin: 0 auto;
-    
 }
 
-/* 
+.bulbpoint-project{
+    width: 90%;
+    margin: 0 auto;
+}
 
-.single-project .description-project{
+.bulbpoint-project section{
     display: inline-block;
-    width: 30%;
-    margin-right: 5%;
-    
-    
-    text-align: left;
+    width: 33%;
+    vertical-align: top;
 }
 
-.single-project .description-project p, .single-project .description-project li, .single-project .description-project h3{
-    text-align: left;
-}
-
-
-
-
-
-.single-project .description-project p{
-    margin: 10px 0;
-}
-
-.single-project .content-project{
+.content-project{
     display: inline-block;
-    width: 65%;
+    width: 100%;
     
     vertical-align: top;
     text-align: center;
 }
 
-.single-project .content-project img{
+.content-project img{
     width: 100%;
 }
 
 
-.single-project .video-box{
+
+.mobile-video-box{
     display: inline-block;
     position: relative;
     width: 310px;
@@ -441,13 +437,89 @@ section a{
     background-size: contain;
 }
 
-.single-project .video-box video{
+.mobile-video-box .circle-projects{
+    background: url(../img/circle-projects-blueversion.png) center no-repeat;
+    background-size: cover;
+    animation: circle-movement .8s ease .5s infinite alternate;
+    opacity: 1;
+}
+
+.play-projects{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -15px;
+    margin-left: -8px;
+    width: 21px;
+    height: 29px;
+    
+    background: url(../img/play.png) center no-repeat;
+    background-size: cover;
+    
+    opacity: 1;
+    
+    z-index: 1;
+}
+
+.mobile-video-box video{
     position: absolute;
     top: 75px;
     left: 17px;
 }
 
-*/
+
+
+.desktop-video-box{
+    width: 90%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.desktop-video-box video{
+    width: 100%;
+}
+
+.description-project{
+    width: 60%;
+    margin: 0 auto;
+    padding: 50px;
+}
+
+
+.related-projects article{
+    display: inline-block;
+    width: 30%;
+    min-height: 350px;
+    
+    margin-bottom: 4%;
+    margin-right: 5%;
+}
+
+.related-projects article.no-margin-right{
+    margin-right: 0;
+}
+
+.related-projects article a{
+    position: relative;
+    display: block;
+}
+
+.related-projects article img{
+    width: 100%;
+}
+
+.related-projects article a:hover .bg-hover{
+    opacity: .5;
+}
+
+.related-projects article a:hover .piu-projects{
+    opacity: 1;
+}
+
+.related-projects article a:hover .circle-projects{
+    animation: circle-movement .8s ease .5s infinite alternate;
+    opacity: 1;
+}
 
 
 
