@@ -1,40 +1,50 @@
-//JQuery script to open and close the PLUS section
-$(document).ready(function(){
-    $("#piu").click(function(){
-        $("#piu").toggleClass("expandPlus");
+//// Script to open and close the PLUS section - No JQuery ////
 
-        $(".circle").toggleClass("hideCircle");
-        $(".bio").toggleClass("hide");
-        $(".version-box").toggleClass("hide");
-        
-        $(".projects").toggleClass("showProjects");
+// Store objects in variables
+var piu = document.getElementById("piu");
+var close = document.getElementById("closeX");
+var circle = document.getElementById("circle");
+var bio = document.getElementById("bio");
+var versionBox = document.getElementById("versionBox");
+var projects = document.getElementById("projects");
+var body = document.getElementsByTagName("BODY")[0];
 
-        $("body").toggleClass("noBorderBody");
+// Add the event listener
+piu.addEventListener("click", openPiu);
+close.addEventListener("click", closePiu);
 
-        //to fix
-        $(".close-X").removeClass("animate-close-X-off");
-        $(".close-X").addClass("animate-close-X");
-        //
-    });
+function openPiu(){
+    piu.classList.toggle("expandPlus");
+    close.classList.toggle("animate-x");
+    circle.classList.toggle("hide");
+    bio.classList.toggle("hide");
+    versionBox.classList.toggle("hide");
+    projects.classList.toggle("showProjects");
+    body.classList.toggle("noBorderBody");
+}
 
-    $("#close-X").click(function(){
+function closePiu(){
+    piu.classList.toggle("expandPlus");
+    close.classList.toggle("animate-x");
+    circle.classList.toggle("hide");
+    bio.classList.toggle("hide");
+    versionBox.classList.toggle("hide");
+    projects.classList.toggle("showProjects");
+    body.classList.toggle("noBorderBody");
+}
 
-        $("#piu").toggleClass("expandPlus");
 
-        $(".circle").toggleClass("hideCircle");
-        $(".bio").toggleClass("hide");
-        $(".version-box").toggleClass("hide");
-        
-        $(".projects").toggleClass("showProjects");
 
-        $("body").toggleClass("noBorderBody");
 
-        //to fix
-        $(".close-X").removeClass("animate-close-X");
-        $(".close-X").addClass("animate-close-X-off");
-        //
-    });
-});
+
+
+
+
+
+
+
+
+
 
 
 

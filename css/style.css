@@ -29,36 +29,6 @@ body{
     height: auto;
 }
 
-/*.animate-body{
-    animation: body-border-none 1s forwards;
-}
-
-.animate-body-off{
-    animation: body-border-none-off 1s forwards;
-}
-
-@keyframes body-border-none{
-    0%{
-        border: 10px solid #050047;
-        height: 100%;
-    }
-    100%{
-        border: none;
-        height: auto;
-    }
-}
-
-@keyframes body-border-none-off{
-    0%{
-        border: none;
-        height: auto;
-    }
-    100%{
-        border: 10px solid #050047;
-        height: 100%;
-    }
-}*/
-
 h1, h2, h3{
     font-family: 'Lato', sans-serif;
     font-weight: 400;
@@ -187,10 +157,6 @@ a:hover{
     transition: all .5s;
 }
 
-.hideCircle{
-    opacity: 0;
-}
-
 .animate-circle-movement{
     animation: circle-movement .8s ease .5s infinite alternate;
 }
@@ -251,32 +217,12 @@ a:hover{
     margin-left: 80px;
     
     z-index: 2;
+    transition: all .5s ease;
 }
 
-.animate-close-X{
-    animation: close-X .5s forwards 1.7s;
-}
-
-.animate-close-X-off{
-    animation: close-X-off .5s backwards;
-}
-
-@keyframes close-X{
-    0%{
-        margin-left: 80px;
-    }
-    100%{
-        margin-left: -80px;
-    }
-}
-
-@keyframes close-X-off{
-    0%{
-        margin-left: -80px;
-    }
-    100%{
-        margin-left: 80px;
-    }
+.animate-x{
+    margin-left: -80px;
+    transition: all .5s ease 1.7s;
 }
 
 
