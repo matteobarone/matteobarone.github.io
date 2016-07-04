@@ -546,20 +546,28 @@ section a{
 
 
 
-/* MEDIA QUERIES */
+/****** MEDIA QUERIES ******/
 
 @media(max-width:420px){
+    
+    /* index */
+    
     body{
         border: 5px solid #050047;
     }
     
-    h1{
+    h1, h2{
         font-size: 1.5em;
         letter-spacing: 5px;
     }
     
+    
     p{
         font-size: .75em;
+    }
+    
+    .bio{
+        padding: 10px;
     }
     
     .circle{
@@ -577,37 +585,98 @@ section a{
     .top-left{
         border-top: 3px solid #050047;
         border-left: 3px solid #050047;
-
-        top: 50%;
-        left: 50%;
     }
 
     .top-right{
         border-top: 3px solid #050047;
         border-right: 3px solid #050047;
-
-        top: 50%;
-        left: 50%;
+        
         margin-left: -20px;
     }
 
     .bottom-left{
         border-bottom: 3px solid #050047;
         border-left: 3px solid #050047;
-
-        top: 50%;
-        left: 50%;
+        
         margin-top: -20px;
     }
 
     .bottom-right{
         border-bottom: 3px solid #050047;
         border-right: 3px solid #050047;
-
-        top: 50%;
-        left: 50%;
+        
         margin-left: -20px;
         margin-top: -20px;
+    }
+    
+    .expandPlus .top-left{
+        top: 5px;
+        left: 5px;
+    }
+
+    .expandPlus .top-right{
+        top: 5px;
+        left: 100%;
+        margin-left: -25px;
+    }
+
+    .expandPlus .bottom-left{
+        top: 100%;
+        left: 5px;
+        margin-top: -25px;
+    }
+
+    .expandPlus .bottom-right{
+        top: 100%;
+        left: 100%;
+        margin-left: -25px;
+        margin-top: -25px;
+    }
+    
+    .close-X{
+        background-image: url(../img/x-mobile.png);
+        top: 30px;
+        margin-left: 60px;
+    }
+    
+    .animate-x{
+        margin-left: -60px;
+    }
+
+    
+    
+    /* projects */
+    
+    section{
+        padding: 10px;
+    }
+    
+    section h2{
+        font-size: 18px;
+    }
+    
+    section h3{
+        font-size: 15px;
+        letter-spacing: 2px;
+    }
+    
+    section p{
+        font-size: 12px;
+    }
+    
+    .projects article{
+        width: 100%;
+        margin-right: 0;
+        min-height: 0;
+        margin-bottom: 15%;
+    }
+    
+    .about-div{
+        width: 100%;
+    }
+    
+    .about-div img {
+        width: 100%;
     }
 }
 
