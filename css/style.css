@@ -403,6 +403,10 @@ section a{
     margin: 0 auto;
 }
 
+.intro-project img.phone{
+    width: 20%;
+}
+
 .bulbpoint-project{
     width: 90%;
     margin: 0 auto;
@@ -423,7 +427,12 @@ section a{
 }
 
 .content-project img{
-    width: 100%;
+    width: 90%;
+}
+
+.content-project .img-caption{
+    font-size: 11px;
+    margin-top: 10px;
 }
 
 
@@ -434,6 +443,11 @@ section a{
     width: 310px;
     height: 633px;
     background-image: url(../img/iphone6-mockup.png);
+    background-size: contain;
+}
+
+.samsung-video-box{
+    background-image: url(../img/s7edge-mockup.png);
     background-size: contain;
 }
 

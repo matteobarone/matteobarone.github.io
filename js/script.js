@@ -63,6 +63,7 @@ function playVid() {
 
 
 //Script to manage the changing version (White/Blue)
+
 function loadjscssfile(filename, filetype){
     if (filetype=="css"){ //if filename is an external CSS file
         var fileref=document.createElement("link")

@@ -1,0 +1,547 @@
+/*
+
+COLORS:
+- dark grey:    #4a4a4a
+- red:          #d15c57
+- orange:       #f3b14b
+- grey 1:       #bfbfbf
+- grey 2:       #d9d9d9
+
+*/
+
+
+
+/**** GENERAL SELECTOR ****/
+*{
+    /*outline: 1px solid black;*/
+    box-sizing: border-box;
+    text-align: center;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    
+    font-family: futura, monospace;
+    color: #4a4a4a;
+}
+
+.clear{
+    clear: both;
+}
+
+.text-bigger{
+    font-size: 1.2em;
+}
+
+.wrapper{
+    width: 100%;
+    max-width: 1024px;
+    
+    margin: 0 auto;
+}
+
+hr{
+    margin: 0 auto 20px auto;
+    max-width: 461px;
+    
+    border: 0;
+    color: #4a4a4a;
+    background-color: #4a4a4a;
+    height: 1px;
+}
+
+
+
+/**** HEADER ****/
+header{
+    width: 100%;
+    height: 50px;
+    
+    background-color: #4a4a4a;
+    text-align: center;
+}
+
+header img{
+    margin-top: 8px;
+}
+
+
+
+/**** NAV ****/
+nav{
+    
+}
+
+nav ul{
+    width: 100%;
+    height: 90px;
+    
+    margin: 0;
+    padding: 0;
+    
+    display: flex;
+    flex-flow: row wrap;
+    
+    justify-content: space-around;
+    align-items: center;
+}
+
+nav ul li{
+    margin: 0;
+    padding: 0;
+    
+    display: flex;
+}
+
+nav ul li a{
+    color: #4a4a4a;
+    text-decoration: none;
+}
+
+nav ul li a p{
+    margin: 0;
+}
+
+
+
+/**** SIDE-BAR ****/
+aside{
+    max-width: 320px;
+    width: 31.25%;
+    height: 430px;
+    
+    float: left;
+
+    color: white;
+    
+    font-size: 1.5em;
+    line-height: 1em;
+}
+
+aside ul {
+    margin: 0;
+    padding: 0;
+    
+    height: 100%;
+}
+
+aside ul li {
+    height: 33%;
+    display: block;
+}
+
+/* class to give the right height to the third and fourth button */
+.half-height{
+    height: 17%;
+}
+
+aside ul li a {
+    display: flex;
+    flex-flow: column wrap;
+    
+    justify-content: center;
+    align-items: center;
+    
+    height: 100%;
+    
+    
+    position: relative;
+    
+    background-color: #d15c57;
+    color: white;
+    text-decoration: none;
+
+    
+    transition: all .2s ease;
+}
+
+aside ul li a h3 {
+    margin: 0;
+    font-size: 1em;
+}
+
+aside ul li a p {
+    margin: 0;
+    font-size: 0.5em;
+}
+
+aside ul li a:hover {
+    margin-right: -20px;
+    padding-right: 20px;
+}
+
+.open-btn-aside{
+    margin-right: -20px;
+    padding-right: 20px;
+}
+
+
+.btn-urban-extra {
+    background-color: #f3b14b;
+}
+
+.btn-recharge {
+    background-color: #bfbfbf;
+}
+
+.btn-airport-hospital{
+    background-color: #d9d9d9;
+}
+
+
+
+/**** CONTENT ****/
+.content{
+    max-width: 704px;
+    width: 68.75%;
+    min-height: 510px;
+    
+    float: right;
+    
+    background-color: #f7f7f7;
+}
+.content img {
+    width: 100%;
+    height: auto;
+}
+
+/* Selector for internal pages (no home) */
+.content-no-home{
+    padding: 0 5%;
+}
+
+.content-no-home h4{
+    display: none;
+    
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    
+    background-color: #d15c57;
+    color: white;
+    border-bottom: 1px solid white;
+}
+
+.wrapper-content{
+    width: 100%;
+    max-width: 461px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+.content-no-home a{
+    display: inline-flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    
+    width: 49.5%;
+    max-width: 230px;
+    height: 60px;
+    margin: 0 1px 20px 0;
+    
+    background-color: #d15c57;
+    color: white;
+    text-decoration: none;
+}
+
+.content-no-home a.one-tirdh-width{
+    width: 32.9%;
+    max-width: 152px;
+}
+
+.content-no-home a.clicked, .content-no-home a:hover{
+    background-color: white;
+    color: #4a4a4a;
+    border: 1px solid #4a4a4a;
+}
+
+.content-no-home a.orange-link{
+    display: inline;
+    
+    background-color: transparent;
+    color: #f3b14b;
+}
+
+.content-no-home a.orange-link:hover{
+    text-decoration: underline;
+    border: none;
+}
+
+.content-no-home p{
+    text-align: left;
+    font-size: 1.1em;
+    margin: 0 0 20px 0;
+    position: relative;
+}
+
+.content-no-home p span{
+    text-align: right;
+    position: absolute;
+    right: 0;
+}
+
+.content-no-home form{
+    font-size: 1.1em;
+}
+
+.content-no-home form span{
+    width: 59%;
+    display: inline-block;
+    text-align: left;
+}
+
+.content-no-home label{
+    display: inline-block;
+    width: 39%;
+    margin: 0 0 5px 0;
+    
+    text-align: left;
+}
+
+.content-no-home label.long{
+    width: 90%;
+}
+
+.content-no-home input{
+    display: inline-block;
+    width: 59%;
+    margin: 0 0 5px 0;
+    padding: 5px;
+    
+    font-family: futura, monospace;
+    text-align: left;
+}
+
+.content-no-home input[type="submit"]{
+    display: inline-flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    
+    width: 49.5%;
+    max-width: 230px;
+    height: 60px;
+    margin: 20px auto 0 auto;
+    
+    background-color: #d15c57;
+    color: white;
+    text-decoration: none;
+    border: none;
+    
+    font-size: 1em;
+}
+
+.content-no-home input[type="submit"]:hover{
+    background-color: white;
+    color: #4a4a4a;
+    border: 1px solid #4a4a4a;
+    cursor: pointer;
+}
+
+.content-no-home input[type="number"]{
+    width: 80px;
+}
+
+.content-no-home input[type="checkbox"]{
+    width: 20px;
+}
+
+.content-no-home img{
+    max-width: 130px;
+    margin: 0 0 20px 0;
+}
+
+.ticket-confirmation{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.ticket-confirmation img{
+    max-width: 143px;
+}
+
+.ticket-description{
+    text-align: center;
+    
+    font-size: 0.8em;
+}
+
+
+
+/**** FOOTER ****/
+footer{
+    max-width: 320px;
+    width: 31.25%;
+    height: 80px;
+    
+    float: left;
+    
+    display: flex;
+    flex-flow: column wrap;
+    
+    justify-content: center;
+    align-items: center;
+}
+
+footer p{
+    margin: 0;
+    margin-top: 10px;
+    
+    font-size: 0.6em;
+}
+
+footer img{
+    width: 100%;
+    max-width: 245px;
+    padding: 0 5px;
+}
+
+
+
+
+
+/******************* MEDIA QUERIES *********************/
+@media(max-width: 750px){
+
+    .content-no-home form span{
+        width: 100%;
+    }
+    
+    .content-no-home label{
+        width: 100%;
+        margin: 0;
+    }
+
+    .content-no-home input{
+        width: 100%;
+    }
+
+}
+
+
+@media(max-width: 540px){
+    
+    hr{
+        max-width: none;
+        color: white;
+        background-color: white;
+    }
+    
+    nav ul{
+        height: 70px;
+    }
+    
+    nav ul li a p{
+        display: none;
+    }
+    
+    aside{
+        max-width: 540px;
+        width: 100%;
+    }
+    
+    aside ul li a:hover {
+        margin-right: 0;
+        padding-right: 0;
+    }
+    
+    .content{
+        display: none;
+    }
+    
+    footer{
+        max-width: 520px;
+        width: 100%;
+    }
+
+    /* Selector for internal pages (no home) */
+    .aside-no-home{
+        display: none;
+    }
+    
+    .content-no-home{
+        display: block;
+        width: 100%;
+        padding: 0;
+        
+        background-color: #f3b14b;
+        color: white;
+    }
+    
+    .wrapper-content{
+        width: 100%;
+        padding: 20px 5%;
+    }
+    
+    .content-no-home h4{
+        display: block;
+    }
+    
+    .content-no-home a{
+        max-width: none;
+        height: 40px;
+    }
+    
+    .content-no-home a:hover{
+        background-color: #d15c57;
+        color: white;
+        border: none;
+    }
+    
+    .content-no-home a.clicked{
+        border: none;
+    }
+    
+    .content-no-home a.orange-link{
+        color: #d15c57;
+    }
+    
+    .content-no-home a.orange-link:hover{
+        background-color: transparent;
+        text-decoration: none;
+    }
+    
+    .content-no-home a.longer-btn{
+        width: 70%;
+    }
+    
+    .content-no-home form span{
+        width: 100%;
+    }
+    
+    .content-no-home label{
+        width: 100%;
+        margin: 0;
+    }
+
+    .content-no-home input{
+        width: 100%;
+    }
+    
+    .content-no-home input[type="submit"]{
+        height: 40px;
+    }
+    
+    .ticket-confirmation{
+        flex-flow: column wrap;
+        justify-content: center;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
