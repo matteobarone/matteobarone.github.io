@@ -556,6 +556,15 @@ section a{
     p{
         font-size: .85em;
     }
+    
+    .bio{
+        height: 100vh;
+    }
+    
+    .bio p{
+        position: relative;
+        top: 68%;
+    }
 }
 
 
