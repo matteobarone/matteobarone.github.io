@@ -6,11 +6,12 @@
 html{
     width: 100%;
     height: 100%;
+    background-color: #fff5de;
 }
 
 body{
     width: 100%;
-    height: 100%;
+    height: 100vh;
     background-color: #fff5de;
     border: 10px solid #050047;
     
@@ -21,9 +22,7 @@ body{
     
     color: #050047;
     
-    -webkit-transition: all .5s ease;
-    
-    transition: all .5s ease;
+    transition: border .5s ease;
 }
 
 .noBorderBody{
@@ -78,7 +77,6 @@ a:hover{
 }
 
 .transition-for-plus{
-    -webkit-transition: all 1.5s ease;
     transition: all 1.5s ease;
 }
 
@@ -158,24 +156,11 @@ a:hover{
     
     z-index: 1;
     
-    -webkit-transition: all .5s;
-    
     transition: all .5s;
 }
 
 .animate-circle-movement{
-    -webkit-animation: circle-movement .8s ease .5s infinite alternate;
     animation: circle-movement .8s ease .5s infinite alternate;
-}
-
-@-webkit-keyframes circle-movement{
-    0%{
-    }
-    
-    100%{
-        -webkit-transform: scale(1.1);
-        transform: scale(1.1);
-    }
 }
 
 @keyframes circle-movement{
@@ -183,7 +168,6 @@ a:hover{
     }
     
     100%{
-        -webkit-transform: scale(1.1);
         transform: scale(1.1);
     }
 }
@@ -197,8 +181,6 @@ a:hover{
     opacity: 1;
     
     z-index: 2;
-    
-    -webkit-transition: all .5s;
     
     transition: all .5s;
 }
@@ -217,8 +199,6 @@ a:hover{
     opacity: 1;
     
     z-index: 2;
-    
-    -webkit-transition: all .5s;
     
     transition: all .5s;
     font-size: 0.7em;
@@ -241,13 +221,11 @@ a:hover{
     margin-left: 80px;
     
     z-index: 2;
-    -webkit-transition: all .5s ease;
     transition: all .5s ease;
 }
 
 .animate-x{
     margin-left: -80px;
-    -webkit-transition: all .5s ease 1.7s;
     transition: all .5s ease 1.7s;
 }
 
@@ -293,8 +271,6 @@ section a{
     overflow: hidden;
     visibility: hidden;
     
-    -webkit-transition: all .5s ease;
-    
     transition: all .5s ease;
 }
 
@@ -303,8 +279,6 @@ section a{
     height: auto;
     overflow: visible;
     visibility: visible;
-    
-    -webkit-transition: all .5s ease 1.5s;
     
     transition: all .5s ease 1.5s;
 }
@@ -341,8 +315,6 @@ section a{
     background-color: #050047;
     opacity: 0;
     
-    -webkit-transition: all .2s linear;
-    
     transition: all .2s linear;
 }
 
@@ -361,8 +333,6 @@ section a{
     opacity: 0;
     
     z-index: 1;
-    
-    -webkit-transition: all .2s linear;
     
     transition: all .2s linear;
 }
@@ -383,8 +353,6 @@ section a{
     
     z-index: 1;
     
-    -webkit-transition: all .2s linear;
-    
     transition: all .2s linear;
 }
 
@@ -397,7 +365,6 @@ section a{
 }
 
 .projects article a:hover .circle-projects{
-    -webkit-animation: circle-movement .8s ease .5s infinite alternate;
     animation: circle-movement .8s ease .5s infinite alternate;
     opacity: 1;
 }
@@ -491,7 +458,6 @@ section a{
 .mobile-video-box .circle-projects{
     background: url(../img/circle-projects-blueversion.png) center no-repeat;
     background-size: cover;
-    -webkit-animation: circle-movement .8s ease .5s infinite alternate;
     animation: circle-movement .8s ease .5s infinite alternate;
     opacity: 1;
 }
@@ -569,7 +535,6 @@ section a{
 }
 
 .related-projects article a:hover .circle-projects{
-    -webkit-animation: circle-movement .8s ease .5s infinite alternate;
     animation: circle-movement .8s ease .5s infinite alternate;
     opacity: 1;
 }
