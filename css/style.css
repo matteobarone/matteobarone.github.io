@@ -71,7 +71,7 @@ a:hover{
     width: 35px;
     height: 35px;
     
-    position: fixed;
+    position: absolute;
     
     z-index: 2;
 }
@@ -117,23 +117,27 @@ a:hover{
 }
 
 .expandPlus .top-left{
+    position: fixed;
     top: 20px;
     left: 20px;
 }
 
 .expandPlus .top-right{
+    position: fixed;
     top: 20px;
     left: 100%;
     margin-left: -55px;
 }
 
 .expandPlus .bottom-left{
+    position: fixed;
     top: 100%;
     left: 20px;
     margin-top: -55px;
 }
 
 .expandPlus .bottom-right{
+    position: fixed;
     top: 100%;
     left: 100%;
     margin-left: -55px;
