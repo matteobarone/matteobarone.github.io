@@ -11,26 +11,45 @@ var body = document.getElementsByTagName("BODY")[0];
 
 // Add the event listener
 piu.addEventListener("click", openPiu);
-close.addEventListener("click", closePiu);
+if(close){
+    close.addEventListener("click", closePiu);
+}
 
 function openPiu(){
     piu.classList.toggle("expandPlus");
-    close.classList.toggle("animate-x");
+    //close.classList.toggle("animate-x");
     circle.classList.toggle("hide");
     bio.classList.toggle("hide");
     versionBox.classList.toggle("hide");
-    projects.classList.toggle("showProjects");
+    //projects.classList.toggle("showProjects");
     body.classList.toggle("noBorderBody");
+    
+    setTimeout(function(){
+        goToProjectsPage(); 
+    }, 1500);
+    
 }
 
 function closePiu(){
     piu.classList.toggle("expandPlus");
     close.classList.toggle("animate-x");
-    circle.classList.toggle("hide");
-    bio.classList.toggle("hide");
-    versionBox.classList.toggle("hide");
+    //circle.classList.toggle("hide");
+    //bio.classList.toggle("hide");
+    //versionBox.classList.toggle("hide");
     projects.classList.toggle("showProjects");
     body.classList.toggle("noBorderBody");
+    
+    setTimeout(function(){
+        goToHomePage(); 
+    }, 1500);
+}
+
+function goToProjectsPage(){
+    window.location.href = 'projects.html';
+}
+
+function goToHomePage(){
+    window.location.href = 'index.html';
 }
 
 
@@ -40,12 +59,14 @@ function closePiu(){
 var mobileAtmVideo = document.getElementById("mobile-atm-video");
 var mobileAtmController = document.getElementById("mobile-atm-controller");
 
-mobileAtmController.addEventListener("click", playVid);
+if(mobileAtmController){
+    mobileAtmController.addEventListener("click", playVid);
+}
 
 function playVid() {
     mobileAtmVideo.play();
     mobileAtmController.classList.add("hide");
-} 
+}
 
 
 

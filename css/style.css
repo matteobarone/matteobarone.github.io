@@ -27,6 +27,10 @@ body{
 
 .noBorderBody{
     border: 0px solid #050047;
+    
+}
+
+.heightAuto{
     height: auto;
 }
 
@@ -51,7 +55,7 @@ h2{
 h3{
     font-size: 1.5em;
     text-align: center;
-    line-height: 50px;
+    margin: 20px 0;
 }
 
 p{
@@ -260,6 +264,13 @@ section h3{
     letter-spacing: 3px;
 }
 
+section h4{
+    font-size: 15px;
+    text-align: center;
+    font-weight: 100;
+    margin: 20px 0 5px 0;
+}
+
 section p, section li{
     font-size: 14px;
     text-align: center;
@@ -303,6 +314,7 @@ section a{
 .projects article a{
     position: relative;
     display: block;
+    text-decoration: none;
 }
 
 .projects article img{
@@ -553,7 +565,7 @@ section a{
 
 /****** MEDIA QUERIES ******/
 
-@media(max-width:420px){
+@media(max-width:460px){
     
     /* index */
     
