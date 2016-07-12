@@ -1,33 +1,42 @@
 /* COLORS:
     - dirty white: #fff5de
     - night blue: #050047
+
+    v2:
+    - white: #fafafa
+    - black/gray: #312c32
 */
 
 html{
     width: 100%;
     height: 100%;
-    background-color: #fff5de;
+    background-color: #fafafa;
 }
 
 body{
     width: 100%;
     height: 100vh;
-    background-color: #fff5de;
-    border: 10px solid #050047;
+    background-color: #fafafa;
+    border: 10px solid #312c32;
     
     font-family: Helvetica, sans-serif;
     font-weight: 100;
     font-size: 14px;
     line-height: 1.2em;
     
-    color: #050047;
+    color: #312c32;
     
     transition: border .5s ease;
 }
 
+/* Helper classes */
+
+.text-center{
+    text-align: center;
+}
+
 .noBorderBody{
     border: 0px solid #050047;
-    
 }
 
 .heightAuto{
@@ -63,11 +72,11 @@ p{
 }
 
 a{
-    color: #050047;
+    color: #312c32;
 }
 
 a:hover{
-    color: #050047;
+    color: #312c32;
     text-decoration: underline;
 }
 
@@ -85,16 +94,16 @@ a:hover{
 }
 
 .top-left{
-    border-top: 10px solid #050047;
-    border-left: 10px solid #050047;
+    border-top: 10px solid #312c32;
+    border-left: 10px solid #312c32;
     
     top: 50%;
     left: 50%;
 }
 
 .top-right{
-    border-top: 10px solid #050047;
-    border-right: 10px solid #050047;
+    border-top: 10px solid #312c32;
+    border-right: 10px solid #312c32;
     
     top: 50%;
     left: 50%;
@@ -102,8 +111,8 @@ a:hover{
 }
 
 .bottom-left{
-    border-bottom: 10px solid #050047;
-    border-left: 10px solid #050047;
+    border-bottom: 10px solid #312c32;
+    border-left: 10px solid #312c32;
     
     top: 50%;
     left: 50%;
@@ -111,8 +120,8 @@ a:hover{
 }
 
 .bottom-right{
-    border-bottom: 10px solid #050047;
-    border-right: 10px solid #050047;
+    border-bottom: 10px solid #312c32;
+    border-right: 10px solid #312c32;
     
     top: 50%;
     left: 50%;
@@ -157,7 +166,7 @@ a:hover{
     width: 80px;
     height: 80px;
     
-    background: url(../img/circle.png) center no-repeat;
+    background: url(../img/circle-black.png) center no-repeat;
     background-size: cover;
     
     opacity: 1;
@@ -221,7 +230,7 @@ a:hover{
 .close-X{
     width: 30px;
     height: 30px;
-    background-image: url(../img/x.png);
+    background-image: url(../img/x-black.png);
     
     position: fixed;
     top: 50px;
@@ -273,7 +282,6 @@ section h4{
 
 section p, section li{
     font-size: 14px;
-    text-align: center;
 }
 
 section a{
@@ -328,7 +336,7 @@ section a{
     width: 100%;
     height: 100%;
     
-    background-color: #050047;
+    background-color: #312c32;
     opacity: 0;
     
     transition: all .2s linear;
@@ -343,7 +351,7 @@ section a{
     width: 30px;
     height: 30px;
     
-    background: url(../img/piu-porjects.png) center no-repeat;
+    background: url(../img/piu-projects-white.png) center no-repeat;
     background-size: cover;
     
     opacity: 0;
@@ -362,7 +370,7 @@ section a{
     width: 50px;
     height: 50px;
     
-    background: url(../img/circle-projects.png) center no-repeat;
+    background: url(../img/circle-projects-white.png) center no-repeat;
     background-size: cover;
     
     opacity: 0;
@@ -536,6 +544,7 @@ section a{
 .related-projects article a{
     position: relative;
     display: block;
+    text-decoration: none;
 }
 
 .related-projects article img{
