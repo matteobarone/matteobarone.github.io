@@ -10,6 +10,10 @@
     -blue: 0028ff - rgb(0,40,255)
 */
 
+
+
+/* GLOBAL SELECTORS */
+
 html{
     width: 100%;
     height: 100%;
@@ -30,20 +34,6 @@ body{
     color: #0028ff;
     
     transition: border .5s ease;
-}
-
-/* Helper classes */
-
-.text-center{
-    text-align: center;
-}
-
-.noBorderBody{
-    border: 0px solid #0028ff;
-}
-
-.heightAuto{
-    height: auto;
 }
 
 h1, h2, h3{
@@ -82,6 +72,26 @@ a:hover{
     color: #0028ff;
     text-decoration: underline;
 }
+
+
+
+/* Helper classes */
+
+.text-center{
+    text-align: center;
+}
+
+.noBorderBody{
+    border: 0px solid #0028ff;
+}
+
+.heightAuto{
+    height: auto;
+}
+
+
+
+/* INDEX */
 
 .piu div{
     width: 35px;
@@ -251,7 +261,7 @@ a:hover{
 
 
 
-/* SECTION - In the section there is my projects and at the end of the page there is my CV and contact */
+/* PROJECTS - In the Projects page there is my projects and at the end of the page there is my CV and contact */
 
 section{
     padding: 50px;
@@ -317,6 +327,8 @@ section a{
     width: 47.5%;
     min-height: 350px;
     
+    vertical-align: top;
+    
     margin-bottom: 4%;
     margin-right: 5%;
 }
@@ -345,7 +357,7 @@ section a{
     background-color: #0028ff;
     opacity: 0;
     
-    transition: all .2s linear;
+    transition: all 0s linear;
 }
 
 .piu-projects{
@@ -416,6 +428,10 @@ section a{
     color: #fafafa;
 }
 
+.about p{
+    margin-bottom: 30px;
+}
+
 
 .about-img{
     width: 50%;
@@ -440,6 +456,8 @@ section a{
     justify-content: center;
     align-items: flex-start;
     
+    position: relative;
+    
     vertical-align: top;
     
     padding: 30px 50px;
@@ -457,23 +475,37 @@ section a{
     text-align: left;
 }
 
+.footer{
+    font-size: 11px;
+    position: absolute;
+    bottom: 40px;
+    right: 50px;
+}
 
 
 
 
-/* PROJECT PAGE */
+
+/* SINGLE PROJECT */
 
 
 .back-to-projects{
     text-align: left;
     position: fixed;
+    padding: 5px;
+        
+    background-color: #fafafa;
+        
+    z-index: 1;
 }
 
 
 
 .single-project{
-    max-width: 1800px;
+    max-width: 1500px;
     margin: 0 auto;
+    
+    position: relative;
     
 }
 
@@ -596,6 +628,8 @@ section a{
     width: 30%;
     min-height: 350px;
     
+    vertical-align: top;
+    
     margin-bottom: 4%;
     margin-right: 5%;
 }
@@ -635,9 +669,107 @@ section a{
 
 
 
+
+
+
 /****** MEDIA QUERIES ******/
 
-@media(max-width:460px){
+@media(max-width: 1280px){
+    
+    /* index */
+    
+    h1, h2{
+        font-size: 2em;
+        letter-spacing: 5px;
+    }
+    
+    /* projects */
+    
+    section h2{
+        font-size: 28px;
+    }
+    
+    section h3{
+        font-size: 21px;
+    }
+    
+    section h4{
+        font-size: 14px;
+    }
+    
+    section p, section li{
+        font-size: 13px;
+    }
+
+}
+
+
+@media(max-width: 930px){
+    /* ABOUT */
+    
+    .about{
+        display: block;
+    }
+
+    .about-img{
+        width: 100%;
+        padding-top: 80%;
+    }
+
+    .about-content{
+        width: 100%;
+        display: block;
+        padding: 50px;
+    }
+
+    .about-content > div{
+        width: 50%;
+        display: inline-block;
+    }
+
+    .about-content > div h3, .about-content > div h4{
+        text-align: left;
+    }
+    
+    /* Single Project */
+    
+    .bulbpoint-project{
+        width: 100%;
+    }
+    
+    .bulbpoint-project section{
+        padding: 20px;
+    }
+}
+
+
+
+
+@media(max-width: 560px){
+    
+    /* single project */
+    
+    .bulbpoint-project{
+        padding: 20px 0;
+    }
+
+    .bulbpoint-project section{
+        width: 100%;
+        padding: 0;
+    }
+    
+    .related-projects article{
+        width: 100%;
+
+        margin-bottom: 4%;
+        margin-right: 0;
+    }
+    
+}
+
+
+
+@media(max-width: 460px){
     
     /* index */
     
@@ -760,15 +892,25 @@ section a{
         margin-bottom: 15%;
     }
     
-    .about-div{
+    
+    /* about */
+
+    .about-content{
+        padding: 10px;
+    }
+
+    .about-content > div{
         width: 100%;
+        display: block;
     }
     
-    .about-div img {
-        width: 100%;
+    .footer{
+        font-size: 10px;
+        bottom: 20px;
+        right: 25px;
     }
-    
-    
+
+
     
     /* single project */
     
@@ -794,17 +936,6 @@ section a{
     .intro-project img.phone{
         max-width: 150px;
     }
-
-    
-    .bulbpoint-project{
-        width: 100%;
-        padding: 20px 0;
-    }
-
-    .bulbpoint-project section{
-        width: 100%;
-        padding: 0;
-    }
     
     .description-project{
         width: 100%;
@@ -816,16 +947,8 @@ section a{
     }
     
     .related-projects{
-        padding: 0;
+        padding: 0 0 20px 0;
     }
-    
-    .related-projects article{
-        width: 100%;
-
-        margin-bottom: 4%;
-        margin-right: 0;
-    }
-
     
 }
 

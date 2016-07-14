@@ -16,12 +16,10 @@ if(close){
 }
 
 function openPiu(){
-    piu.classList.toggle("expandPlus");
-    //close.classList.toggle("animate-x");
+    piu.classList.add("expandPlus");
     circle.classList.toggle("hide");
     bio.classList.toggle("hide");
     versionBox.classList.toggle("hide");
-    //projects.classList.toggle("showProjects");
     body.classList.toggle("noBorderBody");
     
     setTimeout(function(){
@@ -31,11 +29,8 @@ function openPiu(){
 }
 
 function closePiu(){
-    piu.classList.toggle("expandPlus");
+    piu.classList.remove("expandPlus");
     close.classList.toggle("animate-x");
-    //circle.classList.toggle("hide");
-    //bio.classList.toggle("hide");
-    //versionBox.classList.toggle("hide");
     projects.classList.toggle("showProjects");
     body.classList.toggle("noBorderBody");
     body.classList.toggle("heightAuto");
