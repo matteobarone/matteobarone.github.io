@@ -38,6 +38,7 @@ function closePiu(){
     //versionBox.classList.toggle("hide");
     projects.classList.toggle("showProjects");
     body.classList.toggle("noBorderBody");
+    body.classList.toggle("heightAuto");
     
     setTimeout(function(){
         goToHomePage(); 
