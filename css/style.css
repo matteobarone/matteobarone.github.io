@@ -268,19 +268,19 @@ section h1{
 }
 
 section h2{
-    font-size: 28px;
+    font-size: 35px;
 }
 
 section h3{
-    font-size: 21px;
+    font-size: 28px;
     letter-spacing: 3px;
 }
 
 section h4{
-    font-size: 15px;
+    font-size: 16px;
     text-align: center;
     font-weight: 100;
-    margin: 20px 0 5px 0;
+    margin: 20px 0 8px 0;
 }
 
 section p, section li{
@@ -446,7 +446,7 @@ section a{
     text-align: left;
 }
 
-.about-content > div h3{
+.about-content > div h3, .about-content > div h4{
     text-align: left;
 }
 
@@ -494,6 +494,10 @@ section a{
     display: inline-block;
     width: 33%;
     vertical-align: top;
+}
+
+.bulbpoint-project section img{
+    width: 14px;
 }
 
 .content-project{
