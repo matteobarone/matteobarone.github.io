@@ -59,13 +59,13 @@ h1{
 }
 
 h2{
-    font-size: 2em;
+    font-size: 2.5em;
     text-align: center;
     line-height: 100px;
 }
 
 h3{
-    font-size: 1.5em;
+    font-size: 2em;
     text-align: center;
     margin: 20px 0;
 }
@@ -421,10 +421,16 @@ section a{
     width: 50%;
     display: inline-block;
     vertical-align: top;
+    
+    background: url('../img/about-img.jpg');
+    background-size: cover;
+    background-position: center;
 }
 
-.about-img img{
-    width: 100%;
+.about-img:hover{
+    background: url('../img/about-gif.gif');
+    background-size: cover;
+    background-position: center;
 }
 
 .about-content{
@@ -436,7 +442,7 @@ section a{
     
     vertical-align: top;
     
-    padding: 50px 70px;
+    padding: 30px 50px;
 }
 
 .about-content > div{
@@ -444,6 +450,7 @@ section a{
     display: inline-block;
     vertical-align: top;
     text-align: left;
+    padding: 10px;
 }
 
 .about-content > div h3, .about-content > div h4{
