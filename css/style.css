@@ -349,10 +349,11 @@ section a{
 
 .bg-hover{
     position: absolute;
-    top: 0;
+    top: 5%;
+    left: 3.5%;
     
-    width: 100%;
-    height: 100%;
+    width: 93%;
+    height: 90%;
     
     background-color: #0028ff;
     opacity: 0;
@@ -532,6 +533,8 @@ section a{
 .bulbpoint-project section{
     display: inline-block;
     width: 33%;
+    padding: 30px 50px;
+    
     vertical-align: top;
 }
 
@@ -542,6 +545,8 @@ section a{
 .content-project{
     display: inline-block;
     width: 100%;
+    
+    padding: 30px 0;
     
     vertical-align: top;
     text-align: center;
@@ -619,7 +624,7 @@ section a{
     max-width: 700px;
     
     margin: 0 auto;
-    padding: 40px 0;
+    padding: 30px 0;
 }
 
 
@@ -705,6 +710,7 @@ section a{
 
 
 @media(max-width: 930px){
+    
     /* ABOUT */
     
     .about{
@@ -747,6 +753,29 @@ section a{
 
 @media(max-width: 560px){
     
+    /* projects */
+    
+    .projects article a:hover .bg-hover{
+        opacity: 0;
+    }
+
+    .projects article a:hover .piu-projects{
+        opacity: 0;
+    }
+
+    .projects article a:hover .circle-projects{
+        opacity: 0;
+    }
+
+    
+    /* about */
+    
+    .about-img{
+        background: url('../img/about-gif.gif');
+        background-size: cover;
+        background-position: center;
+    }
+    
     /* single project */
     
     .bulbpoint-project{
@@ -763,6 +792,10 @@ section a{
 
         margin-bottom: 4%;
         margin-right: 0;
+    }
+    
+    .mobile-video-box{
+        display: none;
     }
     
 }
@@ -856,6 +889,7 @@ section a{
     
     .close-X{
         background-image: url(../img/x-mobile.png);
+        background-size: contain;
         top: 30px;
         margin-left: 60px;
     }

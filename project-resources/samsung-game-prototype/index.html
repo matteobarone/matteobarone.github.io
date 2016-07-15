@@ -1,0 +1,148 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <link rel="stylesheet" href="style.css"/>
+        
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.0/jquery-ui.min.js"></script>
+        
+        <script src="jquery-circle-progress/dist/circle-progress.js"></script>
+        
+        <script src="jquery.ui.touch-punch.min.js"></script>
+        
+        <script>
+            function getTime(){
+                var seconds = document.getElementById("timer").innerHTML;
+                //alert("1 " + seconds);
+                seconds = parseInt(seconds,10);
+                //alert("2 " + seconds);
+                seconds = seconds+1;
+                //alert("3 " + seconds);
+                console.log(seconds);
+                if(seconds < 10){
+                    document.getElementById("timer").innerHTML = "0" + seconds;
+                    seconds = seconds / 60;
+                    $('.first.circle').circleProgress({
+                        value: seconds,
+                        animation: false,
+                        fill: { gradient: ['#49acae', '#49acae'] }
+                    });
+                }else{
+                    document.getElementById("timer").innerHTML = seconds;
+                    seconds = seconds / 60;
+                    $('.first.circle').circleProgress({
+                        value: seconds,
+                        animation: false,
+                        fill: { gradient: ['#49acae', '#49acae'] }
+                    });
+                    console.log(seconds);
+                    if(seconds >= 1){
+                        alert("You loose the game.\nOut of time\nTime: " + seconds*60 );
+                        window.location.reload();
+                    }
+                }
+                
+                window.setTimeout('getTime()',1000);
+            }
+        </script>
+        
+        <script>
+            $(document).ready(function(){
+                getTime();
+                var counter = 0;
+            });
+            
+            $(function() {
+                $(".draggable").draggable({
+                    revert: 'invalid',
+                    cursor: "move",
+                    cursorAt: { top: 25, left: 25 },
+                    stop: function(event, ui) {
+                        var box = $(this);
+                        var offsetBox = box.offset();
+                        if( (offsetBox.left >= 25 && offsetBox.left <= 263) && (offsetBox.top >= 120 && offsetBox.top <= 398) ){
+                            //alert(offsetBox.left + " " + offsetBox.top);
+                            $(this).css("display", "none");
+                            counter = document.getElementById("counter").innerHTML;
+                            counter = parseInt(counter,10);
+                            counter = counter+1;
+                            console.log(counter);
+                            document.getElementById("counter").innerHTML = counter;
+                            counter = counter / 7;
+                            
+                            $('.second.circle').circleProgress({
+                                value: counter,
+                                animation: false,
+                                fill: { gradient: ['#49acae', '#49acae'] }
+                            });
+                        }
+                        var counter = document.getElementById("counter").innerHTML;
+                        var seconds = document.getElementById("timer").innerHTML;
+                        if(counter == 7){
+                            $("#winner").css("display", "block");
+                        }
+                    }
+                });
+                $("#droppable").droppable({
+                    hoverClass: 'ui-state-active',
+                    drop: function(event, ui) {
+                        $(this).addClass('ui-state-highlight').find('p').html('Rilasciato!');
+                    }
+                });
+            });
+        </script>
+
+    </head>
+    <body>
+        
+        <div class="wrapper">
+            
+            <p class="timer"><span id="timer">-1</span></p>
+            <p class="counter"><span id="counter">0</span></p>
+            
+            <div id="droppable"></div>
+
+            <div>
+                <div class="draggable firstBox calzini">
+                    <img src="img/calzini.png"/>
+                </div>
+                <div class="draggable mutande">
+                    <img src="img/mutande.png"/>
+                </div>
+                <div class="draggable cappello">
+                    <img src="img/cappello.png"/>
+                </div>
+                <div class="draggable jeans">
+                    <img src="img/jeans.png"/>
+                </div>
+                <div class="draggable magliaVerde">
+                    <img src="img/magliaVerde.png"/>
+                </div>
+                <div class="draggable camicia">
+                    <img src="img/camicia.png"/>
+                </div>
+                <div class="draggable pantaloni">
+                    <img src="img/pantaloni.png"/>
+                </div>
+            </div>
+            
+            <div class="circles">
+                <div class="first circle">
+                    <canvas width="50" height="50"></canvas>
+                </div>
+                
+                <div class="second circle">
+                    <canvas width="50" height="50"></canvas>
+                </div>
+            </div>
+            
+            <div id="winner">
+                <img src="img/win.png">
+            </div>
+
+        </div>
+</body>
+</html>

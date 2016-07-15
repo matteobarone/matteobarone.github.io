@@ -67,15 +67,23 @@ function playVid() {
 
 
 //Video about controller with hover
+
 var figure = $(".about-img").hover( hoverVideo, hideVideo );
 
 function hoverVideo(e) {
-    $(".song").get(0).play(); 
+    var w = window.innerWidth;
+    if(w > 560){
+        $(".song").get(0).play(); 
+    }
 }
 
 function hideVideo(e) {
-    $(".song").get(0).pause(); 
+    var w = window.innerWidth;
+    if(w > 560){
+        $(".song").get(0).pause(); 
+    }
 }
+
 
 
 
