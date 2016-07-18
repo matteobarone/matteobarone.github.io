@@ -75,7 +75,7 @@ a:hover{
 
 
 
-/* Helper classes */
+/* HELPER CLASSES */
 
 .text-center{
     text-align: center;
@@ -151,8 +151,6 @@ a:hover{
     margin-top: -25px;
 }
 
-
-
 .expandPlus .top-left{
     position: fixed;
     top: 20px;
@@ -181,14 +179,8 @@ a:hover{
     margin-top: -55px;
 }
 
-.white-brackets-bottom-left{
-    border-bottom: 10px solid white;
-    border-left: 10px solid white;
-}
-
-.white-brackets-bottom-right{
-    border-bottom: 10px solid white;
-    border-right: 10px solid white;
+.white-brackets{
+    border-color: white;
 }
 
 .circle{
@@ -272,17 +264,21 @@ a:hover{
     margin-left: 80px;
     
     z-index: 2;
-    transition: all .5s ease;
+    transition: margin .5s ease;
+}
+
+.x-white{
+    background-image: url(../img/x-white.png);
 }
 
 .animate-x{
     margin-left: -80px;
-    transition: all .5s ease 1.7s;
+    transition: margin .5s ease 1.7s;
 }
 
 
 
-/* PROJECTS - In the Projects page there is my projects and at the end of the page there is my CV and contact */
+/* PROJECTS - In the Projects page there is my projects and at the end of the page there is the about section */
 
 section{
     padding: 50px;
@@ -322,7 +318,7 @@ section a{
     text-decoration: underline;
 }
 
-.projects{
+.wrapper-projects-about{
     max-width: 1800px;
     margin: 0 auto;
     
@@ -331,16 +327,11 @@ section a{
     overflow: hidden;
     visibility: hidden;
     
-    transition: all .5s ease;
+    /*transition: all .5s ease;*/
 }
 
-.showProjects{
-    opacity: 1;
-    height: auto;
-    overflow: visible;
-    visibility: visible;
+.projects{
     
-    transition: all .5s ease 1.5s;
 }
 
 .projects article{
@@ -497,6 +488,15 @@ section a{
     text-align: left;
 }
 
+.show{
+    opacity: 1;
+    height: auto;
+    overflow: visible;
+    visibility: visible;
+    
+    transition: all .5s ease 1.5s;
+}
+
 .footer{
     font-size: 11px;
     position: absolute;
@@ -506,10 +506,7 @@ section a{
 
 
 
-
-
 /* SINGLE PROJECT */
-
 
 .back-to-projects{
     text-align: left;
@@ -520,8 +517,6 @@ section a{
         
     z-index: 1;
 }
-
-
 
 .single-project{
     max-width: 1500px;
@@ -590,8 +585,6 @@ section a{
 .content-more-pictures img{
     width: 22%;
 }
-
-
 
 .mobile-video-box{
     display: inline-block;
@@ -668,7 +661,6 @@ section a{
     padding: 30px 0;
 }
 
-
 .related-projects article{
     display: inline-block;
     width: 30%;
@@ -720,16 +712,20 @@ section a{
 
 /****** MEDIA QUERIES ******/
 
+
+
+/* Screens smaller than 1280px */
+
 @media(max-width: 1280px){
     
-    /* index */
+    /* INDEX */
     
     h1, h2{
         font-size: 2em;
         letter-spacing: 5px;
     }
     
-    /* projects */
+    /* PROJECTS */
     
     section h2{
         font-size: 28px;
@@ -749,6 +745,9 @@ section a{
 
 }
 
+
+
+/* Screens smaller than 930px */
 
 @media(max-width: 930px){
     
@@ -778,7 +777,7 @@ section a{
         text-align: left;
     }
     
-    /* Single Project */
+    /* SINGLE PROJECT */
     
     .bulbpoint-project{
         width: 100%;
@@ -805,10 +804,11 @@ section a{
 
 
 
+/* Screens smaller than 560px */
 
 @media(max-width: 560px){
     
-    /* projects */
+    /* PROJECTS */
     
     .projects article a:hover .bg-hover{
         opacity: 0;
@@ -822,8 +822,7 @@ section a{
         opacity: 0;
     }
 
-    
-    /* about */
+    /* ABOUT */
     
     .about-img{
         background: url('../img/about-gif.gif');
@@ -831,7 +830,7 @@ section a{
         background-position: center;
     }
     
-    /* single project */
+    /* SINGLE PROJECT */
     
     .bulbpoint-project{
         padding: 20px 0;
@@ -857,9 +856,11 @@ section a{
 
 
 
+/* Screens smaller than 460px */
+
 @media(max-width: 460px){
     
-    /* index */
+    /* INDEX */
     
     body{
         border: 5px solid #0028ff;
@@ -869,7 +870,6 @@ section a{
         font-size: 1.5em;
         letter-spacing: 5px;
     }
-    
     
     p{
         font-size: .75em;
@@ -918,6 +918,10 @@ section a{
         margin-top: -20px;
     }
     
+    .white-brackets{
+        border-color: white;
+    }
+    
     .expandPlus .top-left{
         top: 5px;
         left: 5px;
@@ -952,10 +956,12 @@ section a{
     .animate-x{
         margin-left: -60px;
     }
+    
+    .x-white{
+        background-image: url(../img/x-mobile-white.png);
+    }
 
-    
-    
-    /* projects */
+    /* PROJECTS */
     
     section{
         padding: 10px;
@@ -981,8 +987,7 @@ section a{
         margin-bottom: 15%;
     }
     
-    
-    /* about */
+    /* ABOUT */
 
     .about-content{
         padding: 10px;
@@ -999,9 +1004,7 @@ section a{
         right: 25px;
     }
 
-
-    
-    /* single project */
+    /* SINGLE PROJECT */
     
     .back-to-projects{
         left: 0;
@@ -1041,14 +1044,3 @@ section a{
     }
     
 }
-
-
-
-
-
-
-
-
-
-
-
