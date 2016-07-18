@@ -53,20 +53,32 @@ function goToHomePage(){
 //Video Controller
 
 var mobileAtmVideo = document.getElementById("mobile-atm-video");
-var mobileAtmController = document.getElementById("mobile-atm-controller");
+var mobileControllerPlay = document.getElementById("mobile-controller-play");
+var mobileControllerPause = document.getElementById("mobile-controller-pause");
 
-if(mobileAtmController){
-    mobileAtmController.addEventListener("click", playVid);
+var buttonPlay = document.getElementById("controller-play");
+var buttonPause = document.getElementById("controller-pause");
+
+if(mobileControllerPlay){
+    mobileControllerPlay.addEventListener("click", playVid);
+    mobileControllerPause.addEventListener("click", pauseVid);
 }
 
 function playVid() {
     mobileAtmVideo.play();
-    mobileAtmController.classList.add("hide");
+    mobileControllerPlay.classList.add("no-display");
+    mobileControllerPause.classList.remove("no-display");
+}
+
+function pauseVid() {
+    mobileAtmVideo.pause();
+    mobileControllerPause.classList.add("no-display");
+    mobileControllerPlay.classList.remove("no-display");
 }
 
 
 
-//Video about controller with hover
+//Controller for the hover in the about: active/disactive song
 
 var figure = $(".about-img").hover( hoverVideo, hideVideo );
 
@@ -90,41 +102,52 @@ function hideVideo(e) {
 
 
 
-
-
-
-
-
-
-
-
-
-
-//Script to manage the changing version (White/Blue)
-
-function loadjscssfile(filename, filetype){
-    if (filetype=="css"){ //if filename is an external CSS file
-        var fileref=document.createElement("link")
-        fileref.setAttribute("rel", "stylesheet")
-        fileref.setAttribute("type", "text/css")
-        fileref.setAttribute("href", filename)
+window.onscroll = function(e) {
+    
+    //get brackets
+    var bracketTopLeft = document.getElementById("bracket-top-left");
+    var bracketTopRight = document.getElementById("bracket-top-right");
+    var bracketBottomLeft = document.getElementById("bracket-bottom-left");
+    var bracketBottomRight = document.getElementById("bracket-bottom-right");
+    
+    // Get the pageYOffset
+    var pageOffset = window.pageYOffset;
+    
+    //browser height
+    var browserheight = window.innerHeight;
+    
+    // Page height minus the browser height
+    var totalHeightMinusBrowser = document.body.clientHeight - window.innerHeight;
+    
+    //about offset
+    var about = document.getElementById("about");
+    var offsetAbout = about.getBoundingClientRect().top;
+    
+    var offsetBottomBrackets = offsetAbout - browserheight + 55;
+    
+    
+    console.log("browserHeight -> " + browserheight);
+    console.log("bottom brackets offset -> " + offsetBottomBrackets);
+    
+    if(offsetBottomBrackets < 0){
+        bracketBottomLeft.classList.add("white-brackets-bottom-left");
+        bracketBottomRight.classList.add("white-brackets-bottom-right");
+    }else{
+        bracketBottomLeft.classList.remove("white-brackets-bottom-left");
+        bracketBottomRight.classList.remove("white-brackets-bottom-right");
     }
-    if (typeof fileref!="undefined")
-        document.getElementsByTagName("head")[0].appendChild(fileref)
+
+
 }
 
-data = new Date();
-
-ora = data.getHours();
-minuti = data.getMinutes();
 
 
 
-if(ora >= 8 || ora < 20){
-    //alert("Ora attuale: " + ora + ":" + (minuti< 10 ? "0"+minuti : minuti));
-    var oreMancanti = 19 - ora;
-    var minutiMancanti = 60 - minuti;
-    //alert("Mancano: " + oreMancanti + ":" + minutiMancanti + " al cambio di versione");
-}
 
-//loadjscssfile("mystyle.css", "css") ////dynamically load and add this .css file
+
+
+
+
+
+
+
