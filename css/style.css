@@ -62,6 +62,7 @@ h3{
 
 p{
     margin-bottom: 10px;
+    line-height: 18px;
 }
 
 a{
@@ -313,6 +314,7 @@ section h4{
 
 section p, section li, section a{
     font-size: 14px;
+    line-height: 18px;
 }
 
 section a{
