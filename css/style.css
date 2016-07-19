@@ -326,19 +326,17 @@ section a{
 }
 
 .wrapper-projects-about{
-    max-width: 1800px;
-    margin: 0 auto;
+    width: 100%;
     
     opacity: 0;
     height: 100%;
     overflow: hidden;
     visibility: hidden;
-    
-    /*transition: all .5s ease;*/
 }
 
 .projects{
-    
+    max-width: 1800px;
+    margin: 0 auto;
 }
 
 .projects article{
