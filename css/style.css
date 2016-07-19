@@ -898,6 +898,10 @@ section a{
         padding: 10px;
     }
     
+    .bio h1{
+        font-size: 21px;
+    }
+    
     .circle{
         margin-top: -30px;
         margin-left: -30px;
