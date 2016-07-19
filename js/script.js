@@ -20,7 +20,8 @@ if(close){
     close.addEventListener("click", closePiu);
 }
 
-function openPiu(){
+function openPiu(e){
+    e.preventDefault();
     piu.classList.add("expandPlus");
     circle.classList.toggle("hide");
     bio.classList.toggle("hide");
@@ -33,7 +34,8 @@ function openPiu(){
     
 }
 
-function closePiu(){
+function closePiu(e){
+    e.preventDefault();
     piu.classList.remove("expandPlus");
     close.classList.toggle("animate-x");
     wrapperProjectsAbout.classList.remove("show");
@@ -83,21 +85,28 @@ function pauseVid() {
 
 
 
-//Controller for the hover in the about: active/disactive song - JQUERY
+//Controller for the hover in the about: active/disactive song
+var aboutImg = document.getElementById("about-img");
+var song = document.getElementById("song");
+if(aboutImg){
+    aboutImg.addEventListener("mouseover", hoverVideo);
+    aboutImg.addEventListener("mouseout", hideVideo);
+}
 
-var figure = $(".about-img").hover( hoverVideo, hideVideo );
-
-function hoverVideo(e) {
+function hoverVideo() {
+    //alert("hover");
     var w = window.innerWidth;
     if(w > 560){
-        $(".song").get(0).play(); 
+        song.play();
     }
 }
 
-function hideVideo(e) {
+function hideVideo() {
+    
+    //alert("out");
     var w = window.innerWidth;
     if(w > 560){
-        $(".song").get(0).pause(); 
+        song.pause();
     }
 }
 

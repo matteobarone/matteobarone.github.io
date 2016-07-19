@@ -40,7 +40,7 @@ h1, h2, h3{
     font-family: 'Lato', sans-serif;
     font-weight: 400;
     line-height: 1.5em;
-    letter-spacing: 10px;
+    letter-spacing: 5px;
 }
 
 h1{
@@ -305,12 +305,13 @@ section h3{
 
 section h4{
     font-size: 16px;
+    font-weight: bold;
     text-align: center;
     font-weight: 100;
-    margin: 20px 0 8px 0;
+    margin: 20px 0 10px 0;
 }
 
-section p, section li{
+section p, section li, section a{
     font-size: 14px;
 }
 
@@ -718,6 +719,19 @@ section a{
 
 @media(max-width: 1280px){
     
+    .about-content{
+        padding: 10px;
+    }
+
+
+}
+
+
+
+/* Screens smaller than 930px */
+
+@media(max-width: 960px){
+    
     /* INDEX */
     
     h1, h2{
@@ -731,10 +745,6 @@ section a{
         font-size: 28px;
     }
     
-    section h3{
-        font-size: 21px;
-    }
-    
     section h4{
         font-size: 14px;
     }
@@ -742,14 +752,6 @@ section a{
     section p, section li{
         font-size: 13px;
     }
-
-}
-
-
-
-/* Screens smaller than 930px */
-
-@media(max-width: 930px){
     
     /* ABOUT */
     
@@ -810,6 +812,10 @@ section a{
     
     /* PROJECTS */
     
+    section h3{
+        font-size: 21px;
+    }
+    
     .projects article a:hover .bg-hover{
         opacity: 0;
     }
@@ -828,6 +834,10 @@ section a{
         background: url('../img/about-gif.gif');
         background-size: cover;
         background-position: center;
+    }
+    
+    .about-content{
+        padding: 10px;
     }
     
     /* SINGLE PROJECT */
@@ -869,10 +879,6 @@ section a{
     h1, h2{
         font-size: 1.5em;
         letter-spacing: 5px;
-    }
-    
-    p{
-        font-size: .75em;
     }
     
     .bio{
@@ -969,15 +975,6 @@ section a{
     
     section h2{
         font-size: 18px;
-    }
-    
-    section h3{
-        font-size: 15px;
-        letter-spacing: 2px;
-    }
-    
-    section p{
-        font-size: 12px;
     }
     
     .projects article{
