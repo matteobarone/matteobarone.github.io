@@ -779,6 +779,18 @@ footer{
 
 @media(max-width:500px){
     
+    /* HEADER */
+    
+    video{
+        display: none;
+    }
+    
+    header{
+        background: url(../images/home-mobile.jpg) no-repeat center;
+        background-size: cover;
+        height: 100vh;
+    }
+    
     /* PRODUCTS IN HOMEPAGE */
     
     .product-categories nav {
@@ -815,6 +827,8 @@ footer{
         background-size: contain;
     }
 }
+
+
 
 
 

@@ -22,9 +22,14 @@
         <!-- HEADER -->
         <header>
             
-            <video autoplay>
-                <source src="video/luceplan-video.mp4" type="video/mp4">
+            <span id="parent-video">
+            
+            <video id="video-home" autoplay>
+                <source  src="video/luceplan-video.mp4" type="video/mp4">
             </video>
+
+            </span>
+            
             
             <div class="float-left logo-nav">
                 
@@ -265,10 +270,37 @@
         
         
         <script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+        <script src="js/jquery.mobile.custom.min.js"></script>
         <script src="css/bootstrap/js/bootstrap.js"></script>
         <script>
             $("#mioCarousel").carousel();
-            $("#productsCarousel").carousel();
+        </script>
+        
+        <script>
+            
+            $(document).ready(function() {  
+                $("#mioCarousel").swiperight(function() {  
+                    $(this).carousel('prev');  
+                });  
+                $("#mioCarousel").swipeleft(function() {  
+                    $(this).carousel('next');  
+                });  
+            });
+            
+        </script>
+        
+        <script>
+            
+            var parentVideo = document.getElementById("parent-video");
+            var videoHome = document.getElementById("video-home");
+            var w = window.innerWidth;
+            
+            console.log(w);
+            
+            if(w < 500){
+                parentVideo.removeChild(videoHome);
+            }
+        
         </script>
             
         <script>
