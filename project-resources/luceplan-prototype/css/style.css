@@ -1,0 +1,832 @@
+/*COLOR PALETTE:
+    - white
+    - dimgray
+    - dark grey: #333
+    - black
+*/
+
+
+
+/* GLOBAL SELECTORS */
+
+*{
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    font-size: 14px;
+    color: dimgray;
+}
+
+h2{
+    font-size: 45px;
+}
+
+h3, h4{
+    font-weight: 100;
+    font-size: 2em;
+    color: #333;
+}
+
+h4{
+    font-size: 1em;
+}
+
+h5{
+    margin: 8px 0 3px 0;
+}
+
+a{
+    color: #000;
+}
+
+p{
+    
+    font-weight: 300;
+}
+
+.float-left{
+    float: left;
+}
+
+.float-right{
+    float: right;
+}
+
+.clear{
+    clear: both;
+}
+
+.display-none{
+    display: none;
+    transition: all .5s ease;
+}
+
+
+
+/* HEADER */
+
+header{
+    width: 100%;
+    max-width: 1280px;
+    min-height: 720px;
+    
+    overflow: hidden;
+    position: relative;
+}
+
+header a{
+    color: white;
+}
+
+header a:hover{
+    color: white;
+}
+
+header nav{
+    margin-top: 100px;
+}
+
+video {
+    height: 100%;
+    position: absolute;
+    
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    
+    z-index: 0;
+    
+    transform-origin: center;
+    
+    
+}
+
+.logo-nav, .lang-search{
+    padding: 15px;
+    position: relative;
+    z-index: 2;
+}
+
+.logo{
+    width: 70px;
+    height: 70px;
+    background: url(../images/logo.png) no-repeat;
+    background-size: contain;
+}
+
+.logo a{
+    width: 70px;
+    height: 70px;
+    display: block;
+}
+
+.logo-nav nav{
+    position: relative;
+}
+
+header nav ul li {
+    margin: 20px 0;
+    letter-spacing: 3px;
+}
+
+.search{
+    display: block;
+    margin: 0 0 0 40px;
+    width: 122px;
+    height: 18px;
+    background: url(../images/search.png) no-repeat;
+    background-size: contain;
+    
+}
+
+.languages{
+    display: block;
+    text-align: right;
+    margin-top: 20px;
+}
+
+
+
+
+
+
+
+/* CONTENT */
+
+.wrapper {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1000px;
+    padding: 0 10px;
+}
+
+.wrapper h2{
+    text-align: center;
+    font-weight: 100;
+    margin: 100px 0 50px 0;
+}
+
+
+
+/* HIGHLIGHTS */
+
+.highlights *{
+}
+
+.highlights {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0px auto;
+    
+    position: relative;
+}
+
+.highlights h3{
+    font-weight: 300;
+    margin: -3px 0 10px -2px;
+}
+
+.images-highlights{
+    display: inline-block;
+    width: 66%;
+    
+    position: relative;
+    
+    transition: all .3s ease;
+}
+
+.images-highlights img{
+    width: 100%;
+    position: relative;
+    
+    transition: all .3s ease;
+    
+}
+
+.images-highlights h4{
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    margin-left: -118px;
+    font-size: 40px;
+    padding:20px;
+    border-top: 1px solid #333;
+    opacity: 0;
+    
+}
+
+.images-highlights:hover h4{
+    opacity: 1;
+}
+
+.images-highlights:hover img{
+    opacity: .2;
+}
+
+.titles-highlights{
+    display: inline-block;
+    width: 30%;
+    vertical-align: top;
+    padding-left: 30px;
+}
+
+
+/* Carousel Highlights */
+
+#mioCarousel{
+    margin-bottom: 50px;
+}
+
+.carousel-control{
+    color: #000;
+}
+
+.carousel-control:hover, .carousel-control:focus{
+    color: #000;
+}
+
+.carousel-control.right, .carousel-control.left{
+    background-image: none;
+}
+
+.carousel-fade .carousel-inner .item {
+  opacity: 0;
+  transition-property: opacity;
+}
+
+.carousel-fade .carousel-inner .active {
+  opacity: 1;
+}
+
+.carousel-fade .carousel-inner .active.left,
+.carousel-fade .carousel-inner .active.right {
+  left: 0;
+  opacity: 0;
+  z-index: 1;
+}
+
+.carousel-fade .carousel-inner .next.left,
+.carousel-fade .carousel-inner .prev.right {
+  opacity: 1;
+}
+
+.carousel-fade .carousel-control {
+  z-index: 2;
+}
+
+.carousel-indicators {
+    position: absolute;
+    bottom: 0;
+    left: inherit;
+    right: 0;
+    z-index: 15;
+    width: 33%;
+    padding-left: 30px;
+    text-align: left;
+    list-style: none;
+    margin-bottom: 0;
+}
+
+.carousel-indicators li {
+    border: 1px solid #ccc;
+}
+
+.carousel-indicators .active {
+    background-color: #ccc;
+}
+
+@media all and (transform-3d), (-webkit-transform-3d) {
+    .carousel-fade .carousel-inner > .item.next,
+    .carousel-fade .carousel-inner > .item.active.right {
+      opacity: 0;
+      -webkit-transform: translate3d(0, 0, 0);
+              transform: translate3d(0, 0, 0);
+    }
+    .carousel-fade .carousel-inner > .item.prev,
+    .carousel-fade .carousel-inner > .item.active.left {
+      opacity: 0;
+      -webkit-transform: translate3d(0, 0, 0);
+              transform: translate3d(0, 0, 0);
+    }
+    .carousel-fade .carousel-inner > .item.next.left,
+    .carousel-fade .carousel-inner > .item.prev.right,
+    .carousel-fade .carousel-inner > .item.active {
+      opacity: 1;
+      -webkit-transform: translate3d(0, 0, 0);
+              transform: translate3d(0, 0, 0);
+    }
+}
+
+
+
+
+
+
+
+
+/* PRODUCTS IN HOMEPAGE */
+
+.product-categories {
+    
+}
+
+.nav-mobile{
+    display: none;
+    padding: 50px;
+    background: linear-gradient(to bottom,rgba(255,255,255,1) 0,rgba(231,231,231,1) 50%,rgba(255,255,255,1) 100%);
+    text-align: center;
+}
+
+.product-categories nav {
+    height: 150px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
+
+.product-categories nav ul {
+    display: flex;
+    align-content: center;
+    align-items: center;
+    
+    
+    width: 100%;
+}
+
+.product-categories nav ul li {
+    display: inline-block;
+    text-align: center;
+    width: 10%;
+}
+
+.product-categories nav ul li.active{
+    font-weight: bold;
+    background: linear-gradient(to bottom,rgba(255,255,255,1) 0,rgba(245,245,245,1) 50%,rgba(255,255,255,1) 100%);
+}
+
+.product-categories nav ul li:hover{
+    background: linear-gradient(to bottom,rgba(255,255,255,1) 0,rgba(245,245,245,1) 50%,rgba(255,255,255,1) 100%);
+}
+
+.product-categories nav ul li a {
+    color: dimgrey;
+    
+    display: inline-block;
+    
+    height: 90px;
+    line-height: 90px;
+    padding: 0 10px;
+}
+
+.product-categories nav ul li a:hover{
+    text-decoration: none;
+}
+
+.product-categories nav ul img {
+    width: 1px;
+}
+
+.product-categories .wrapper{
+    width: 100%;
+    max-width: 1000px;
+    margin: 50px auto;
+}
+
+.product-categories .wrapper article {
+    width: 20%;
+    margin-right: 6%;
+    margin-bottom: 3%;
+    display: inline-block;
+    vertical-align: top;
+    transition: all .3s ease;
+    
+    position: relative;
+    
+    overflow: hidden;
+}
+
+.product-categories .wrapper article div{
+    overflow: hidden;
+    border: 1px solid #eee;
+}
+
+.product-categories .wrapper article:hover h4{
+    opacity: 1;
+}
+
+.product-categories .wrapper article.no-margin-right{
+    margin-right: 0;
+}
+
+.product-categories .wrapper article img{
+    width: 100%;
+    transition: all .3s ease;
+    
+    position: relative;
+}
+
+.product-categories .wrapper article h4{
+    position: absolute;
+    width: 100%;
+    bottom: 47px;
+    font-size: 20px;
+    padding: 10px;
+    border-top: 1px solid #333;
+    opacity: 0;
+    text-align: center;
+    
+}
+
+.product-categories .wrapper article:hover img{
+    opacity: .2;
+    transform: scale(1.05);
+}
+
+
+
+/* EXPERIENCE THE LIGHT */
+
+#elementToCling {
+    background-color: #fcc970;
+    height: 0;
+    width: 0;
+    position: relative;
+    top: 0;
+    left: 0;
+    margin-top: 240px;
+    border-radius: 25px;
+    transform-origin: 100% 100%;
+    -webkit-transform-origin: 100% 100%;
+}
+
+
+.experience-light{
+    width: 100%;
+    font-size: 0;
+    vertical-align: top;
+    margin-bottom: 50px;
+}
+
+
+.filler {
+    height: 600px;
+    width: 75%;
+    max-width: 1024px;
+    overflow: hidden;
+    background-color: #333;
+    display: inline-block;
+    vertical-align: top;
+    margin-bottom: 10px;
+}
+
+.experience-light-products{
+    height: 600px;
+    width: 25%;
+    min-width: 256px;
+    display: inline-block;
+    vertical-align: top;
+    transition: all .5s ease;
+}
+
+.experience-light-products img{
+    width: 60%;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 10px;
+}
+
+#cold-products{
+    transition: all .5s ease;
+}
+
+#warm-products{
+    transition: all .5s ease;
+}
+
+
+/* FOOTER */
+
+footer{
+    width: 100%;
+    height: 100px;
+    padding: 10px;
+    margin-bottom: 30px;
+    background: url(../images/footer.png) no-repeat center;
+    background-size: contain;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* PLP */
+
+.no-home header a{
+    color: black;
+}
+
+.no-home .logo{
+    background: url(../images/logo-black.png) no-repeat;
+    background-size: contain;
+}
+
+.no-home .search{
+    background: url(../images/search-black.png) no-repeat;
+    background-size: contain;
+}
+
+.no-home header .mainmenu {
+    left: 50%;
+    margin-left: -336px;
+    margin-top: 15px;
+    
+    position: absolute;
+}
+
+.no-home header .mainmenu nav{
+    margin: 0;
+}
+
+.no-home .mainmenu nav ul li{
+    display: inline;
+    letter-spacing: 0px;
+    padding: 0;
+    margin: 10px;
+}
+
+.no-home .mainmenu nav ul li a:hover{
+    text-decoration: underline;
+}
+
+.no-home header nav{
+    margin-top: 100px;
+}
+
+.no-home header nav ul li{
+    margin: 10px 0;
+}
+
+.product-menu nav ul li.active{
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+.product-menu nav ul li a:hover{
+    text-decoration: underline;
+}
+
+
+
+
+.othermenu li {
+    letter-spacing: 0px;
+}
+
+.othermenu nav ul li a:hover{
+    text-decoration: underline;
+} 
+
+
+
+
+
+
+
+
+
+.spaceboxes {
+    width: 100%;
+    max-width: 650px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    margin: 0 auto;
+    position: relative;
+    margin-top: -620px;
+    margin-bottom: 200px;
+}
+
+.productsboxes {
+    display: inline-block;
+    width: 300px;
+    margin: 20px 0px 10px 0px;
+    
+    transition: all .3s ease;
+    
+    position: relative;
+    
+    overflow: hidden;
+}
+
+.productsboxes div{
+    overflow: hidden;
+    border: 1px solid #eee;
+}
+
+.productsboxes img{
+    width:  100%;
+    transition: all .3s ease;
+}
+
+.productsboxes h4{
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    margin-left: -60px;
+    font-size: 20px;
+    padding: 10px;
+    border-top: 1px solid #333;
+    opacity: 0;
+    
+}
+
+.productsboxes:hover img{
+    opacity: .2;
+    transform: scale(1.05);
+}
+
+.productsboxes:hover h4{
+    opacity: 1;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* MEDIA */
+
+@media(max-width:1024px){
+    
+    /* EXPERIENCE THE LIGHT */
+    
+    .filler {
+        height: 600px;
+        width: 100%;
+        max-width: 1024px;
+        overflow: hidden;
+        background-color: #333;
+        display: inline-block;
+        vertical-align: top;
+    }
+
+    .experience-light-products{
+        height: auto;
+        width: 100%;
+        min-width: 256px;
+        display: inline-block;
+        vertical-align: top;
+        text-align: center;
+    }
+
+    .experience-light-products img{
+        width: 25%;
+        max-width: 256px; 
+        display: inline-block;
+        margin-left: 3%;
+    }
+    
+}
+
+@media(max-width:800px){
+    
+    /* HIGHLIGHTS */
+    
+    .images-highlights{
+        width: 100%;
+        margin-bottom: 30px;
+    }
+    
+    .titles-highlights{
+        width: 100%;
+        text-align: center;
+        padding-left: 0;
+    }
+    
+    .carousel-indicators{
+        bottom: -30px;
+        width: 100%;
+        padding-left: 0;
+        text-align: center;
+    }
+    
+    #mioCarousel {
+        margin-bottom: 150px;
+    }
+    
+    /* PRODUCTS IN HOMEPAGE */
+    
+    .product-categories nav {
+        height: 300px;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .product-categories nav ul {
+        display: flex;
+        flex-flow: row wrap;
+        align-content: center;
+        align-items: center;
+    }
+
+    .product-categories nav ul li {
+        width: 19%;
+    }
+
+    .product-categories .wrapper article h4{
+        background-color: rgba(255,255,255,.8);
+        opacity: 1;
+    }
+
+    .product-categories .wrapper article:hover img{
+        opacity: 1;
+        transform: scale(1);
+    }
+    
+    
+    .product-categories .wrapper article {
+        width: 44%;
+        margin-right: 10%;
+        margin-bottom: 3%;
+    }
+    
+    .product-categories .wrapper article.no-right-products{
+        margin-right: 0;
+    }
+}
+
+@media(max-width:500px){
+    
+    /* PRODUCTS IN HOMEPAGE */
+    
+    .product-categories nav {
+        display: none;
+    }
+    
+    .nav-mobile{
+        display: block;
+    }
+    
+    .product-categories .wrapper article {
+        width: 100%;
+        margin-right: 0;
+    }
+    
+    
+    /* EXPERIENCE THE LIGHT */
+    
+    .filler {
+        height: 400px;
+        width: 100%;
+        max-width: 1024px;
+        overflow: hidden;
+        background-color: #333;
+        display: inline-block;
+        vertical-align: top;
+    }
+    
+    /* FOOTER */
+
+    footer{
+        height: 370px;
+        background: url(../images/footer-mobile.png) no-repeat center;
+        background-size: contain;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
