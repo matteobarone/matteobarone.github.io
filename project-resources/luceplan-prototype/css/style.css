@@ -132,6 +132,34 @@ header nav ul li {
     letter-spacing: 3px;
 }
 
+header nav ul li a:hover{
+    text-decoration: none;
+}
+
+.logo-nav .submenu{
+    position: absolute;
+    top: 20px;
+    left: 0;
+    padding-left: 200px;
+    
+    width: 400px;
+    border-top: 2px solid white;
+    
+    opacity: 0;
+    
+    transition: opacity .5s ease;
+}
+
+.logo-nav ul.submenu li{
+    margin-top: 10px;
+}
+
+.link-for-submenu:hover .submenu{
+    opacity: 1;
+}
+
+
+
 .search{
     display: block;
     margin: 0 0 0 40px;
@@ -160,7 +188,7 @@ header nav ul li {
     margin: 0 auto;
     width: 100%;
     max-width: 1000px;
-    padding: 0 10px;
+    padding: 0 15px;
 }
 
 .wrapper h2{
@@ -341,17 +369,20 @@ header nav ul li {
 }
 
 .product-categories nav {
-    height: 150px;
+    height: 300px;
     display: flex;
     flex-flow: row wrap;
     justify-content: space-around;
+    align-items: center;
+    
+    margin-top: -50px;
 }
 
 .product-categories nav ul {
     display: flex;
+    flex-flow: row wrap;
     align-content: center;
     align-items: center;
-    
     
     width: 100%;
 }
@@ -359,8 +390,12 @@ header nav ul li {
 .product-categories nav ul li {
     display: inline-block;
     text-align: center;
-    width: 10%;
+    width: 19%;
 }
+
+
+
+
 
 .product-categories nav ul li.active{
     font-weight: bold;
@@ -449,6 +484,15 @@ header nav ul li {
 
 /* EXPERIENCE THE LIGHT */
 
+h2.experience-light-h2{
+    padding: 100px 0 50px 0;
+    margin: 0;
+    background-color: #333;
+    color: white;
+    text-align: center;
+    font-weight: 100;
+}
+
 #elementToCling {
     background-color: #fcc970;
     height: 0;
@@ -480,6 +524,9 @@ header nav ul li {
     display: inline-block;
     vertical-align: top;
     margin-bottom: 10px;
+    
+    border-top: 1px solid #ccc;
+    border-right: 1px solid #ccc;
 }
 
 .experience-light-products{
@@ -489,13 +536,28 @@ header nav ul li {
     display: inline-block;
     vertical-align: top;
     transition: all .5s ease;
+    
+    background-color: #333;
+}
+
+#cold-products, #warm-products{
+    width: 60%;
+    margin: 0 auto;
+    margin-bottom: 10px;
 }
 
 .experience-light-products img{
-    width: 60%;
-    display: block;
-    margin: 0 auto;
-    margin-bottom: 10px;
+    width: 100%;
+}
+
+.experience-light-products h5{
+    color: #ccc;
+}
+
+.experience-light-products p{
+    color: #ccc;
+    font-size: 16px;
+    margin: -5px 0 20px 0;
 }
 
 #cold-products{
@@ -535,6 +597,15 @@ footer{
 
 
 /* PLP */
+
+.hamb-menu{
+    display: none;
+    width: 30px;
+    height: 21px;
+    margin: 0;
+    float: right;
+    background: url(../images/hamb-menu.png) no-repeat center;
+}
 
 .no-home header a{
     color: black;
@@ -601,9 +672,26 @@ footer{
     text-decoration: underline;
 } 
 
+.othermenu li img{
+    padding-right: 5px;
+}
 
 
 
+.products-nav-mobile, .search-nav-mobile{
+    height: 50px;
+    width: 300px;
+    display: none;
+    border: 1px solid black;
+    text-align: center;
+    line-height: 50px;
+    vertical-align: middle;
+}
+
+.products-nav-mobile img, .search-nav-mobile img{
+    padding-left: 5px;
+    padding-bottom: 3px;
+}
 
 
 
@@ -645,14 +733,13 @@ footer{
 
 .productsboxes h4{
     position: absolute;
-    bottom: 50px;
-    left: 50%;
-    margin-left: -60px;
+    width: 100%;
+    bottom: 47px;
     font-size: 20px;
     padding: 10px;
     border-top: 1px solid #333;
     opacity: 0;
-    
+    text-align: center;
 }
 
 .productsboxes:hover img{
@@ -688,6 +775,11 @@ footer{
         background-color: #333;
         display: inline-block;
         vertical-align: top;
+        
+        margin-bottom: 0;
+        
+        border-bottom: 1px solid #ccc;
+        border-right: 0px solid #ccc;
     }
 
     .experience-light-products{
@@ -700,15 +792,34 @@ footer{
     }
 
     .experience-light-products img{
-        width: 25%;
+        width: 80%;
         max-width: 256px; 
         display: inline-block;
-        margin-left: 3%;
+        margin-left: 0;
+    }
+    
+    #cold-products, #warm-products{
+        width: 100%;
+        padding: 10px;
+    }
+    
+    #cold-products div, #warm-products div{
+        display: inline-flex;
+        flex-flow: column wrap;
+        justify-content: center;
+        align-items: flex-start;
+        width: 33%;
     }
     
 }
 
 @media(max-width:800px){
+    
+    /* HEADER */
+    
+    .logo-nav .submenu{
+        display: none;
+    }
     
     /* HIGHLIGHTS */
     
@@ -775,6 +886,58 @@ footer{
     .product-categories .wrapper article.no-right-products{
         margin-right: 0;
     }
+    
+    
+    
+    /* PLP */
+    
+    .hamb-menu{
+        display: inline-block;
+    }
+    
+    .no-home .search, .no-home .languages{
+        display: none;
+    }
+    
+    .no-home header .mainmenu {
+        display: none;
+    }
+    
+    .no-home header .product-menu, .no-home header .othermenu {
+        display: none;
+    }
+    
+    .no-home header{
+        height: 150px;
+        min-height: 0;
+    }
+    
+    
+    
+    .spaceboxes {
+        width: 100%;
+        max-width: 650px;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        margin: 0 auto;
+        position: relative;
+        margin-top: -0px;
+        margin-bottom: 200px;
+    }
+    
+    .products-nav-mobile, .search-nav-mobile{
+        display: inline-block;
+    }
+    
+    .productsboxes h4{
+        background-color: rgba(255,255,255,.8);
+        opacity: 1;
+    }
+    
+    
+    
+    
 }
 
 @media(max-width:500px){
@@ -826,6 +989,26 @@ footer{
         background: url(../images/footer-mobile.png) no-repeat center;
         background-size: contain;
     }
+    
+    
+    /* PLP */
+    
+    .no-home header{
+        background: none;
+    }
+    
+    .productsboxes {
+        display: inline-block;
+        width: 100%;
+        margin: 20px 0px 10px 0px;
+    }
+    
+    .products-nav-mobile, .search-nav-mobile{
+        width: 100%;
+        margin: 20px 0px 10px 0px;
+    }
+    
+    
 }
 
 
