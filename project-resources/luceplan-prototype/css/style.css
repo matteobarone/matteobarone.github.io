@@ -982,6 +982,14 @@ footer{
         vertical-align: top;
     }
     
+    #cold-products div, #warm-products div{
+        width: 45%;
+    }
+    
+    #cold-products .lastprod, #warm-products .lastprod{
+        display: none;
+    }
+    
     /* FOOTER */
 
     footer{
