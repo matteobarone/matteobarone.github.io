@@ -26,7 +26,7 @@ h2{
 h3, h4{
     font-weight: 100;
     font-size: 2em;
-    color: #333;
+    color: black;
 }
 
 h4{
@@ -364,18 +364,18 @@ header nav ul li a:hover{
 .nav-mobile{
     display: none;
     padding: 50px;
-    background: linear-gradient(to bottom,rgba(255,255,255,1) 0,rgba(231,231,231,1) 50%,rgba(255,255,255,1) 100%);
+    
     text-align: center;
 }
 
 .product-categories nav {
-    height: 300px;
+    height: 200px;
     display: flex;
     flex-flow: row wrap;
     justify-content: space-around;
     align-items: center;
     
-    margin-top: -50px;
+    
 }
 
 .product-categories nav ul {
@@ -390,7 +390,7 @@ header nav ul li a:hover{
 .product-categories nav ul li {
     display: inline-block;
     text-align: center;
-    width: 19%;
+    width: 9.9%;
 }
 
 
@@ -413,7 +413,7 @@ header nav ul li a:hover{
     
     height: 90px;
     line-height: 90px;
-    padding: 0 10px;
+    padding: 0 5px;
 }
 
 .product-categories nav ul li a:hover{
@@ -427,7 +427,7 @@ header nav ul li a:hover{
 .product-categories .wrapper{
     width: 100%;
     max-width: 1000px;
-    margin: 50px auto;
+    margin: 0 auto 50px auto;
 }
 
 .product-categories .wrapper article {
@@ -487,8 +487,6 @@ header nav ul li a:hover{
 h2.experience-light-h2{
     padding: 100px 0 50px 0;
     margin: 0;
-    background-color: #333;
-    color: white;
     text-align: center;
     font-weight: 100;
 }
@@ -536,8 +534,6 @@ h2.experience-light-h2{
     display: inline-block;
     vertical-align: top;
     transition: all .5s ease;
-    
-    background-color: #333;
 }
 
 #cold-products, #warm-products{
@@ -551,11 +547,11 @@ h2.experience-light-h2{
 }
 
 .experience-light-products h5{
-    color: #ccc;
+    color: black;
 }
 
 .experience-light-products p{
-    color: #ccc;
+    color: black;
     font-size: 16px;
     margin: -5px 0 20px 0;
 }
@@ -676,6 +672,13 @@ footer{
     padding-right: 5px;
 }
 
+.othermenu input{
+    width: 100%;
+    border: 1px solid black;
+    padding: 10px;
+    margin-top: 10px;    
+}
+
 
 
 .products-nav-mobile, .search-nav-mobile{
@@ -705,7 +708,7 @@ footer{
     justify-content: space-between;
     margin: 0 auto;
     position: relative;
-    margin-top: -620px;
+    margin-top: -670px;
     margin-bottom: 200px;
 }
 
@@ -750,6 +753,165 @@ footer{
 .productsboxes:hover h4{
     opacity: 1;
 }
+
+
+
+
+
+
+/* PDP */
+
+.img-pdp{
+    height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    z-index: 0;
+    transform-origin: center;
+}
+
+.img-pdp-mobile{
+        display: none;
+    }
+
+.silenzio h2{
+    margin-bottom: 0px;
+}
+
+.silenzio h5{
+    text-align: center;
+    margin-top: 0;  
+    
+}
+
+
+
+
+.productext {
+    font-size: 2em;
+}
+
+.partone {
+    height: 100vh;
+    position: relative;
+    display: flex;
+    margin: 50px 0;
+}
+
+
+.toptext {
+    width: 80%;
+}
+
+.bottomtext {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 30%;
+}
+
+.parttwo {
+    width: 100%;
+    margin: 50px 0;
+    display: flex;
+    justify-content: space-between;
+    background: url(../images/silenzio6.jpg) no-repeat top center;
+    background-size: contain;
+}
+
+.parttwo img{
+    display: none;
+}
+
+.afterscroll {
+    position: relative;
+    display: flex;
+    flex-flow: column;
+}
+
+.leftext {
+    width: 60%;
+}
+
+.spacetext {
+    margin-bottom: 20px;
+}
+
+
+.silenzio2{
+  width: 100%;
+  position: absolute;
+  z-index: -2;
+}
+
+.silenzio1 {
+  width: 100%;
+}
+
+.silenziosection {
+  width: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.text-section{
+  width: 30%;
+}
+
+.parthree {
+  width: 100%;
+  margin: 50px 0;
+}
+
+.skyway {
+  width: 100%;
+}
+
+.right-text{
+  width: 50%;
+  position:relative; 
+  
+}
+
+.downloads {
+  float: right;
+  position:absolute; 
+  right: 0;
+  bottom: 0;
+}
+
+.downloads a:hover{
+    text-decoration: underline;
+}
+
+.left-text{
+  width: 50%;
+  float: left;
+}
+
+#silenzioCarousel img{
+    width: 100%;
+}
+
+#silenzioCarousel .carousel-indicators{
+    display: block;
+    width: 100%;
+    padding-left: 0;
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+
+
+
+
+
+
+
+
 
 
 
@@ -830,8 +992,12 @@ footer{
     
     .titles-highlights{
         width: 100%;
-        text-align: center;
+        text-align: left;
         padding-left: 0;
+    }
+    
+    .titles-highlights h3{
+        text-align: center;
     }
     
     .carousel-indicators{
@@ -842,7 +1008,7 @@ footer{
     }
     
     #mioCarousel {
-        margin-bottom: 150px;
+        margin-bottom: 100px;
     }
     
     /* PRODUCTS IN HOMEPAGE */
@@ -937,10 +1103,102 @@ footer{
     
     
     
+    /* PDP */
+    
+    header.pdp{
+        height: 100vh;
+        min-height: 0;
+    }
+    
+    .img-pdp-desktop{
+        display: none;
+    }
+    
+    .img-pdp-mobile{
+        display: inherit;
+    }
+    
+    .text-section{
+        width: 100%;
+    }
+    
+    .toptext {
+        width: 100%;
+    }
+    
+    .bottomtext {
+        position: static;
+        width: 100%;
+    }
+    
+    .partone {
+        height: auto;
+        position: static;
+        display: block;
+        margin: 50px 0;
+    }
+    
+    .silenziosection{
+        width: 100%;
+    }
+    
+    .parttwo {
+        display: block;
+        background: none;
+    }
+    
+    .parttwo img{
+        display: inherit;
+        width: 100%;
+    }
+    
+    .left-text {
+        width: 100%;
+        float: left;
+    }
+    
+    .leftext {
+        width: 100%;
+    }
+    
+    .right-text {
+        width: 100%;
+        position: static;
+    }
+    
+    .downloads {
+        float: none;
+        position: static;
+        margin-top: 30px;
+    }
+    
+    #silenzioCarousel .carousel-indicators{
+        display: block;
+        width: 100%;
+        padding-left: 0;
+        text-align: center;
+        margin-bottom: 35px;
+    }
+
+
+    
+    
+    
     
 }
 
 @media(max-width:500px){
+    
+    /* GLOBAL */
+    
+    h2{
+        font-size: 30px;
+    }
+
+    h3, h4{
+        font-size: 1.5em;
+    }
+
     
     /* HEADER */
     
