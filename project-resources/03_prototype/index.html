@@ -1,0 +1,729 @@
+<!doctype html>
+<html lang="en">
+
+    <head>
+        
+        <title>Quotalo.it</title>
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta charset="utf-8" />
+        
+        <!-- css -->
+        <link rel="stylesheet" href="css/sanitize.css" />
+        <link rel="stylesheet" href="css/bootstrap/css/bootstrap.css" />
+        <link rel="stylesheet" href="css/style.css" />
+        
+        <!-- fonts         -->
+        <link href='https://fonts.googleapis.com/css?family=Catamaran:600,700' rel='stylesheet' type='text/css'>
+
+    </head>
+
+    <body>
+        
+        <!-- wraps around the whole site -->
+        <div class="wrapper">
+        
+            <header id="header">
+                
+                <img src="img/header-1.jpg" id="header-img" class="img-header-home"/>
+                <img src="img/header-2.jpg" id="header-img2" class="img-header-home"/>
+                <img src="img/header-3.jpg" id="header-img3" class="img-header-home"/>
+                
+                <!-- Navigation -->
+                <nav>
+                    
+                    <!-- Wrapper per nav -->
+                    <div class="wrapper-nav">
+                        
+                        <!-- Logo -->
+                        <a href="index.html" class="logo">
+                            <img src="img/logo.png" alt="Quotalo" />
+                        </a>
+
+                        <!-- Menu -->
+                        <div class="nav-desktop">
+                            <ul>
+                                <li><a href="#">Cos'è Quotalo</a></li>
+
+                                <li class="link-for-sub-nav">
+                                    <a href="fornitori.html">Cerca fornitori</a>
+
+                                    <div class="sub-nav">
+                                        <img src="img/arrow-sub-menu.png" alt="arrow" />
+                                        <p>Cerca per:</p>
+                                        <ul>
+                                            <li><a href="fornitori-giardini.html">Giardini e Ambienti</a></li>
+                                            <li><a href="#">Edilizia e Casa</a></li>
+                                            <li><a href="#">Impianti</a></li>
+                                            <li><a href="#">Professionisti</a></li>
+                                            <li><a href="#">Noleggio veicoli</a></li>
+                                            <li><a href="#">Eventi e Matrimoni</a></li>
+                                            <li><a href="#">Infissi e Serramenti</a></li>
+                                            <li><a href="#">Anziani</a></li>
+                                            <li><a href="#">Animali</a></li>
+                                        </ul>
+                                    </div>
+
+
+                                </li>
+
+                                <li><a href="guide-dei-servizi.html">Guide dei servizi</a></li>
+                            </ul>
+                        </div>
+                        
+                        <!-- Buttons Accedi, Per le Aziende e Richiedi Preventivo -->
+                        <a href="#" class="accedi-link float-right">Accedi</a>
+                        <a href="#" class="btn float-right margin-left green">PER LE AZIENDE</a>
+                        <a href="landing-page-preventivo.html" class="btn float-right blue">RICHIEDI PREVENTIVO</a>
+                        
+                        <!-- Menu mobile -->
+                        <div id="nav-mobile-id" class="nav-mobile">
+                            <ul>
+                                <li><a href="#">Cos'è quotalo</a></li>
+                                <li><a href="fornitori.html">Cerca fornitori</a></li>
+                                <li><a href="guide-dei-servizi.html">Guide dei servizi</a></li>
+                                <li class="blue"><a href="landing-page-preventivo.html">RICHIEDI PREVENTIVO</a></li>
+                                <li class="last-link-nav-mobile green"><a href="#">PER LE AZIENDE</a></li>
+                                <li><a href="#" class="accedi-link accedi-link-mobile">Accedi</a></li>
+                            </ul>
+                        </div>
+
+                        <!-- Hamb Menu -->
+                        <button class="c-hamburger c-hamburger--htx float-right">
+                            <span>toggle menu</span>
+                        </button>
+                        
+                    </div>
+                    
+                </nav>
+                
+                <!-- Title (Professionisti / Edilizia e Casa / Infissi) -->
+                <h1 class="h1-title-home">
+                    <span id="title-home-1">Trova il Professionista</span>
+                    <span id="title-home-2">Trova il Falegname</span>
+                    <span id="title-home-3">Trova l'Imbianchino</span><br/>
+                    ideale per la tua necessità
+                    
+                    
+                </h1>
+                
+                <h3 class="h3-title-home">Richiedi un preventivo a professionisti e fornitori di servizi della tua zona. Consulta utili guide sui servizi di cui hai bisogno. Risolvi la tua necessità.</h3>
+
+                <!-- Input -->
+                <form action="preventivo-page.html" class="form-home">
+                    <input type="text" name="localita" placeholder="Località d'interesse" />
+                    <input type="text" name="servizio" placeholder="Servizio di cui hai bisogno" />
+                    <input type="submit" value="CONTINUA" class="btn margin-left green border-green"/>
+                </form>
+                
+            </header>
+            
+            <!-- Come funziona -->
+            <section id="content" class="come-funziona">
+                
+                <h2>Come funziona</h2>
+                <hr class="red" />
+                
+                <div class="wrapper-article">
+                    <article class="col-3">
+                        <img src="img/icon-richiedi-servizio.png" alt="Richiedi un preventivo" />
+                        <h3>Richiedi un<br/>servizio</h3>
+                        <p>Descrivi in dettaglio<br/>la tua necessità</p>
+                    </article>
+
+                    <article class="col-3">
+                        <img src="img/icon-entra-in-contatto.png" alt="Entra in contatto" />
+                        <h3>Entra in<br/>contatto</h3>
+                        <p>Ricevi proposte da<br/>professionisti della tua zona</p>
+                    </article>
+
+                    <article class="col-3">
+                        <img src="img/icon-trova-prof.png" alt="Trova il professionista ideale" />
+                        <h3>Trova il<br/>professionista ideale</h3>
+                        <p>Valuta le proposte e<br/>risolvi le tue necessità</p>
+                    </article>
+                </div>
+                
+                <!-- Description of Come funziona -->
+                <div class="description-come-funziona">
+                    <div class="sx">
+                        <div class="wrapper-sx">
+                            <p>Quotalo ti mette in contatto con professionisti e fornitori di servizi qualificati in grado di risolvere la tua necessità.</p>
+
+                            <p>Fai la tua richiesta ed ottieni <strong>soluzioni su misura in base alle tue esigenze.</strong></p>
+
+                            <p>Ricevi differenti <strong>offerte personalizzate</strong> semplicemente dettagliando le tue esigenze: valuta le proposte e scegli quella che si adatta maggiormente ai tuoi bisogni.</p>
+
+                            <p>Scrivi una <strong>recensione</strong> e aiuta migliaia di persone a scegliere i migliori fornitori.</p>
+
+                            <a href="#" class="btn btn-black">PREVENTIVI PER SETTORE</a>
+                        </div>
+                            
+                        <div class="clear"></div>
+                    </div>
+                    <div class="dx"></div>
+                </div>
+
+            </section>
+            
+            <!-- Ricevi un preventivo per -->
+            <section class="categories">
+
+                <h2>Ricevi un preventivo per</h2>
+                <hr/>
+
+                <a href="giardini.html">
+                    <article class="col-3">
+                        <img src="img/giardini-e-ambienti.jpg" alt="Giardini e Ambiente" />
+                        <h3>Giardini e Ambienti</h3>
+                        <p>Irrigazioni e impianti idrici, smaltimento rifiuti e molto altro.</p>
+                    </article>
+                </a>
+
+                <a href="#">
+                    <article class="col-3">
+                        <img src="img/edilizia-e-casa.jpg" alt="" />
+                        <h3>Edilizia e Casa</h3>
+                        <p>Irrigazioni e impianti idrici, smaltimento rifiuti e molto altro.</p>
+                    </article>
+                </a>
+
+                <a href="#">
+                    <article class="col-3">
+                        <img src="img/impianti.jpg" alt="" />
+                        <h3>Impianti</h3>
+                        <p>Irrigazioni e impianti idrici, smaltimento rifiuti e molto altro.</p>
+                    </article>
+                </a>
+
+                <a href="#" class="col-3">
+                    <article>
+                        <img src="img/avvocato.jpg" alt="" />
+                        <h3>Professionisti</h3>
+                        <p>Irrigazioni e impianti idrici, smaltimento rifiuti e molto altro.</p>
+                    </article>
+                </a>
+
+                <a href="#" class="col-3">
+                    <article>
+                        <img src="img/noleggio-veicoli.jpg" alt="" />
+                        <h3>Noleggio veicoli</h3>
+                        <p>Irrigazioni e impianti idrici, smaltimento rifiuti e molto altro.</p>
+                    </article>
+                </a>
+
+                <a href="#" class="col-3">
+                    <article>
+                        <img src="img/eventi-e-matrimoni.jpg" alt="" />
+                        <h3>Eventi e Matrimoni</h3>
+                        <p>Irrigazioni e impianti idrici, smaltimento rifiuti e molto altro.</p>
+                    </article>
+                </a>
+
+                <a href="#">
+                    <article class="col-3">
+                        <img src="img/infissi.jpg" alt="" />
+                        <h3>Infissi e serramenti</h3>
+                        <p>Irrigazioni e impianti idrici, smaltimento rifiuti e molto altro.</p>
+                    </article>
+                </a>
+
+                <a href="#">
+                    <article class="col-3">
+                        <img src="img/anziani.jpg" alt="" />
+                        <h3>Anziani</h3>
+                        <p>Irrigazioni e impianti idrici, smaltimento rifiuti e molto altro.</p>
+                    </article>
+                </a>
+
+                <a href="#">
+                    <article class="col-3">
+                        <img src="img/animali.jpg" alt="" />
+                        <h3>Animali</h3>
+                        <p>Irrigazioni e impianti idrici, smaltimento rifiuti e molto altro.</p>
+                    </article>
+                </a>
+
+            </section>
+            
+            <!-- Professionisti ed aziende in evidenza -->
+            <section class="aziende">
+                
+                <h2>Professionisti ed aziende in evidenza</h2>
+                <hr/>
+                
+                <div class="wrapper-article">
+                    
+                    <div id="mioCarousel" class="carousel slide" data-interval="5000" data-pause="hover" data-wrap="true">
+                    
+                        <ol class="carousel-indicators">
+                            <li data-target="#mioCarousel" data-slide-to="0" class="active"></li>
+                            <li data-target="#mioCarousel" data-slide-to="1"></li>
+                            <li data-target="#mioCarousel" data-slide-to="2"></li>
+                            <li data-target="#mioCarousel" data-slide-to="3"></li>
+                            <li data-target="#mioCarousel" data-slide-to="4"></li>
+                            <li data-target="#mioCarousel" data-slide-to="5"></li>
+                            <li data-target="#mioCarousel" data-slide-to="6"></li>
+                            <li data-target="#mioCarousel" data-slide-to="7"></li>
+                            <li data-target="#mioCarousel" data-slide-to="8"></li>
+                            <li data-target="#mioCarousel" data-slide-to="9"></li>
+                        </ol>
+
+                        <div class="carousel-inner">
+
+
+                            <div class="item active">
+                                <article class="col-3">
+                                    <img src="img/logo-azienda1.png" alt="Logo Annunziatina" />
+                                    <p class="name">Annunziatina Speranza</p>
+                                    <p class="professione">Avvocato</p>
+                                </article>
+
+                                <article class="col-3">
+                                    <img src="img/logo-azienda1.png" alt="Logo Annunziatina" />
+                                    <p class="name">Missicup SRL</p>
+                                    <p class="professione">Avvocato</p>
+                                </article>
+
+                                <article class="col-3">
+                                    <img src="img/logo-azienda2.png" alt="Logo Annunziatina" />
+                                    <p class="name">Arredobagno Cervia</p>
+                                    <p class="professione">Edilizia</p>
+                                </article>
+                            </div>
+                            
+                            
+                            <div class="item">
+                                <article class="col-3">
+                                    <img src="img/logo-azienda3.png" alt="Logo Annunziatina" />
+                                    <p class="name">Bertazzi e Percoco</p>
+                                    <p class="professione">Avvocato</p>
+                                </article>
+
+                                <article class="col-3">
+                                    <img src="img/logo-azienda3.png" alt="Logo Annunziatina" />
+                                    <p class="name">Anna Folia</p>
+                                    <p class="professione">Avvocato</p>
+                                </article>
+
+                                <article class="col-3">
+                                    <img src="img/logo-azienda5.png" alt="Logo Annunziatina" />
+                                    <p class="name">Diversamentefelici</p>
+                                    <p class="professione">Psicologo ed educatore</p>
+                                </article>
+                            </div>
+                                
+                
+                            <div class="item">
+                                <article class="col-3">
+                                    <img src="img/logo-azienda4.png" alt="Logo Annunziatina" />
+                                    <p class="name">Alessio Carena</p>
+                                    <p class="professione">Smaltimento rifiuti</p>
+                                </article>
+
+                                <article class="col-3">
+                                    <img src="img/logo-azienda2.png" alt="Logo Annunziatina" />
+                                    <p class="name">La sosta europea</p>
+                                    <p class="professione">Autonoleggio</p>
+                                </article>
+
+                                <article class="col-3">
+                                    <img src="img/logo-azienda3.png" alt="Logo Annunziatina" />
+                                    <p class="name">Ecohabitat</p>
+                                    <p class="professione">Immobiliare</p>
+                                </article>
+                            </div>
+                            
+                            
+                            <div class="item">
+                                <article class="col-3">
+                                    <img src="img/logo-azienda1.png" alt="Logo Annunziatina" />
+                                    <p class="name">Annunziatina Speranza</p>
+                                    <p class="professione">Avvocato</p>
+                                </article>
+
+                                <article class="col-3">
+                                    <img src="img/logo-azienda1.png" alt="Logo Annunziatina" />
+                                    <p class="name">Missicup SRL</p>
+                                    <p class="professione">Avvocato</p>
+                                </article>
+
+                                <article class="col-3">
+                                    <img src="img/logo-azienda2.png" alt="Logo Annunziatina" />
+                                    <p class="name">Arredobagno Cervia</p>
+                                    <p class="professione">Edilizia</p>
+                                </article>
+                            </div>
+                            
+                            
+                            <div class="item">
+                                <article class="col-3">
+                                    <img src="img/logo-azienda3.png" alt="Logo Annunziatina" />
+                                    <p class="name">Bertazzi e Percoco</p>
+                                    <p class="professione">Avvocato</p>
+                                </article>
+
+                                <article class="col-3">
+                                    <img src="img/logo-azienda3.png" alt="Logo Annunziatina" />
+                                    <p class="name">Anna Folia</p>
+                                    <p class="professione">Avvocato</p>
+                                </article>
+
+                                <article class="col-3">
+                                    <img src="img/logo-azienda5.png" alt="Logo Annunziatina" />
+                                    <p class="name">Diversamentefelici</p>
+                                    <p class="professione">Psicologo ed educatore</p>
+                                </article>
+                            </div>
+                            
+                            
+                            <div class="item">
+                                <article class="col-3">
+                                    <img src="img/logo-azienda4.png" alt="Logo Annunziatina" />
+                                    <p class="name">Alessio Carena</p>
+                                    <p class="professione">Smaltimento rifiuti</p>
+                                </article>
+
+                                <article class="col-3">
+                                    <img src="img/logo-azienda2.png" alt="Logo Annunziatina" />
+                                    <p class="name">La sosta europea</p>
+                                    <p class="professione">Autonoleggio</p>
+                                </article>
+
+                                <article class="col-3">
+                                    <img src="img/logo-azienda3.png" alt="Logo Annunziatina" />
+                                    <p class="name">Ecohabitat</p>
+                                    <p class="professione">Immobiliare</p>
+                                </article>
+                            </div>
+
+                            
+                            <div class="item">
+                                <article class="col-3">
+                                    <img src="img/logo-azienda1.png" alt="Logo Annunziatina" />
+                                    <p class="name">Annunziatina Speranza</p>
+                                    <p class="professione">Avvocato</p>
+                                </article>
+
+                                <article class="col-3">
+                                    <img src="img/logo-azienda1.png" alt="Logo Annunziatina" />
+                                    <p class="name">Missicup SRL</p>
+                                    <p class="professione">Avvocato</p>
+                                </article>
+
+                                <article class="col-3">
+                                    <img src="img/logo-azienda2.png" alt="Logo Annunziatina" />
+                                    <p class="name">Arredobagno Cervia</p>
+                                    <p class="professione">Edilizia</p>
+                                </article>
+                            </div>
+                                
+                            
+                            <div class="item">
+                                <article class="col-3">
+                                    <img src="img/logo-azienda3.png" alt="Logo Annunziatina" />
+                                    <p class="name">Bertazzi e Percoco</p>
+                                    <p class="professione">Avvocato</p>
+                                </article>
+
+                                <article class="col-3">
+                                    <img src="img/logo-azienda3.png" alt="Logo Annunziatina" />
+                                    <p class="name">Anna Folia</p>
+                                    <p class="professione">Avvocato</p>
+                                </article>
+
+                                <article class="col-3">
+                                    <img src="img/logo-azienda5.png" alt="Logo Annunziatina" />
+                                    <p class="name">Diversamentefelici</p>
+                                    <p class="professione">Psicologo ed educatore</p>
+                                </article>
+                            </div>
+                            
+                            
+                            <div class="item">
+                                <article class="col-3">
+                                    <img src="img/logo-azienda4.png" alt="Logo Annunziatina" />
+                                    <p class="name">Alessio Carena</p>
+                                    <p class="professione">Smaltimento rifiuti</p>
+                                </article>
+
+                                <article class="col-3">
+                                    <img src="img/logo-azienda2.png" alt="Logo Annunziatina" />
+                                    <p class="name">La sosta europea</p>
+                                    <p class="professione">Autonoleggio</p>
+                                </article>
+
+                                <article class="col-3">
+                                    <img src="img/logo-azienda3.png" alt="Logo Annunziatina" />
+                                    <p class="name">Ecohabitat</p>
+                                    <p class="professione">Immobiliare</p>
+                                </article>
+                            </div>
+                            
+                            
+                            <div class="item">
+                                <article class="col-3">
+                                    <img src="img/logo-azienda1.png" alt="Logo Annunziatina" />
+                                    <p class="name">Annunziatina Speranza</p>
+                                    <p class="professione">Avvocato</p>
+                                </article>
+
+                                <article class="col-3">
+                                    <img src="img/logo-azienda1.png" alt="Logo Annunziatina" />
+                                    <p class="name">Missicup SRL</p>
+                                    <p class="professione">Avvocato</p>
+                                </article>
+
+                                <article class="col-3">
+                                    <img src="img/logo-azienda2.png" alt="Logo Annunziatina" />
+                                    <p class="name">Arredobagno Cervia</p>
+                                    <p class="professione">Edilizia</p>
+                                </article>
+                            </div>
+
+                        </div>
+
+                        <a class="left carousel-control" href="#mioCarousel" data-slide="prev">
+                            <span class="icon-prev"></span>
+                        </a>
+                        <a class="right carousel-control" href="#mioCarousel" data-slide="next">
+                            <span class="icon-next"></span>
+                        </a>
+
+                    </div>
+                    
+                </div>
+
+                
+            </section>
+            
+            <!-- Guide ed approfondimenti sui servizi -->
+            <section class="guide">
+                
+                <h2>Guide ed approfondimenti sui servizi</h2>
+                <hr/>
+                
+                <div class="bg-guide">
+                
+                    <div class="wrapper-guide">
+                        <article>
+                            <a href="#">
+                                <img src="img/guide-1.png" alt="Antifurto casa senza fili" />
+                            </a>
+                            <div class="text">
+                                <a href="#"><h3>Antifurto casa senza fili</h3></a>
+                                <p>Mentre anni fa era sufficiente avere un grosso cane da guardia per rendere sicura la propria casa e scoraggiare i ladri ed i malintenzionati, oggi e' indispensabile avere non solo porte blindate ed inferriate alle finestre, ma anche un buon antifurto casa senza fili o con i fili I sistemi di allarme anticollision...</p>
+                            </div>
+                            <div class="clear"></div>
+                        </article>
+
+                        <article>
+                            <a href="#">
+                                <img src="img/guide-2.png" alt="I giardini giapponesi" />
+                            </a>
+                            <div class="text">
+                                <a href="#"><h3>I giardini giapponesi</h3></a>
+                                <p>Il giardino giapponese tradizionale e' una visione del rapporto Uomo, Natura e Universo. Ogni elemento pur apparendo decorativo ha un valore altamente simbolico, fino a arrivare al giardino Zen progettato per la meditazione, che puo', a volte, sembrare un non-giardino. Il giardino giapponese e' un...</p>
+                            </div>
+                            <div class="clear"></div>
+                        </article>
+
+                        <article>
+                            <a href="#">
+                                <img src="img/guide-3.png" alt="Quanto costa ristrutturare casa" />
+                            </a>
+                            <div class="text">
+                                <a href="#"><h3>Quanto costa ristrutturare casa</h3></a>
+                                <p>Vuoi ristrutturare la tua casa e ti chiedi quanto costa? Sei al corrente di tutte le informazioni necessarie per effettuare una stima o un preventivo approssimativo per la ristrutturazione del tuo immobile? La variabili da considerare in un intervento di ristrutturazione casa sono molteplici...</p>
+                            </div>
+                            <div class="clear"></div>
+                        </article>
+
+                        <article>
+                            <a href="#">
+                                <img src="img/guide-4.png" alt="Quanto costa rifare un tetto" />
+                            </a>
+                            <div class="text">
+                                <a href="#"><h3>Quanto costa rifare un tetto</h3></a>
+                                <p>Rifacimento tetto: ma quanto costa rifare il tetto? Quanto costa rifare il tetto: ecco un preventivo tipo, di costo. Una delle parti fondamentali di una casa, anche se spesso sottovalutata, e' il tetto, che non rappresenta semplicemente un mero riparo dalle intemperie, in qu...</p>
+                            </div>
+                            <div class="clear"></div>
+                        </article>
+                        
+                        <article>
+                            <a href="#">
+                                <img src="img/guide-5.png" alt="La legge sul divorzio breve" />
+                            </a>
+                            <div class="text">
+                                <a href="#"><h3>La legge sul divorzio breve</h3></a>
+                                <p>E' stata approvata dalla Camera con 398 si', 28 no e 6 astenuti la tanto attesa nuova legge sul divorzio breve, titolata: “Disposizioni in materia di scioglimento o di cessazione degli effetti civili del matrimonio nonché di comunione tra i coniugi”. E' diventata realta' il 22 Aprile del 2015,...</p>
+                            </div>
+                            <div class="clear"></div>
+                        </article>
+                        
+                        <article>
+                            <a href="#">
+                                <img src="img/guide-6.png" alt="Cosa sono gli infissi a taglio termico? Caratteristiche e costi" />
+                            </a>
+                            <div class="text">
+                                <a href="#"><h3>Cosa sono gli infissi a taglio termico? Caratteristiche e costi</h3></a>
+                                <p>Cosa sono gli infissi a taglio termico? Caratteristiche e costi
+Uno degli aspetti da tenere in considerazione durante dei lavori di ristrutturazione di una casa, e' quello dell'efficienza energetica di una cost...</p>
+                            </div>
+                            <div class="clear"></div>
+                        </article>
+                        
+                        <article>
+                            <a href="#">
+                                <img src="img/guide-7.png" alt="Gratuito patrocinio: requisiti e modalità di domanda" />
+                            </a>
+                            <div class="text">
+                                <a href="#"><h3>Gratuito patrocinio: requisiti e modalità di domanda</h3></a>
+                                <p>"La Legge è uguale per tutti", ma la difesa dei propri diritti è comunque onerosa. Adire le vie legale e' un costo e chi si trovi in ristrettezze economiche rinuncia, a volte per questo, a far valere un proprio diritto o a difendersi. Troppo spesso si ignora la possibilita' del patrocinio gratuito p...</p>
+                            </div>
+                            <div class="clear"></div>
+                        </article>
+                        
+                        <article>
+                            <a href="#">
+                                <img src="img/guide-8.png" alt="Il decreto ingiuntivo quale forma veloce ed economica per recuperare un credito" />
+                            </a>
+                            <div class="text">
+                                <a href="#"><h3>Il decreto ingiuntivo quale forma veloce ed economica per recuperare un credito</h3></a>
+                                <p>Il decreto ingiuntivo e' il procedimento giudiziario tramite il quale, le imprese (ma anche i cittadini, le societa' ed i lavoratori) possono recuperare un credito nei confronti di un terzo, persona o impresa debitrice che sia. La procedura consiste nel far emanare da un Giudice del Tribunale competente, ...</p>
+                            </div>
+                            <div class="clear"></div>
+                        </article>
+                    </div>
+                    
+                </div>
+            
+
+
+            </section>
+            
+            <!-- Footer -->
+            <footer>
+                
+                <div class="wrapper-footer">
+                    
+                    <div class="top-footer">
+                        <h3>Sei un professionista o un impresa?<br/>Registrati oppure accedi ed entra a far parte di Quotalo.</h3>
+                        <!-- Buttons Accedi and PerLeAziende -->
+                        <a href="#" class="btn blue">ACCEDI</a>
+                        <a href="#" class="btn green margin-left">REGISTRATI</a>
+                    </div>
+                
+                    <div class="sx">
+                        <div>
+                            <h4>Quotalo</h4>
+                            <a href="#">Cos'è quotalo</a>
+                            <a href="#">Come funziona</a>
+                            <a href="#">Chi siamo</a>
+                            <a href="#">Contattaci</a>
+                            <a href="#">Consigliaci ad un amico</a>
+                            <a href="#">Invita un fornitore</a>
+                            <a href="#">Domande frequenti</a>
+                            <a href="#">Lavora con noi</a>
+                        </div>
+                        <div>
+                            <h4>Fornitori di servizi</h4>
+                            <a href="#">Vuoi offrire i tuoi servizi?</a>
+                            <a href="#">Consigli per i fornitori</a>
+                            <a href="#">Perché registrarsi</a>
+                        </div>
+                        <div>
+                            <h4>Utenti</h4>
+                            <a href="#">Perché registrarsi</a>
+                            <a href="#">Consigli per scegliere un professionista</a>
+                            <a href="#">Preventivi</a>
+                        </div>
+                    </div>
+                    <div class="dx">
+                        <h4>Seguici su</h4>
+                        <a href="#">
+                            <img src="img/facebook-icon.png" alt="Facebook" />
+                        </a>
+                        <a href="#">
+                            <img src="img/twitter-icon.png" alt="Twitter" />
+                        </a>
+                    </div>
+                    <div class="clear"></div>
+                    <hr/>
+                    <p class="copy">Q Business Innovation S.r.l.- P.IVA 07971870964</p>
+                    <p class="copy">Tutti i diritti riservati - Note Legali</p>
+                    
+                </div>
+                
+
+                
+            </footer>
+        </div>
+
+        
+        <!-- js -->
+        <script src="js/classie.js"></script>
+        <script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+        <script src="css/bootstrap/js/bootstrap.js"></script>
+        <script>
+            $("#mioCarousel").carousel();
+        </script>
+        <!-- script per scrolling header -->
+        <script>
+            function init() {
+                window.addEventListener('scroll', function(e){
+                    var distanceY = window.pageYOffset || document.documentElement.scrollTop,
+                        shrinkOn = 10,
+                        header = document.querySelector("nav");
+                    if (distanceY > shrinkOn) {
+                        classie.add(header,"white");
+                    } else {
+                        if (classie.has(header,"white")) {
+                            classie.remove(header,"white");
+                        }
+                    }
+                });
+            }
+            window.onload = init();
+        </script>
+        
+        <!-- Script per button hambueger menu -->
+        <script>
+          (function() {
+
+            "use strict";
+
+            var toggles = document.querySelectorAll(".c-hamburger");
+            
+            var menu = document.querySelectorAll(".nav-mobile");
+
+            for (var i = toggles.length - 1; i >= 0; i--) {
+              var toggle = toggles[i];
+              toggleHandler(toggle);
+            };
+              
+            /*for (var i = menu.length - 1; i >= 0; i--) {
+              var menuOk = menu[i];
+              hideShowMenu(menuOk);
+            };*/
+
+            function toggleHandler(toggle) {
+              toggle.addEventListener( "click", function(e) {
+                e.preventDefault();
+                var x = document.getElementById('nav-mobile-id');
+                /*alert("prova1 " + x);
+                alert("prova2 " + x.classList.item(0));
+                alert("prova3 " + x.classList.contains("nav-mobile"));*/
+                  (x.classList.contains("is-active-menu") === true) ? x.classList.remove("is-active-menu") : x.classList.add("is-active-menu");
+                (this.classList.contains("is-active") === true) ? this.classList.remove("is-active") : this.classList.add("is-active");
+                
+                
+              });
+            }
+
+          })();
+        </script>
+        
+    </body>
+
+</html>

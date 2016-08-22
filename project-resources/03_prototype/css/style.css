@@ -1,0 +1,2039 @@
+/* BLUE: rgb(57, 108, 162); 
+   RED:  #B22C22
+   GREEN: #219a1b
+*/
+
+
+/* GLOBAL SELECTORS */
+
+/**{
+    outline: 1px solid black;
+}*/
+
+@font-face{
+    font-family: Catamaran-Black;
+    src: url('../font/Catamaran-Black.ttf') format('truetype');
+}
+
+body{
+    font-family: Verdana;
+}
+
+.wrapper{
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+a{
+    color: white;
+    text-decoration: none;
+}
+
+a:hover, a:focus{
+    color: white;
+}
+
+h1, h2, h3, h4{
+    font-family: 'Catamaran', sans-serif;
+}
+
+h1{
+    font-size: 42px;
+}
+
+h2{
+    font-size: 42px;
+    margin: 80px 0 10px 0;
+    text-align: center;
+}
+
+h3{
+    font-size: 24px;
+}
+
+h4{
+    color: white;
+    font-size: 16px;
+}
+
+p{
+    margin: 0 0 20px 0;
+}
+
+hr{
+    background-color: rgb(57, 108, 162);
+    height: 2px;
+    width: 430px;
+    margin: 0 auto;
+    margin-bottom: 50px;
+}
+
+.btn{
+    height: 44px;
+    
+    padding: 10px 15px;
+    
+    border: 2px solid white;
+    color: white;
+    border-radius: 0px;
+    
+    transition: all .3s;
+}
+
+.btn:hover, .btn:focus{
+    background-color: white;
+    color: #333;
+}
+
+.blue{
+    background-color: rgb(57, 108, 162);
+    color: white;
+}
+
+.green{
+    background-color: #219a1b;
+    color: white;
+}
+
+
+/* HELPER SELECTORS */
+
+.float-right{float: right}
+.float-left{float: left;}
+.clear{clear: both;}
+.no-margin{margin: 0;}
+
+.margin-left{margin-left: 10px;}
+.margin-right{margin-right: 5px;}
+.margin-bottom{margin-bottom: 40px;}
+.margin-top-header{height: 85px;}
+
+.align-center{text-align: center;}
+
+.btn-black{
+    border: 2px solid #333;
+    color: #333;
+}
+
+.btn-black:hover, .btn-black:focus{
+    background-color: #333;
+    color: white;
+}
+
+.border-green, .border-green:hover{
+    border: 2px solid #219a1b;
+}
+
+
+
+
+/* HEADER */
+
+header{
+    position: relative;
+    
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    
+    width: 100%;
+    max-width: 1440px;
+    height: 685px; /*To fix*/
+    
+    overflow: hidden;
+    
+    /*background: url(../img/header-1.jpg) no-repeat center;
+    background-size: cover;*/
+    
+}
+
+header .img-header-home{
+    height: 100%;
+    position: absolute;
+    
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    
+    z-index: 0;
+    
+    transform-origin: center;
+}
+
+header.not-home{
+    height: 426px;
+    
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+#header-img, #header-img2, #header-img3{
+    position: absolute;
+    /*top: 0;
+    left: 0;*/
+    opacity: 1;
+    
+    z-index: 0; 
+}
+
+#header-img{
+    animation: slide-img-1 20s;
+    animation-iteration-count: 3;
+}
+
+#header-img2 {
+    opacity: 0;
+    z-index: 1;
+    
+    animation: slide-img-2 20s;
+    animation-iteration-count: 3;
+}
+
+#header-img3 {
+    opacity: 0;
+    z-index: 2;
+    
+    animation: slide-img-3 20s;
+    animation-iteration-count: 3;
+}
+
+@keyframes slide-img-1{
+    0%{
+        opacity: 1;
+        z-index: 0;
+    }
+    20%{
+        opacity: 1;
+        z-index: 0;
+    }
+    25%{
+        opacity: 0;
+        z-index: 0;
+    }
+    30%{
+        opacity: 0;
+        z-index: 2;
+    }
+    50%{
+        opacity: 0;
+        z-index: 2;
+    }
+    55%{
+        opacity: 0;
+        z-index: 2;
+    }
+    60%{
+        opacity: 0;
+        z-index: 1;
+    }
+    80%{
+        opacity: 0;
+        z-index: 1;
+    }
+    85%{
+        opacity: 1;
+        z-index: 1;
+    }
+    100%{
+        opacity: 1;
+        z-index: 0;
+    }
+}
+
+@keyframes slide-img-2{
+    0%{
+        opacity: 0;
+        z-index: 1;
+    }
+    20%{
+        opacity: 0;
+        z-index: 1;
+    }
+    25%{
+        opacity: 1;
+        z-index: 1;
+    }
+    30%{
+        opacity: 1;
+        z-index: 0;
+    }
+    50%{
+        opacity: 1;
+        z-index: 0;
+    }
+    55%{
+        opacity: 0;
+        z-index: 0;
+    }
+    60%{
+        opacity: 0;
+        z-index: 2;
+    }
+    80%{
+        opacity: 0;
+        z-index: 2;
+    }
+    85%{
+        opacity: 0;
+        z-index: 2;
+    }
+    100%{
+        opacity: 0;
+        z-index: 1;
+    }
+}
+
+@keyframes slide-img-3{
+    0%{
+        opacity: 0;
+        z-index: 2;
+    }
+    20%{
+        opacity: 0;
+        z-index: 2;
+    }
+    25%{
+        opacity: 0;
+        z-index: 2;
+    }
+    30%{
+        opacity: 0;
+        z-index: 1;
+    }
+    50%{
+        opacity: 0;
+        z-index: 1;
+    }
+    55%{
+        opacity: 1;
+        z-index: 1;
+    }
+    60%{
+        opacity: 1;
+        z-index: 0;
+    }
+    80%{
+        opacity: 1;
+        z-index: 0;
+    }
+    85%{
+        opacity: 0;
+        z-index: 0;
+    }
+    100%{
+        opacity: 0;
+        z-index: 2;
+    }
+}
+
+
+
+.logo{
+    margin-right: 20px;
+}
+
+a.logo:hover{
+    text-decoration: none;
+}
+
+nav{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    max-width: 1440px;
+    height: 85px;
+    
+    padding-top: 20px;
+    
+    font-size: 14px;
+    border-bottom: none;
+    
+    transition: all .3s;
+    
+    z-index: 4;
+}
+
+.nav-desktop{
+    display: inline-block;
+}
+
+.nav-mobile{
+    background-color: rgba(57, 108, 162, .8);
+    display: none;
+    position: fixed;
+    top: 85px;
+    
+    padding: 30px;
+}
+
+.nav-mobile ul{
+    margin: 0;
+}
+
+.nav-mobile li{
+    display: block;
+    margin: 5px;
+    padding: 10px;
+}
+
+.nav-mobile li a{
+    display: block;
+}
+
+nav .btn-black{
+    background-color: rgba(255,255,255,.8);
+}
+
+nav .blue{
+    border-color: rgb(57, 108, 162);
+}
+
+nav .green{
+    border-color: #219a1b;
+}
+
+nav .accedi-link{
+    height: 40px;
+    width: 80px;
+    line-height: 40px;
+    margin-left: 20px;
+    
+    text-align: right;
+    
+    background: url(../img/login-icon.png) center left no-repeat;
+    
+    transition: all .3s;
+}
+
+nav .accedi-link-mobile{
+    margin-left: 0px;
+    height: 30px;
+    line-height: 30px;
+}
+
+nav.white{
+    background-color: rgba(255,255,255,.8);
+    border-bottom: 1px solid #ccc;
+}
+
+nav.white a{
+    color: #333;
+}
+
+nav.white .btn:hover, nav.white .btn:focus{
+    background-color: white;
+    color: #333;
+}
+
+nav.white .btn-black:hover, nav.white .btn-black:focus{
+    background-color: #333;
+    color: white;
+}
+
+nav.white .blue{
+    color: white;
+    border-color: rgb(57, 108, 162);
+}
+
+nav.white .green{
+    color: white;
+    border-color: #219a1b;
+}
+
+nav.white .accedi-link{
+    background: url(../img/login-icon-black.png) center left no-repeat;
+}
+
+
+nav.white .nav-mobile{
+    background-color: rgba(255,255,255,.8);
+}
+
+.wrapper-nav{
+    max-width: 1440px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+nav ul{
+    display: inline-block;
+}
+
+nav ul li{
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.link-for-sub-nav:hover .sub-nav{
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Submenu */
+.sub-nav{
+    display: inline-block;
+    position: absolute;
+    top: 85px;
+    
+    padding: 10px 65px 20px 20px;
+    
+    background-color: rgba(57, 108, 162, .8);
+    
+    opacity: 0;
+    visibility: hidden;
+    
+    transition: all .3s;
+}
+
+.sub-nav img{
+    position: absolute;
+    top: -30px;
+    
+    opacity: 1;
+}
+
+.sub-nav p{
+    margin: 10px;
+    color: white;
+    font-weight: bold;
+}
+
+.sub-nav ul li{
+    display: block;
+}
+
+nav.white .sub-nav {
+    background-color: rgba(255, 255, 255, .8);
+}
+
+
+nav.white .sub-nav p{
+    color: #333;
+}
+
+nav.white .sub-nav img{
+    opacity: 0;
+}
+
+
+
+
+
+
+
+header h1{
+    width: 80%;
+    margin-bottom: 20px;
+    margin-top: 85px;
+    
+    color: white;
+    text-align: center;
+    font-size: 60px;
+    
+    z-index: 3;
+}
+
+header .h1-title-home{
+    position: relative;
+}
+
+#title-home-1, #title-home-2, #title-home-3{
+    opacity: 1;
+    
+    z-index: 0;
+    position: absolute;
+    left: 0;
+    width: 100%;
+}
+
+#title-home-1{
+    animation: slide-img-1 20s;
+    animation-iteration-count: 3;
+}
+
+#title-home-2{
+    opacity: 0;
+    z-index: 1;
+    
+    animation: slide-img-2 20s;
+    animation-iteration-count: 3;
+}
+
+#title-home-3{
+    opacity: 0;
+    z-index: 2;
+    
+    animation: slide-img-3 20s;
+    animation-iteration-count: 3;
+}
+
+
+
+
+
+
+
+
+
+header h3{
+    width: 60%;
+    margin-bottom: 50px;
+    
+    color: white;
+    text-align: center;
+    
+    font-family: Verdana;
+    font-size: 1.2em;
+    line-height: 1.5em;
+    
+    z-index: 3;
+}
+
+header form{
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    
+    z-index: 3;
+}
+
+header form input[type="text"]{
+    background-color: white;
+    border: 2px solid #ccc;
+    width: 300px;
+    margin-left: 10px;
+    padding-left: 10px;
+}
+
+
+/* CONTENT */
+
+.wrapper-article{
+    max-width: 1280px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 30px;
+}
+
+
+
+.col-3{
+    width: 33.33%;
+    display: inline-flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.col-4{
+    width: 25%;
+    display: inline-flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    
+    vertical-align: top;
+}
+
+.col-66{
+    display: inline-block;
+    width: 60%;
+}
+
+.col-33{
+    display: inline-block;
+    width: 33%;
+    min-width: 300px;
+    
+    background-color: #fafafa;
+}
+
+.col-66 h3, .col-33 h3{
+    margin: 50px 0 30px 0;
+}
+
+.col-33 a{
+    display: block;
+    color: rgb(57, 108, 162);
+}
+
+.col-33 a:hover{
+    text-decoration: underline;
+}
+
+/* Come funziona */
+
+.come-funziona article{
+    text-align: center;
+    
+    margin-bottom: 80px;
+    
+    width: 32%;
+}
+
+.come-funziona article img{
+    margin-bottom: 30px;
+}
+
+.description-come-funziona{
+    height: 385px;
+    font-size: 0;
+}
+
+.description-come-funziona .sx{
+    display: inline-block;
+    width: 50%;
+    height: 385px;
+    padding: 20px;
+    background-color: #dddddd;
+    
+    font-size: 16px;
+}
+
+.description-come-funziona .sx .wrapper-sx{
+    width: 100%;
+    max-width: 510px;
+    float: right;
+}
+
+.description-come-funziona .dx{
+    display: inline-block;
+    width: 50%;
+    height: 100%;
+    
+    background: url(../img/mockup-v2.jpg) no-repeat center;
+    background-size: cover;
+}
+
+/* Categorie */
+
+.categories{
+    font-size: 0;
+}
+
+.categories article{
+    position: relative;
+    overflow: hidden;
+    vertical-align: top;
+}
+
+.categories article img{
+    width: 100%;
+    
+    transition: all .3s ease;
+}
+
+.categories article:hover img{
+    transform: scale(1.10);
+}
+
+.categories article h3{
+    position: absolute;
+    bottom: -10px;
+    
+    width: 100%;
+    height: 85px;
+    
+    background-color: rgba(0,0,0,.5);
+    /*background-color: rgba(57, 108, 162, .5);*/
+    color: white;
+    
+    text-align: center;
+    line-height: 25px;
+    
+    padding-top: 20px;
+    
+    transition: all .3s ease;
+}
+
+.categories article:hover h3{
+    height: 150px;
+}
+
+.categories article p{
+    position: absolute;
+    bottom: 0px;
+    
+    width: 100%;
+    
+    font-size: 16px;
+    text-align: center;
+    
+    opacity: 0;
+    
+    transition: all .3s ease 0s;
+}
+
+.categories article:hover p{
+    opacity: 1;
+    
+    transition: all .3s ease .3s;
+}
+
+/* Aziende */
+
+.aziende{
+    font-size: 0;
+}
+
+.aziende img{
+    width: 100px;
+    height: 100px;
+    
+    margin-bottom: 10px;
+    border: 2px solid rgb(57, 108, 162);
+    padding: 5px;
+}
+
+.aziende .name{
+    font-family: 'Catamaran', sans-serif;
+    font-size: 24px;
+    margin-bottom: 0;
+}
+
+.aziende .professione{
+    font-size: 14px;
+}
+
+.aziende article{
+    margin-bottom: 30px;
+}
+
+/* Carousel boostrap */
+
+.carousel-control{
+    color: #000;
+}
+
+.carousel-control:hover, .carousel-control:focus{
+    color: #000;
+}
+
+.carousel-control.right, .carousel-control.left{
+    background-image: none;
+}
+
+/* Guide */
+
+.guide{
+    font-size: 0;
+}
+
+.guide .bg-guide{
+    background-color: #fafafa;
+    padding: 20px;
+}
+
+.guide .wrapper-guide{
+    max-width: 1280px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.guide article{
+    width: 50%;
+    display: inline-block;
+    padding: 20px;
+    vertical-align: top;
+}
+
+.guide article img{
+    float: left;
+    width: 35%;
+    padding: 5px;
+    border: 2px solid rgb(57, 108, 162);
+}
+
+.guide article .text{
+    float: right;
+    width: 60%;
+}
+
+.guide article h3{
+    display: inline-block;
+    margin-top: 0;
+}
+
+.guide article p{
+    font-size: 14px;
+}
+
+.guide article a{
+    color: #333;
+    display: block;
+}
+
+.guide article a:hover h3{
+    text-decoration: underline;
+}
+
+
+
+/* FOOTER */
+
+footer{
+    background-color: rgb(57, 108, 162);
+    padding: 20px;
+    font-size: 0;
+    
+    color: white;
+}
+
+.wrapper-footer{
+    max-width: 1100px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+footer .top-footer{
+    width: 100%;
+    border-bottom: 2px solid white;
+    
+    margin-bottom: 20px;
+    padding-bottom: 30px;
+    
+    text-align: center;
+}
+
+footer .top-footer h3{
+    line-height: 1.5em;
+}
+
+footer .sx{
+    width: 70%;
+    float: left;
+}
+
+footer .sx div{
+    width: 25%;
+    display: inline-block;
+    vertical-align: top;
+    padding: 20px;
+    margin-right: 5%;
+}
+
+footer .sx div a{
+    font-size: 11px;
+    display: block;
+}
+
+footer .dx{
+    width: 20%;
+    float: right;
+    margin-top: 140px;
+}
+
+footer .dx h4{
+    display: inline-block;
+    line-height: 33px;
+    vertical-align: middle;
+}
+
+footer .dx img{
+    margin-left: 10px;
+}
+
+footer .copy{
+    font-size: 10px;
+    text-align: center;
+    margin: 5px;
+}
+
+footer hr{
+    width: 100%;
+    margin: 30px 0;
+    background-color: white;
+}
+
+
+
+
+
+/* PREVENTIVO PAGE */
+
+.mini-header-preventivo{
+    /*width: 100%;*/
+    padding: 30px;
+    margin-top: 85px;
+    margin-bottom: 80px;
+    
+    background: url(../img/img-avvocato-preventivopage.jpg) no-repeat right top;
+    
+    vertical-align: top;
+    
+    position: relative;
+}
+
+.mini-header-preventivo h3{
+    width: 50%;
+    
+    font-family: Verdana;
+    font-size: 1.2em;
+    line-height: 1.5em;
+}
+
+.mini-header-preventivo .coccarda{
+    margin-left: 100px;
+    margin-top: -30px;
+}
+
+.preventivo-form{
+    display: inline-block;
+    width: 500px;
+    
+    padding: 20px 60px;
+    margin-top: 30px;
+    
+    text-align: center;
+    
+    background-color: rgb(57, 108, 162);
+    vertical-align: top;
+    
+    position: relative;
+}
+
+.preventivo-form h2{
+    font-size: 28px;
+    margin: 0;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.preventivo-form .arrow{
+    position: absolute;
+    right: 30px;
+    top: 40px;
+}
+
+.preventivo-form input[type="text"], .preventivo-form input[type="email"], .preventivo-form input[type="tel"]{
+    background-color: white;
+    border: 2px solid #eee;
+    width: 100%;
+    height: 40px;
+    margin: 10px 0;
+    padding-left: 10px;
+}
+
+.preventivo-form .btn{
+    margin: 10px 0;
+    width: 50%;
+}
+
+
+.preventivo-content section{
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgb(57, 108, 162);
+}
+
+
+
+.preventivo-content a{
+    text-decoration: none;
+}
+
+.preventivo-content section h4{
+    color: rgb(57, 108, 162);
+    line-height: 30px;
+    display: inline-block;
+}
+
+.preventivo-content section img{
+    padding: 5px;
+    margin: 10px;
+    border: 2px solid rgb(57, 108, 162);
+}
+
+.preventivo-content section img.no-border{
+    border: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+.preventivo-side{
+    padding: 0 20px;
+}
+
+.preventivo-side section{
+    margin-bottom: 20px;
+}
+
+.preventivo-side section.border-bottom{
+    border-bottom: 1px solid rgb(57, 108, 162);
+}
+
+.preventivo-side h4{
+    color: rgb(57, 108, 162);
+}
+
+
+/* CATEGORY PAGE */
+
+.category-header{
+    height: 100%;
+    position: absolute;
+    
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    
+    z-index: 0;
+    
+    transform-origin: center;
+}
+
+
+/* GUIDE PAGE */
+
+.guide-content a{
+    text-decoration: none;
+}
+
+.guide-content section{
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgb(57, 108, 162);
+}
+
+.guide-content section h4{
+    color: rgb(57, 108, 162);
+    line-height: 20px;
+}
+
+.guide-content section img{
+    padding: 5px;
+    margin-left: 20px;
+    border: 2px solid rgb(57, 108, 162);
+}
+
+.guide-side{
+    padding: 0 20px;
+}
+
+.guide-side section{
+    margin-bottom: 20px;
+}
+
+.guide-side h4{
+    color: rgb(57, 108, 162);
+}
+
+.guide-side a{
+    text-decoration: none;
+}
+
+
+
+/* LANDING PAGE PREVENTIVO */
+
+.form-landing-preventivo{
+    width: 100%;
+    max-width: 700px;
+    margin: 20px auto;
+}
+
+.form-landing-preventivo a{
+    color: rgb(57, 108, 162);
+}
+
+.form-landing-preventivo label{
+    width: 100%;
+    margin-top: 20px;
+}
+
+.form-landing-preventivo input[type="text"], .form-landing-preventivo input[type="email"], .form-landing-preventivo input[type="tel"], .form-landing-preventivo select, .form-landing-preventivo textarea{
+    background-color: white;
+    border: 2px solid #ccc;
+    width: 100%;
+    height: 40px;
+    margin: 10px 0;
+    padding-left: 10px;
+}
+
+.form-landing-preventivo textarea{
+    height: 100px;
+    padding: 10px;
+}
+
+.form-landing-preventivo input[type="checkbox"]{
+    width: 50px;
+    height: 15px;
+}
+
+.form-landing-preventivo p{
+    width: 70%;
+    display: inline-block;
+}
+
+.form-landing-preventivo .informativa{
+    padding: 30px 0;
+}
+
+
+
+/* VETRINA PROFESSIONISTA */
+
+.header-vetrina{
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    margin-top: 105px;
+}
+
+.header-vetrina h1{
+    font-size: 28px;
+}
+
+.header-vetrina a{
+    color: rgb(57, 108, 162);
+}
+
+.header-vetrina .btn{
+    color: white;
+}
+
+.header-vetrina .btn:hover{
+    color: #333;
+}
+
+.header-vetrina img{
+    width: 200px;
+    padding: 5px;
+    border: 2px solid rgb(57, 108, 162);
+    margin: 0 20px 20px 0;
+}
+
+.header-vetrina img.top{
+    width: 42px;
+    padding: 5px;
+    border: 0px solid rgb(57, 108, 162);
+    margin: 0;
+}
+
+.header-vetrina .bottone-mobile{
+    border: 2px solid rgb(57, 108, 162);
+    margin-top: 10px;
+    display: none;
+}
+
+.header-vetrina .col-66{
+    width: 66%;
+    vertical-align: top;
+}
+
+.foto-vetrina{
+    width: 100%;
+    margin-top: 30px;
+    padding: 3px;
+    border: 1px solid #ccc;
+}
+
+.foto-vetrina .item img{
+    width: 100%;
+}
+
+.foto-vetrina .carousel-control{
+    color: white;
+    font-size: 200px;
+}
+
+.foto-vetrina .carousel-control:hover{
+    color: white;
+}
+
+.foto-vetrina .carousel-control .icon-prev, .foto-vetrina .carousel-control .icon-next{
+    width: 100px;
+    height: 100px;
+    margin-top: -50px;
+    font-size: 100px;
+}
+
+.vetrina-form{
+    background-color: rgb(57, 108, 162);
+    vertical-align: top;
+    margin-top: 85px;
+    padding: 20px;
+    position: relative;
+}
+
+.vetrina-form form{
+    text-align: center;
+}
+
+.vetrina-form h3{
+    color: white;
+    margin-top: 0;
+}
+
+
+.vetrina-form input[type="text"], .vetrina-form input[type="email"], .vetrina-form input[type="tel"], .vetrina-form textarea{
+    background-color: white;
+    border: 2px solid #eee;
+    width: 100%;
+    height: 40px;
+    margin: 10px 0;
+    padding-left: 10px;
+}
+
+.vetrina-form textarea{
+    height: 100px;
+    padding: 10px;
+}
+
+.vetrina-form form img{
+    padding: 10px 0;
+}
+
+.vetrina-form .informativa{
+    text-align: left;
+    padding: 30px 0;
+    color: white;
+}
+
+.vetrina-form .informativa input{
+    margin-right: 10px;
+}
+
+.vetrina-form .informativa a{
+    color: white;
+    display: inline;
+}
+
+.vetrina-form .btn{
+    margin: 10px 0;
+    width: 50%;
+}
+
+.vetrina-form .arrow{
+    position: absolute;
+    right: 30px;
+    top: 20px;
+    height: 50px;
+}
+
+
+
+.specializzato-vetrina ul li{
+    list-style-type: none;
+    margin: 5px 0;
+}
+
+.specializzato-vetrina ul li img{
+    width: 20px;
+    padding: 0;
+    border: 0 solid rgb(57, 108, 162);
+    margin: 0;
+    margin-right: 3px;
+}
+
+
+
+
+
+
+
+
+/* -----------------------------------------------------------------------------
+
+  HAMBURGER ICONS COMPONENT
+  
+----------------------------------------------------------------------------- */
+/**
+ * Toggle Switch Globals
+ *
+ * All switches should take on the class `c-hamburger` as well as their
+ * variant that will give them unique properties. This class is an overview
+ * class that acts as a reset for all versions of the icon.
+ */
+.c-hamburger {
+  display: none;
+  position: relative;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  width: 80px;
+  height: 150px;
+  font-size: 0;
+  text-indent: -9999px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  box-shadow: none;
+  border-radius: none;
+  border: none;
+  cursor: pointer;
+}
+
+header.smaller .c-hamburger{
+    height: 75px;
+}
+
+.c-hamburger:focus {
+  outline: none;
+}
+
+.c-hamburger span {
+    display: block;
+    position: absolute;
+    top: 75px;
+    left: 18px;
+    right: 18px;
+    height: 5px;
+    background-color: #fff;
+    -webkit-transition: background .3s;
+	-moz-transition: background .3s;
+	-ms-transition: background .3s;
+	-o-transition: background .3s;
+    transition: background .3s;
+}
+
+nav.white .c-hamburger span{
+    background: rgb(57, 108, 162);
+}
+
+nav.white .is-active span{
+    background: transparent;
+}
+
+.c-hamburger span::before,
+.c-hamburger span::after {
+    position: absolute;
+    display: block;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: white;
+    content: "";
+    -webkit-transition: background .3s;
+	-moz-transition: background .3s;
+	-ms-transition: background .3s;
+	-o-transition: background .3s;
+    transition: background .3s;
+}
+
+nav.white .c-hamburger span::before,
+nav.white .c-hamburger span::after {
+    background: rgb(57, 108, 162);
+}
+
+.c-hamburger span::before {
+  top: -15px;
+}
+
+.c-hamburger span::after {
+  bottom: -15px;
+}
+
+
+
+
+/**
+ * Style 2
+ * 
+ * Hamburger to "x" (htx). Takes on a hamburger shape, bars slide
+ * down to center and transform into an "x".
+ */
+.c-hamburger--htx {
+    background-color: transparent;
+}
+
+.c-hamburger--htx span {
+    -webkit-transition: background 0s 0.0s;
+    -moz-transition: background 0s 0.0s;
+	-ms-transition: background 0s 0.0s;
+	-o-transition: background 0s 0.0s;
+    transition: background 0s 0.0s;
+}
+
+.c-hamburger--htx span::before,
+.c-hamburger--htx span::after {
+  -webkit-transition-duration: 0.3s, 0.3s;
+          transition-duration: 0.3s, 0.3s;
+  -webkit-transition-delay: 0.3s, 0s;
+          transition-delay: 0.3s, 0s;
+}
+
+.c-hamburger--htx span::before {
+  -webkit-transition-property: top, -webkit-transform;
+          transition-property: top, transform;
+}
+
+.c-hamburger--htx span::after {
+  -webkit-transition-property: bottom, -webkit-transform;
+          transition-property: bottom, transform;
+}
+
+/* active state, i.e. menu open */
+
+
+.c-hamburger--htx.is-active span {
+  background: none;
+}
+
+header.smaller .c-hamburger--htx.is-active span{
+  background: none;
+}
+
+.c-hamburger--htx.is-active span::before {
+  top: 0;
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.c-hamburger--htx.is-active span::after {
+  bottom: 0;
+  -webkit-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+.c-hamburger--htx.is-active span::before,
+.c-hamburger--htx.is-active span::after {
+  -webkit-transition-delay: 0s, 0.3s;
+          transition-delay: 0s, 0.3s;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/************** MEDIA QUERIES **************/
+
+
+
+/* MEDIA QUERY FOR SCREENS < 860px */
+
+@media(max-width:1024px){
+    
+    /* Disable hover btn */
+    
+    .btn.green:hover, .btn.green:focus{
+        background-color: #219a1b;
+        color: white;
+    }
+    
+    .btn.blue:hover, .btn.blue:focus{
+        background-color: rgb(57, 108, 162);
+        color: white;
+    }
+    
+    .border-green:hover{
+        border: 2px solid white;
+    }
+    
+    
+    /* header */
+    
+    header h1{
+        width: 90%;
+
+        font-size: 40px;
+    }
+    
+    header h3{
+        width: 90%;
+        
+        font-size: 1em;
+        line-height: 1.5em;
+
+        z-index: 3;
+        
+        margin-bottom: 20px;
+    }
+    
+    header form{
+        display: block;
+        
+        text-align: center;
+
+        z-index: 3;
+    }
+
+    header form input[type="text"]{
+        width: 90%;
+        padding: 10px 10px;
+        margin: 10px 0;
+    }
+    
+    header form input[type="submit"]{
+        width: 90%;
+        padding: 10px 10px;
+        margin: 10px 0;
+    }
+    
+    
+    /* Navigation mobile */
+    .nav-mobile{
+        display: block;
+        right:-300px;
+        -webkit-transition: right .2s ease-in-out .5s;
+        -moz-transition: right .2s ease-in-out .5s;
+        -ms-transition: right .2s ease-in-out .5s;
+        -o-transition: right .2s ease-in-out .5s;
+        transition: right .2s ease-in-out .5s;
+    }
+    
+    .c-hamburger{
+        display: inline-block;
+    }
+    
+    .c-hamburger {
+      width: 70px;
+      height: 50px;
+    }
+    
+    .c-hamburger span{
+        top: 20px;
+    }
+    
+    .c-hamburger span::before {
+        top: -12px;
+    }
+
+    .c-hamburger span::after {
+        bottom: -12px;
+    }
+    
+    .nav-mobile.is-active-menu{
+        right: 0;
+    }
+    
+    /* Navigation desktop */
+    .nav-desktop{
+        display: none;
+    }
+    
+    nav .btn{
+        display: none;
+    }
+    
+    nav .accedi-link{
+        display: none;
+    }
+    
+    /* Content */
+    
+    .col-3{
+        width: 50%;
+    }
+    
+    .col-66{
+        width: 100%;
+    }
+
+    .col-33{
+        width: 100%;
+        min-width: 0;
+    }
+
+    .col-66 h3, .col-33 h3{
+        margin: 50px 0 30px 0;
+    }
+
+    .col-33 a{
+        display: inline-block;
+        width: 49%;
+        color: rgb(57, 108, 162);
+        vertical-align: top;
+    }
+
+    .col-33 a:hover{
+        text-decoration: underline;
+    }
+    
+    
+    /* Come funziona */
+    
+    .come-funziona article img{
+        width: 30%;
+        margin-bottom: 0;
+    }
+    
+    .description-come-funziona{
+        height: auto;
+    }
+
+    .description-come-funziona .sx{
+        width: 100%;
+        height: auto;
+    }
+    
+    .description-come-funziona .sx .wrapper-sx{
+        max-width: none;
+    }
+
+    .description-come-funziona .dx{
+        display: none;
+    }
+    
+    /* Categorie */
+
+
+    .categories article img{
+        width: 100%;
+
+        transform: scale(1.10);
+    }
+
+    .categories article h3{
+        height: 150px;
+    }
+
+    .categories article p{
+        opacity: 1;
+    }
+    
+    /* Aziende in evidenza */
+    
+    .aziende .col-3{
+        width: 100%;
+    }
+    
+    /* Guide */
+
+    .guide article img{
+        float: none;
+        width: 100%;
+        display: block;
+    }
+
+    .guide article .text{
+        float: none;
+        width: 100%;
+    }
+    
+    .guide article h3{
+        margin-top: 15px;
+    }
+    
+    .guide-side h4{
+        display: inline-block;
+    }
+    
+    .guide-side img{
+        width: 100%;
+    }
+    
+    /* footer */
+    
+    footer .sx{
+        width: 100%;
+    }
+    
+    footer .dx{
+        width: 100%;
+        float: none;
+        margin-top: 40px;
+        text-align: center;
+    }
+
+    footer .dx h4{
+        display: block;
+        line-height: 33px;
+        text-align: center;
+    }
+
+    footer .dx img{
+        margin: 0 10px;
+    }
+
+    footer .copy{
+        font-size: 10px;
+        text-align: center;
+        margin: 5px;
+    }
+    
+    /* PREVENTIVO PAGE */
+    
+    .mini-header-preventivo{
+    
+        background: none;
+    }
+    
+    .mini-header-preventivo h1{
+        width: 90%;
+    }
+    
+    .mini-header-preventivo h3{
+        width: 100%;
+    }
+    
+    .mini-header-preventivo .coccarda{
+        position: absolute;
+        top: 40px;
+        right: 10px;
+        width: 80px;
+    }
+    
+    .preventivo-form{
+        width: 100%;
+        min-width: 0;
+    }
+    
+    /* VETRINA PROFESSIONISTA */
+    
+    .header-vetrina img{
+        width: 90px;
+        margin: 0 10px 10px 0;
+    }
+    
+    .vetrina-form{
+        margin-top: 0px;
+    }
+    
+    .vetrina-form h3{
+        margin-top: 20px;
+    }
+    
+    .header-vetrina .bottone-mobile{
+        display: inline-block;
+    }
+    
+}
+
+
+
+
+
+
+/* MEDIA QUERY FOR SCREENS < 460px */
+
+@media(max-width: 460px){
+    
+    /*Global*/
+
+    h1{
+        font-size: 30px;
+    }
+
+    h2{
+        font-size: 30px;
+    }
+
+    hr{
+        width: 90%;
+    }
+    
+    /*Header*/
+    
+    header{
+        height: 100vh;
+        overflow: hidden;
+    }
+
+    header h1{
+        font-size: 30px;
+        
+        margin-top: 30px;
+    }
+    
+    /*Content*/
+    
+    .wrapper-article{
+        padding: 0 10px;
+    }
+    
+    .col-3{
+        width: 100%;
+    }
+    
+    .col-33 a{
+        width: 100%;
+    }
+
+    .col-4{
+        width: 100%;
+    }
+
+    
+    
+    /* Come funziona */
+    
+    .come-funziona article{
+        width: 100%;
+    }
+    
+    .come-funziona article img{
+        width: 20%;
+    }
+    
+    /* Categorie */
+
+
+    .categories article img{
+        width: 100%;
+
+        transform: scale(1.10);
+    }
+
+    .categories article h3{
+        height: 150px;
+    }
+
+    .categories article p{
+        opacity: 1;
+    }
+
+    /* Guide */
+    
+    .guide article{
+        width: 100%;
+    }
+    
+    
+
+
+    /* FOOTER */
+
+
+    footer .sx{
+        width: 100%;
+        float: none;
+    }
+
+    footer .sx div{
+        width: 100%;
+        text-align: center;
+    }
+
+    
+
+    
+    
+    /* PREVENTIVO PAGE */
+
+    .preventivo-form{
+        padding: 20px;
+    }
+
+    .preventivo-form .btn{
+        margin: 10px 0;
+        width: 100%;
+    }
+    
+    .preventivo-form h2{
+        font-size: 22px;
+    }
+    
+    .preventivo-form .arrow{
+        right: 10px;
+        top: 45px;
+    }
+
+    
+
+    .preventivo-content section{
+        margin-bottom: 20px;
+        padding-bottom: 20px;
+        border-bottom: 1px solid rgb(57, 108, 162);
+    }
+
+    .preventivo-content a{
+        text-decoration: none;
+    }
+
+    .preventivo-content section h4{
+        color: rgb(57, 108, 162);
+        line-height: 30px;
+        display: block;
+    }
+
+    .preventivo-content section img{
+        padding: 5px;
+        margin-left: 0;
+        margin-top: 0;
+        border: 2px solid rgb(57, 108, 162);
+        float: none;
+    }
+
+    .preventivo-content section img.no-border{
+        border: none;
+        display: block;
+    }
+
+    .preventivo-side{
+        padding: 0 20px;
+    }
+
+    .preventivo-side section{
+        margin-bottom: 20px;
+    }
+
+    .preventivo-side section.border-bottom{
+        border-bottom: 1px solid rgb(57, 108, 162);
+    }
+
+    .preventivo-side h4{
+        color: rgb(57, 108, 162);
+    }
+    
+    
+    
+    
+    /* GUIDE PAGE */
+
+    .guide-content section h4{
+        color: rgb(57, 108, 162);
+        line-height: 20px;
+    }
+
+    .guide-content section img{
+        margin-bottom: 20px;
+        
+        width: 100%;
+    }
+    
+    .guide-side{
+        padding: 0 10px;
+    }
+    
+    
+    
+    /* VETRINA PROFESSIONISTA */
+    
+    .header-vetrina h1{
+        height: 90px;       
+    }
+    
+    .vetrina-form .arrow{
+        right: 30px;
+        top: 50px;
+        height: 40px;
+    }
+    
+}
+
+
+/* MEDIA QUERY FOR SCREENS < 460px */
+
+@media(max-width: 340px){
+    header h1 {
+        margin-top: 50px;
+        margin-bottom: 0
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
