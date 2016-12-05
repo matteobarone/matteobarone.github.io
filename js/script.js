@@ -1,9 +1,4 @@
-// Script to open and close the PLUS section - No JQuery ////
-
 // Store objects in variables
-var circle = document.getElementById("circle");
-var bio = document.getElementById("bio");
-var versionBox = document.getElementById("versionBox");
 
 var wrapperProjectsAbout = document.getElementById("wrapper-projects-about");
 
@@ -44,33 +39,6 @@ function pauseVid() {
     mobileAtmVideo.pause();
     mobileControllerPause.classList.add("no-display");
     mobileControllerPlay.classList.remove("no-display");
-}
-
-
-
-//Controller for the hover in the about: active/disactive song
-var aboutImg = document.getElementById("about-img");
-var song = document.getElementById("song");
-if(aboutImg){
-    aboutImg.addEventListener("mouseover", hoverVideo);
-    aboutImg.addEventListener("mouseout", hideVideo);
-}
-
-function hoverVideo() {
-    //alert("hover");
-    var w = window.innerWidth;
-    if(w > 560){
-        song.play();
-    }
-}
-
-function hideVideo() {
-    
-    //alert("out");
-    var w = window.innerWidth;
-    if(w > 560){
-        song.pause();
-    }
 }
 
 
@@ -117,7 +85,6 @@ if(elementsToLoad.length != 0){
 
     var bLazy = new Blazy({
         success: function(element){
-            console.log("fatt");
             elementsToLoad[imagesLoaded].classList.remove('animation-bg');
             elementsToLoad[imagesLoaded].nextElementSibling.classList.add('no-display');
             if ( imagesLoaded < elementsToLoad.length - 1 ) {

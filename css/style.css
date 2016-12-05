@@ -27,8 +27,8 @@ body{
     border: 10px solid #0028ff;
     
     font-family: "Lato", sans-serif;
-    font-weight: 100;
-    font-size: 14px;
+    font-weight: 300;
+    font-size: 20px;
     line-height: 1.2em;
     
     color: #0028ff;
@@ -62,7 +62,7 @@ h3{
 
 p{
     margin-bottom: 10px;
-    line-height: 18px;
+    line-height: 1.5em;
 }
 
 a{
@@ -108,17 +108,17 @@ header{
     position: relative;
     height: 70px;
     font-family: "Bitter", serif;
+    z-index: 1;
 }
 
 header .logo{
     position: fixed;
     top: 10px;
     left: 70px;
-    z-index: 1;
 }
 
 header h1{
-    font-size: 2em;
+    font-size: 1.5em;
     margin: 0;
 }
 
@@ -141,6 +141,12 @@ header ul li{
     margin: 20px 0 20px 20px;
 }
 
+header ul li a{
+    font-size: .70em;
+    z-index: 1;
+    position: relative;
+}
+
 header ul li.selected .nav-border,
 header ul li:hover .nav-border{
     transform: scaleX(1);
@@ -148,11 +154,12 @@ header ul li:hover .nav-border{
 
 .nav-border{
     position: absolute;
-    height: 20px;
+    height: 25px;
     width: 100%;
     border-bottom: 2px solid rgb(0,40,255);
     transform: scaleX(0);
     transition: transform .1s ease;
+    z-index: 0;
 }
 
 header ul.side{
@@ -166,201 +173,8 @@ header ul.side{
 
 /* INDEX */
 
-.piu div{
-    width: 35px;
-    height: 35px;
-    
-    position: absolute;
-    
-    z-index: 2;
-}
-
-.transition-for-plus{
-    -webkit-transition: all 1.5s ease;
-    transition: all 1.5s ease;
-    -webkit-transition-property: top, left, bottom, right, margin, position;
-    transition-property: top, left, bottom, right, margin, position;
-}
-
-.top-left{
-    border-top: 10px solid #0028ff;
-    border-left: 10px solid #0028ff;
-    
-    top: 50%;
-    left: 50%;
-}
-
-.top-right{
-    border-top: 10px solid #0028ff;
-    border-right: 10px solid #0028ff;
-    
-    top: 50%;
-    left: 50%;
-    margin-left: -25px;
-}
-
-.bottom-left{
-    border-bottom: 10px solid #0028ff;
-    border-left: 10px solid #0028ff;
-    
-    top: 50%;
-    left: 50%;
-    margin-top: -25px;
-}
-
-.bottom-right{
-    border-bottom: 10px solid #0028ff;
-    border-right: 10px solid #0028ff;
-    
-    top: 50%;
-    left: 50%;
-    margin-left: -25px;
-    margin-top: -25px;
-}
-
-.expandPlus .top-left{
-    position: fixed;
-    top: 20px;
-    left: 20px;
-}
-
-.expandPlus .top-right{
-    position: fixed;
-    top: 20px;
-    left: 100%;
-    margin-left: -55px;
-}
-
-.expandPlus .bottom-left{
-    position: fixed;
-    top: 100%;
-    left: 20px;
-    margin-top: -55px;
-}
-
-.expandPlus .bottom-right{
-    position: fixed;
-    top: 100%;
-    left: 100%;
-    margin-left: -55px;
-    margin-top: -55px;
-}
-
-.white-brackets{
-    border-color: white;
-}
-
-.circle{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin-top: -35px;
-    margin-left: -35px;
-    width: 80px;
-    height: 80px;
-    
-    background: url(../img/circle.png) center no-repeat;
-    background-size: cover;
-    
-    opacity: 1;
-    
-    z-index: 1;
-    
-    -webkit-transition: all .5s;
-    
-    transition: all .5s;
-}
-
-.animate-circle-movement{
-    -webkit-animation: circle-movement .8s ease .5s infinite alternate;
-    animation: circle-movement .8s ease .5s infinite alternate;
-}
-
-@-webkit-keyframes circle-movement{
-    0%{
-    }
-    
-    100%{
-        -webkit-transform: scale(1.1);
-        transform: scale(1.1);
-    }
-}
-
-@keyframes circle-movement{
-    0%{
-    }
-    
-    100%{
-        -webkit-transform: scale(1.1);
-        transform: scale(1.1);
-    }
-}
-
-.bio{
-    position: absolute;
-    bottom: 0;
-    
-    padding: 20px;
-    
-    opacity: 1;
-    
-    z-index: 2;
-    
-    -webkit-transition: all .5s;
-    
-    transition: all .5s;
-}
-
-.bio a{
-    text-decoration: underline;
-}
-
-.version-box{
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    
-    padding: 20px;
-    
-    opacity: 1;
-    
-    z-index: 2;
-    
-    -webkit-transition: all .5s;
-    
-    transition: all .5s;
-    font-size: 0.7em;
-    
-    display: none;
-}
-
 .hide{
     opacity: 0;
-}
-
-.close-X{
-    width: 30px;
-    height: 30px;
-    background-image: url(../img/x.png);
-    
-    position: fixed;
-    top: 50px;
-    left: 100%;
-    margin-left: 80px;
-    
-    z-index: 2;
-    -webkit-transition: margin .5s ease;
-    transition: margin .5s ease;
-}
-
-.x-white{
-    background-image: url(../img/x-white.png);
-}
-
-.animate-x{
-    margin-left: -80px;
-    -webkit-transition: margin .5s ease 1.7s;
-    transition: margin .5s ease 1.7s;
 }
 
 .contact a{
@@ -372,7 +186,7 @@ header ul.side{
 /* PROJECTS - In the Projects page there is my projects and at the end of the page there is the about section */
 
 section{
-    padding: 50px;
+    padding: 0 70px 50px 70px;
     
     font-size: 0;
     
@@ -380,7 +194,7 @@ section{
 }
 
 section h1{
-    font-size: 28px;
+    font-size: 42px;
     text-align: center;
     margin: 40px 0;
 }
@@ -402,9 +216,13 @@ section h4{
     margin: 20px 0 5px 0;
 }
 
-section p, section li, section a{
-    font-size: 14px;
-    line-height: 18px;
+section li, section a{
+    font-size: 16px;
+}
+
+section p{
+    font-size: 20px;
+    line-height: 1.5em;
 }
 
 section a{
@@ -413,11 +231,8 @@ section a{
 
 .wrapper-projects-about{
     width: 100%;
-    
-    opacity: 0;
     height: 100%;
     overflow: hidden;
-    visibility: hidden;
 }
 
 .projects{
@@ -434,6 +249,9 @@ section a{
     
     margin-bottom: 4%;
     margin-right: 5%;
+
+    position: relative;
+    overflow: hidden;
 }
 
 .projects article.no-margin-right{
@@ -450,93 +268,65 @@ section a{
     width: 100%;
 }
 
-.bg-hover{
-    position: absolute;
-    top: 5%;
-    left: 3.5%;
-    
-    width: 93%;
-    height: 90%;
-    
-    background-color: #0028ff;
-    opacity: 0;
-    
-    -webkit-transition: all 0s linear;
-    
-    transition: all 0s linear;
-}
-
-.piu-projects{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin-top: -15px;
-    margin-left: -15px;
-    width: 30px;
-    height: 30px;
-    
-    background: url(../img/piu-projects-white.png) center no-repeat;
-    background-size: cover;
-    
-    opacity: 0;
-    
-    z-index: 1;
-    
-    -webkit-transition: all .2s linear;
-    
-    transition: all .2s linear;
-}
-
-.circle-projects{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin-top: -25px;
-    margin-left: -25px;
-    width: 50px;
-    height: 50px;
-    
-    background: url(../img/circle-projects-white.png) center no-repeat;
-    background-size: cover;
-    
-    opacity: 0;
-    
-    z-index: 1;
-    
-    -webkit-transition: all .2s linear;
-    
-    transition: all .2s linear;
-}
-
-.projects article a:hover .bg-hover{
-    opacity: .5;
-}
-
-.projects article a:hover .piu-projects{
-    opacity: 1;
-}
-
-.projects article a:hover .circle-projects{
-    -webkit-animation: circle-movement .8s ease .5s infinite alternate;
-    animation: circle-movement .8s ease .5s infinite alternate;
-    opacity: 1;
-}
-
 .project{
     width: 100%;
-    height: 300px;
+    height: 350px;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+    background-color: rgba(0,40,255,.2);
 
     display: flex;
     flex-flow: column wrap;
     justify-content: center;
     align-items: center;
 
-    transform: scale(1.05);
+    transition: all .5s ease;
+}
 
-    transition: transform .2s ease;
+.project a{
+    display: block;
+    width: 100%;
+    height: 300px;
+}
+
+.project.animation-bg{
+    -webkit-filter: blur(30px);
+    -moz-filter: blur(30px);
+    -o-filter: blur(30px);
+    -ms-filter: blur(30px);
+    filter: blur(30px);
+}
+
+/*Loading*/
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  30%{
+    transform: rotate(40deg);
+  }
+  70%{
+    transform: rotate(320deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.loading {
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    margin-top: -22px;
+    margin-left: -22px;
+    border-radius: 50%;
+    width: 44px;
+    height: 44px;
+    border: .25rem solid rgba(255,255,255, 0.2);
+    border-top-color: white;
+    animation: spin .8s infinite linear;
 }
 
 
@@ -545,7 +335,7 @@ section a{
 
 .description{
     font-family: "Bitter", serif;
-    font-size: 2.5em;
+    font-size: 2em;
     font-weight: 700;
     width: 70%;
 
@@ -583,6 +373,7 @@ section a{
 
 .about p{
     margin-bottom: 30px;
+    font-size: 16px;
 }
 
 
@@ -592,12 +383,6 @@ section a{
     vertical-align: top;
     
     background: url('../img/about-img.jpg');
-    background-size: cover;
-    background-position: center;
-}
-
-.about-img:hover{
-    background: url('../img/about-gif.gif');
     background-size: cover;
     background-position: center;
 }
@@ -638,17 +423,6 @@ section a{
 .about-content > div h3, .about-content > div h4{
     text-align: left;
     margin: 20px 0 10px 0;
-}
-
-.show{
-    opacity: 1;
-    height: auto;
-    overflow: visible;
-    visibility: visible;
-    
-    -webkit-transition: all .5s ease 1.5s;
-    
-    transition: all .5s ease 1.5s;
 }
 
 .footer{
@@ -712,9 +486,14 @@ section a{
     width: 14px;
 }
 
+.bulbpoint-project section p{
+    font-size: 16px;
+}
+
 .content-project{
-    display: inline-block;
     width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
     
     padding: 30px 0;
     
@@ -723,7 +502,7 @@ section a{
 }
 
 .content-project img{
-    width: 90%;
+    width: 100%;
     outline: 1px solid #d8d8d8;
 }
 
@@ -824,10 +603,9 @@ section a{
 }
 
 .description-project{
-    width: 100%;
+
     max-width: 700px;
-    
-    margin: 0 auto;
+    margin: 0 10% 80px 20%;
     padding: 30px 0;
 }
 
@@ -875,10 +653,8 @@ section a{
 /* Changing to dark theme when reach the about section */
 
 body.dark{
-
     background-color: rgb(0,40,255);
     color: #fafafa;
-
 }
 
 body.dark a{
@@ -936,6 +712,13 @@ body.dark .description span{
     h1, h2{
         font-size: 2em;
         letter-spacing: 5px;
+    }
+
+    .description{
+        width: 90%;
+        margin: 0 5%;
+        padding: 100px 0;
+        text-align: left;
     }
     
     /* PROJECTS */
@@ -1012,6 +795,11 @@ body.dark .description span{
 /* Screens smaller than 560px */
 
 @media(max-width: 560px){
+
+    .description{
+        font-size: 1.5em;
+        font-weight: 700;
+    }
     
     /* PROJECTS */
     
@@ -1035,12 +823,6 @@ body.dark .description span{
     }
 
     /* ABOUT */
-    
-    .about-img{
-        background: url('../img/about-gif.gif');
-        background-size: cover;
-        background-position: center;
-    }
     
     .about-content{
         padding: 10px;
@@ -1086,94 +868,16 @@ body.dark .description span{
         letter-spacing: 5px;
     }
     
-    .bio{
-        padding: 10px;
-    }
-    
-    .bio h1{
-        font-size: 21px;
-    }
-    
-    .circle{
-        margin-top: -30px;
-        margin-left: -30px;
-        width: 60px;
-        height: 60px;
-    }
-    
-    .piu div{
-        width: 20px;
-        height: 20px;
-    }
-    
-    .top-left{
-        border-top: 3px solid #0028ff;
-        border-left: 3px solid #0028ff;
+    header{
+        padding: 0 10px;
     }
 
-    .top-right{
-        border-top: 3px solid #0028ff;
-        border-right: 3px solid #0028ff;
-        
-        margin-left: -20px;
+    header .logo{
+        left: 10px;
     }
 
-    .bottom-left{
-        border-bottom: 3px solid #0028ff;
-        border-left: 3px solid #0028ff;
-        
-        margin-top: -20px;
-    }
-
-    .bottom-right{
-        border-bottom: 3px solid #0028ff;
-        border-right: 3px solid #0028ff;
-        
-        margin-left: -20px;
-        margin-top: -20px;
-    }
-    
-    .white-brackets{
-        border-color: white;
-    }
-    
-    .expandPlus .top-left{
-        top: 5px;
-        left: 5px;
-    }
-
-    .expandPlus .top-right{
-        top: 5px;
-        left: 100%;
-        margin-left: -25px;
-    }
-
-    .expandPlus .bottom-left{
-        top: 100%;
-        left: 5px;
-        margin-top: -25px;
-    }
-
-    .expandPlus .bottom-right{
-        top: 100%;
-        left: 100%;
-        margin-left: -25px;
-        margin-top: -25px;
-    }
-    
-    .close-X{
-        background-image: url(../img/x-mobile.png);
-        background-size: contain;
-        top: 30px;
-        margin-left: 60px;
-    }
-    
-    .animate-x{
-        margin-left: -60px;
-    }
-    
-    .x-white{
-        background-image: url(../img/x-mobile-white.png);
+    header ul{
+        display: none;
     }
 
     /* PROJECTS */
