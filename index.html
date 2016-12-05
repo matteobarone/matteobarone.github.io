@@ -6,7 +6,6 @@
         <!-- title and meta -->
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width,initial-scale=1.0" />
-        <meta name="description" content="Web developer from Pordenone, based in Milan. My background is mainly coding and programming, but I have a strong passion for UX. I’m a nature and sport lover." />
         <title>MATTEO BARONE</title>
 
         <!-- CSS -->
@@ -14,39 +13,199 @@
         <link rel="stylesheet" href="css/style.css" />
 
         <!-- font -->
-        <link href='https://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
+        <link href="https://fonts.googleapis.com/css?family=Bitter:400,700|Lato:300,400,700" rel="stylesheet">
     </head>
 
-    <body>
+    <body class="noBorderBody heightAuto">
         
-        <a class="piu" id="piu" href="projects.html">
-            <div class="top-left transition-for-plus"></div>
-            <div class="top-right transition-for-plus"></div>
-            <div class="bottom-left transition-for-plus"></div>
-            <div class="bottom-right transition-for-plus"></div>
-        </a>
-        
-        <div class="circle animate-circle-movement" id="circle"></div>
-        
-        <div class="bio" id="bio">
-            <h1>MATTEO BARONE</h1>
-            <p>Web developer from Pordenone, based in Milan.<br/>
-    My background is mainly coding and programming,<br/>
-    but I have a strong passion for UX.<br/>
-    I’m a nature and sport lover.</p>
-            <p class="contact">
-                <a href="https://it.linkedin.com/in/matteo-barone-61285561">LinkedIn</a>
-                <a href="https://www.instagram.com/matteobarone90/">Instagram</a>
-                <a href="https://github.com/matteobarone/">Github</a>
-            </p>
-        </div>
-        
-        <div class="version-box" id="versionBox">
-            This is the <span>Day</span> version.<br/>Is missing <span class="hours">2</span> hours and <span class="minutes">50</span> minutes to the shift of the version.
-        </div>
+        <header>
+            <div class="logo"><h1><a href="/">MB</a></h1></div>
+            <ul>
+                <li id="works-link" class="selected">
+                    <div class="nav-border"></div>
+                    <a href="#"> Works </a>
+                </li>
+                <li id="about-link">
+                    <div class="nav-border"></div>
+                    <a href="#"> About </a>
+                </li>
+            </ul>
+        </header>
+                
+        <div class="wrapper-projects-about show" id="wrapper-projects-about">
+            
+            <section class="projects" id="projects">
+
+                <article>
+                    <div class="project animation-bg" data-src="img/projects-img/luceplan.jpg">
+                        <a href="luceplan-project.html">
+                            
+                        </a>
+                    </div>
+                    
+                    <a href="luceplan-project.html">
+                        <h3>Luceplan Visual Design</h3>
+                    </a>
+                    <h4><strong>Responsive Design and Prototyping</strong></h4>
+                    <p class="text-center">2016</p>
+                </article>
+                
+                <article class="no-margin-right">
+                    <div class="project animation-bg" data-src="img/projects-img/samsung.jpg">
+                        <a href="samsung-project.html" class="project animation-bg">
+                            
+                        </a>
+                    </div>
+
+                    <a href="samsung-project.html">
+                        <h3>Samsung Contact</h3>
+                    </a>
+                    <h4><strong>Design a Service - Mobile Application</strong></h4>
+                    <p class="text-center">2016</p>
+                </article>
+
+                <article>
+                    <a href="nike-project.html" class="project animation-bg">
+                        <img src="img/projects-img/nike.jpg" alt="Nike project" />
+                    </a>
+                    <a href="nike-project.html">
+                        <h3>Nike Campaign</h3>
+                    </a>
+                    <h4><strong>Digital Communication Campaign</strong></h4>
+                    <p class="text-center">2016</p>
+                </article>
+
+                <article class="no-margin-right">
+                    <a href="rayban-project.html" class="project animation-bg">
+                        <img src="img/projects-img/rayban.jpg" alt="Rayban project" />
+                    </a>
+                    <a href="rayban-project.html">
+                        <h3>Ray-ban Restyling</h3>
+                    </a>
+                    <h4><strong>Responsive Design and Prototyping</strong></h4>
+                    <p class="text-center">2016</p>
+                </article>
+
+                <article>
+                    <a href="atm-project.html" class="project animation-bg">
+                        <img src="img/projects-img/atm.jpg" alt="ATM project" />
+                    </a>
+                    <a href="atm-project.html">
+                        <h3>ATM Restyling</h3>
+                    </a>
+                    <h4><strong>Responsive Design and Prototyping</strong></h4>
+                    <p class="text-center">2016</p>
+                </article>
+
+                <article class="no-margin-right">
+                    <a href="apple-project.html" class="project animation-bg">
+                        <img src="img/projects-img/apple.jpg" alt="Apple digital experience project" />
+                    </a>
+                    <a href="apple-project.html">
+                        <h3>Apple digital experience</h3>
+                    </a>
+                    <h4><strong>Design an Experience - Desktop</strong></h4>
+                    <p class="text-center">2015</p>
+                </article>
+
+            </section>
 
 
+            <h2 class="description">Web <span>developer</span> from Pordenone, based in Milan.<br/>
+My background is mainly <span>coding</span> and programming,
+but I have a strong passion for UX and <span>functional design.</span><br/>
+I’m a nature and sport lover.</h2>
+
+            <section class="about" id="about">
+
+                <div class="about-img" id="about-img"></div>
+
+                <div class="about-content">
+
+
+                    <div>
+
+                        <h3>Education</h3>
+
+                        <h4><strong>MASTER IN WEB DESIGN</strong></h4>
+                        <a href="http://www.scuoladesign.com/">SPD - Scuola politecnica di design</a>
+                        <p>Milan<br/>
+                        oct. 2015 - dec. 2016</p>
+
+
+                        <h4><strong>WEB TECHNOLOGIES DEGREE</strong></h4>
+                        <a href="http://www.uniud.it/">Università degli Studi di Udine</a>
+                        <p>Udine<br/>
+                        2010 - 2015</p>
+
+                    </div>
+
+                    <div>
+
+                        <h3>Work History</h3>
+
+                        <h4><strong>SALESFORCE DEV</strong></h4>
+                        <a href="https://www.newenergygroup.com/">New Energy Group</a>
+                        <p>Milan<br/>
+                        mar. 2015 - oct. 2016</p>
+
+                        <h4><strong>WEB DEVELOPER</strong></h4>
+                        <a href="http://www.actiongroupcommunication.com/">Actiongroupcommunication</a>
+                        <p>Pordenone<br/>
+                        feb. 2010 - dec. 2010</p>
+
+                    </div>
+
+                    <div>
+
+                            <h3>Skills</h3>
+                            <p>
+                                HTML<br/>
+                                CSS<br/>
+                                Javascript/JQuery<br/>
+                                PHP<br/>
+                                Wordpress<br/>
+                            </p>
+                            <p>
+                                Photoshop<br/>
+                                Sketch App 3<br/>
+                                Illustrator<br/>
+                                After Effects<br/>
+                                InDesign<br/>
+                            </p>
+
+
+                    </div>
+
+                    <div>
+
+                            <h3>Contact</h3>
+                            <a href="https://it.linkedin.com/in/matteo-barone-61285561">LinkedIn</a><br/>
+                            <a href="https://www.instagram.com/matteobarone90/">Instagram</a><br/>
+                            <a href="https://github.com/matteobarone/">Github</a><br/>
+                            <a href="CV2016.pdf">Download my cv</a>
+
+                    </div>
+
+                    <span class="footer">Matteo Barone | &copy; 2016</span>
+
+                </div>
+
+            </section>
+        
+        </div>
+        
+        
+        
+        
+        <audio class="song" id="song" loop>
+            <source src="song/song-about.mp3" type="audio/mpeg">
+        </audio>
+            
+        
+        
         <!-- js -->
+        <script src="js/blazy.js"></script>
         <script src="js/script.js"></script>
 
     </body>

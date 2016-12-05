@@ -1,8 +1,6 @@
 // Script to open and close the PLUS section - No JQuery ////
 
 // Store objects in variables
-var piu = document.getElementById("piu");
-var close = document.getElementById("closeX");
 var circle = document.getElementById("circle");
 var bio = document.getElementById("bio");
 var versionBox = document.getElementById("versionBox");
@@ -14,46 +12,11 @@ var about = document.getElementById("about");
 var aboutTitle = document.getElementById("about-title");
 var body = document.getElementsByTagName("BODY")[0];
 
-// Add the event listener
-piu.addEventListener("click", openPiu);
-if(close){
-    close.addEventListener("click", closePiu);
-}
+var description = document.querySelector('.description');
+var heightWind = document.documentElement.clientHeight;
 
-function openPiu(e){
-    e.preventDefault();
-    piu.classList.add("expandPlus");
-    circle.classList.toggle("hide");
-    bio.classList.toggle("hide");
-    versionBox.classList.toggle("hide");
-    body.classList.toggle("noBorderBody");
-    
-    setTimeout(function(){
-        goToProjectsPage(); 
-    }, 1500);
-    
-}
-
-function closePiu(e){
-    e.preventDefault();
-    piu.classList.remove("expandPlus");
-    close.classList.toggle("animate-x");
-    wrapperProjectsAbout.classList.remove("show");
-    body.classList.toggle("noBorderBody");
-    body.classList.toggle("heightAuto");
-    
-    setTimeout(function(){
-        goToHomePage(); 
-    }, 1500);
-}
-
-function goToProjectsPage(){
-    window.location.href = 'projects.html';
-}
-
-function goToHomePage(){
-    window.location.href = 'index.html';
-}
+var elementsToLoad = document.querySelectorAll('.projects article .project');
+var imagesLoaded   = 0;
 
 
 
@@ -111,69 +74,99 @@ function hideVideo() {
 }
 
 
+//Scrolling homepage
 
-// Only for about page, when the brackets in the corner of the page reach the About section (blue section), its become white
-if(about){
+window.addEventListener('scroll', function(){
 
-    window.onscroll = function(e) {
-
-        //about offset
-        var offsetAbout = about.getBoundingClientRect().top;
-
-        //get brackets
-        var bracketTopLeft = document.getElementById("bracket-top-left");
-        var bracketTopRight = document.getElementById("bracket-top-right");
-        var bracketBottomLeft = document.getElementById("bracket-bottom-left");
-        var bracketBottomRight = document.getElementById("bracket-bottom-right");
-        //get x
-        var x = document.getElementById("closeX");
-
-        // Get the pageYOffset
-        var pageOffset = window.pageYOffset;
-
-        //browser height
-        var browserheight = window.innerHeight;
-
-        // Page height minus the browser height
-        var totalHeightMinusBrowser = document.body.clientHeight - window.innerHeight;
-
-        //calculation of the offset for brackets and x
-        var offsetBottomBrackets = offsetAbout - browserheight + 35;
-        var offsetTopBrackets = offsetAbout - 20;
-        var offsetX = offsetAbout - 50;
-
-        //console.log("browserHeight -> " + browserheight);
-        //console.log("top brackets offset -> " + offsetTopBrackets);
-        //console.log("offsetX -> " + offsetX);
-
-        if(offsetBottomBrackets < 0){
-            bracketBottomLeft.classList.add("white-brackets");
-            bracketBottomRight.classList.add("white-brackets");
-        }else{
-            bracketBottomLeft.classList.remove("white-brackets");
-            bracketBottomRight.classList.remove("white-brackets");
-        }
-        
-        if(offsetTopBrackets < 0){
-            bracketTopLeft.classList.add("white-brackets");
-            bracketTopRight.classList.add("white-brackets");
-        }else{
-            bracketTopLeft.classList.remove("white-brackets");
-            bracketTopRight.classList.remove("white-brackets");
-        }
-        
-        if(offsetX < 0){
-            x.classList.add("x-white");
-        }else{
-            x.classList.remove("x-white");
-        }
-        
+    if(window.pageYOffset >= 100){
+        document.querySelector('header ul').classList.add('side');
+    }else{
+        document.querySelector('header ul').classList.remove('side');
     }
-    
+
+    if (description != null) {
+        if(description.getBoundingClientRect().top < heightWind/2){
+            document.querySelector('body').classList.add('dark');
+            document.querySelector('header ul li:first-child').classList.remove('selected');
+            document.querySelector('header ul li:last-child').classList.add('selected');
+        }else{
+            document.querySelector('body').classList.remove('dark');
+            document.querySelector('header ul li:first-child').classList.add('selected');
+            document.querySelector('header ul li:last-child').classList.remove('selected');
+        }
+    }
+
+});
+
+//Smooth scroll
+var worksLink = document.querySelector("#works-link");
+var aboutLink = document.querySelector("#about-link");
+if (description != null) {
+    worksLink.addEventListener('click', function(e){
+        smoothScrollTo(0, document.body, 20);
+    });
+    aboutLink.addEventListener('click', function(e){
+        smoothScrollTo(description.offsetTop, document.body, 20);
+    });
+}
+
+// Blazy in action in homepage
+if(elementsToLoad.length != 0){
+
+    console.log(elementsToLoad);
+
+    var bLazy = new Blazy({
+        success: function(element){
+            console.log("fatt");
+            elementsToLoad[imagesLoaded].classList.remove('animation-bg');
+            elementsToLoad[imagesLoaded].nextElementSibling.classList.add('no-display');
+            if ( imagesLoaded < elementsToLoad.length - 1 ) {
+                imagesLoaded ++;
+                bLazy.load(elementsToLoad[imagesLoaded], false);
+            }
+
+        }
+    });
+    // load the first image if in home
+    bLazy.load(elementsToLoad[0], false);
+
 }
 
 
+// FUNCTION FOR SMOOTH SCROLL
 
+function smoothScrollTo(destination, parent, time) {
+    var scroll = init();
+    requestAnimationFrame(shouldScroll);
+
+    function init() {
+        var start = parent.scrollTop;
+        var ticks = time || 30;
+        var i = 0;
+        return {
+            positionY: function () {
+                return (destination - start) * i / ticks + start;
+            }, 
+            isFinished: function () {
+                return i++ >= ticks;
+            }
+        };
+    }
+
+    function shouldScroll() {
+        if(scroll.isFinished()) return;
+        parent.scrollTop = scroll.positionY();
+        requestAnimationFrame(shouldScroll);
+    }
+}
+
+function selected(elem, parent) {
+    for(var i = 0; i < parent.children.length; i++) {
+        parent.children[i].classList.remove('is-selected');
+    }
+    elem.classList.add('is-selected');
+    return elem;
+}
 
 
 
