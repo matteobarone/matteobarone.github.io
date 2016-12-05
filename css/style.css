@@ -117,7 +117,6 @@ header .logo{
     left: 70px;
     width: 60px;
     height: 39px;
-    background-image: url(../img/logo-blue.png);
 }
 
 header h1{
@@ -676,8 +675,8 @@ body.dark a{
     color: #fafafa;
 }
 
-body.dark header .logo{
-    background-image: url(../img/logo-white.png);
+body.dark header .logo #logo{
+    fill: #fafafa;
 }
 
 body.dark .nav-border{
