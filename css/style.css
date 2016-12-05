@@ -655,6 +655,10 @@ section a{
     width: 22%;
 }
 
+.content-more-pictures-due img{
+    width: 45%;
+}
+
 .mobile-video-box{
     display: inline-block;
     position: relative;
