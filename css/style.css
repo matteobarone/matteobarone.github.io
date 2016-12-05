@@ -113,12 +113,15 @@ header{
 
 header .logo{
     position: fixed;
-    top: 10px;
+    top: 20px;
     left: 70px;
+    width: 60px;
+    height: 39px;
+    background-image: url(../img/logo-blue.png);
 }
 
 header h1{
-    font-size: 1.5em;
+    font-size: 0;
     margin: 0;
 }
 
@@ -262,6 +265,10 @@ section a{
     position: relative;
     display: block;
     text-decoration: none;
+}
+
+.projects article p{
+    font-size: 14px;
 }
 
 .projects article img{
@@ -659,6 +666,10 @@ body.dark{
 
 body.dark a{
     color: #fafafa;
+}
+
+body.dark header .logo{
+    background-image: url(../img/logo-white.png);
 }
 
 body.dark .nav-border{
