@@ -100,6 +100,23 @@ if(elementsToLoad.length != 0){
 }
 
 
+// Hover on work in home page
+var workArticlesInHome = document.querySelectorAll('.projects article .project');
+
+for(var i=0; i<workArticlesInHome.length; i++){
+    workArticlesInHome[i].addEventListener('mousemove', function(e){
+        e.preventDefault();
+        var mousePos = {'x': e.layerX, 'y': e.layerY};
+        var widthLayer = this.offsetWidth;
+        
+        var movimentMouseX = (mousePos.x - widthLayer/2)/15;
+        var movimentMouseY = (mousePos.y - 150)/15;
+
+        this.style.transform = "translate(" + movimentMouseX + "px," + movimentMouseY + "px)";
+    });
+}
+
+
 // FUNCTION FOR SMOOTH SCROLL
 
 function smoothScrollTo(destination, parent, time) {

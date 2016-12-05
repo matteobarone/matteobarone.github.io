@@ -51,7 +51,7 @@ h1{
 h2{
     font-size: 2.5em;
     text-align: center;
-    margin: 40px 0;
+    margin: 60px 0;
 }
 
 h3{
@@ -288,7 +288,7 @@ section a{
     justify-content: center;
     align-items: center;
 
-    transition: all .5s ease;
+    transition: all .2s ease;
 }
 
 .project a{
@@ -303,6 +303,10 @@ section a{
     -o-filter: blur(30px);
     -ms-filter: blur(30px);
     filter: blur(30px);
+}
+
+.wrapper-project{
+    overflow: hidden;
 }
 
 /*Loading*/
@@ -427,9 +431,14 @@ section a{
     padding: 10px;
 }
 
-.about-content > div h3, .about-content > div h4{
+.about-content > div h3{
     text-align: left;
-    margin: 20px 0 10px 0;
+    margin: 20px 0;
+}
+
+.about-content > div h4{
+    text-align: left;
+    margin: 10px 0;
 }
 
 .footer{
@@ -610,7 +619,6 @@ section a{
 }
 
 .description-project{
-
     max-width: 700px;
     margin: 0 10% 80px 20%;
     padding: 30px 0;
@@ -734,7 +742,7 @@ body.dark .description span{
     
     /* PROJECTS */
     
-    section h2{
+    section h2, section h1{
         font-size: 28px;
     }
     
@@ -745,10 +753,13 @@ body.dark .description span{
     section h4{
         font-size: 14px;
     }
-    
-    section p, section li{
-        font-size: 13px;
+
+    .description-project{
+        max-width: 700px;
+        margin: 0 10%;
+        padding: 30px 0;
     }
+    
     
     /* ABOUT */
     
@@ -843,6 +854,7 @@ body.dark .description span{
     
     .bulbpoint-project{
         padding: 20px 0;
+        text-align: center;
     }
 
     .bulbpoint-project section{
@@ -945,10 +957,11 @@ body.dark .description span{
     .description-project{
         width: 100%;
         padding: 20px 0;
+        margin: 0;
     }
     
     .content-more-pictures img{
-        width: 90%;
+        width: 100%;
         margin: 20px auto;
     }  
     
