@@ -81,8 +81,6 @@ if (description != null) {
 // Blazy in action in homepage
 if(elementsToLoad.length != 0){
 
-    console.log(elementsToLoad);
-
     var bLazy = new Blazy({
         success: function(element){
             elementsToLoad[imagesLoaded].classList.remove('animation-bg');
