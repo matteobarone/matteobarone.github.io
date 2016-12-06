@@ -902,6 +902,10 @@ body.dark .description span{
         display: none;
     }
 
+    .description{
+        font-size: 1.2em;
+    }
+
     /* PROJECTS */
     
     section{
