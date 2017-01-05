@@ -1,0 +1,49 @@
+#home-carousel {
+	background-image: url('../images/homepage.jpg');
+	background-size: cover;
+	height: 100vh;
+	width: 100%;
+
+	.home-carousel-item {
+		position: absolute;
+		bottom: 60px;
+		padding: 0 50px;
+		width: 100%;
+		display: flex;
+		flex-flow: row wrap;
+		justify-content: space-between;
+		align-items: flex-end;
+
+		@media (max-width: $screen-sm-max) {
+			padding: 0 30px;
+		}
+
+		p {
+			font-size: 18px;
+			color: white;
+		}
+
+		h2 {
+			font-size: 36px;
+			font-weight: 600;
+			color: white;
+		}
+		h4 {
+			font-size: 36px;
+			font-weight: 100;
+			color: white;
+			margin-top: -10px;
+			line-height: 1em;
+		}
+	}
+
+	.home-carousel-paginator {
+		p {
+			font-size: 36px;
+			color: $text-inactive-color;
+			span {
+				color: white;
+			}
+		}
+	}
+}

@@ -1,0 +1,161 @@
+body, html{
+	overflow-x: hidden;
+}
+
+.disable-body{
+	overflow: hidden;
+}
+
+.opacize-body{
+	height: 100vh;
+	width: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+
+	background-color: rgba(0,0,0,.8);
+
+	z-index: 1;
+
+	opacity: 0;
+	visibility: hidden;
+	transition: all .3s ease;
+}
+
+.opacize-body.on{
+	opacity: 1;
+	visibility: visible;
+}
+
+.search-container{
+	height: 100vh;
+	width: 90%;
+
+	padding: 30px 70px;
+	
+	position: absolute;
+	right: -95%;
+
+	background-color: #333;
+	font-weight: bold;
+	font-size: 36px;
+
+	z-index: 2;
+
+	transition: right .3s ease;
+
+	@media (max-width: $screen-md-max) {
+		width: 100%;
+		right: -105%;
+	}
+
+	@media (max-width: $screen-sm-max) {
+		padding: 30px 20px;
+		font-size: 22px;
+	}
+
+	section{
+		padding: 0;
+	}
+
+	p, a{
+		color: white;
+	}
+
+	a#closeSearch{
+		position: absolute;
+		top: 30px;
+		right: 70px;
+
+		width: 73px;
+		height: 73px;
+		@media (max-width: 1200px) {
+			width: 37px;
+			height: 37px;
+			top: 15px;
+			img{
+				width: 37px;
+				height: 37px;
+			}
+		}
+		@media (max-width: $screen-sm-max) {
+			top: 15px;
+			right: 20px;
+		}
+	}
+
+	form{
+		padding-bottom: 30px;
+	}
+
+	input{
+		color: white;
+		background-color: transparent;
+		font-size: 36px;
+		font-weight: bold;
+		@media (max-width: $screen-sm-max) {
+			font-size: 22px;
+		}
+	}
+
+	input[type="text"]{
+		width: 100%;
+		padding: 0 0 20px 0;
+		margin-top: -15px;
+		font-size: 92px;
+		border-bottom: 1px solid $text-inactive-color;
+		@media (max-width: 1200px) {
+			font-size: 52px;
+		}
+		@media (max-width: $screen-sm-max) {
+			font-size: 32px;
+		}
+	}
+
+	input[type="submit"]{
+		padding: 0;
+	}
+
+	input:focus{
+    	outline: none;
+	}
+
+
+	.arrow-white{
+		width: 35px;
+		@media (max-width: $screen-sm-max) {
+			width: 25px;
+		}
+	}
+
+	.rotate-arrow{
+		transform: rotate(90deg);
+	}
+
+	.filters{
+		position: absolute;
+		bottom: 30px;
+		.filters-box{
+			opacity: 0;
+			transition: opacity .5s ease;
+			a{
+				color: $text-inactive-color;
+				margin-right: 40px;
+				@media (max-width: $screen-xs-max) {
+					display: block;
+				}
+			}
+			a.call-to-action{
+				color: white;
+			}
+		}
+		.filters-box.show{
+			opacity: 1;
+		}
+	}
+
+}
+
+.on{
+	right: 0%;
+}

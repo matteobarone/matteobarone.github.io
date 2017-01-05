@@ -1,0 +1,36 @@
+// Text
+$base-font-family:             Arial, sans-serif;
+$base-font-size:               18px;
+
+$base-font-weight:             300;
+$base-line-height:             1.5;
+
+// Colors
+$text-color:                   black;
+$text-inactive-color:		   #8c8c8c;
+$bg-color:                     white;
+
+// Content
+$max-width-content:            800px;
+
+//Media queries variables
+$screen-lg-max:                1200px;
+$screen-md-max:                991px;
+$screen-sm-max:                768px;
+$screen-xs-max:                480px;
+
+
+
+@import
+	"sanitize",
+	"header",
+	"footer",
+	"basic",
+	"typography",
+	"home-slideshow",
+	"navigation",
+	"grid",
+	"homepage",
+	"search";
+
+

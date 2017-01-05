@@ -1,0 +1,52 @@
+/*GRID SIZES*/
+
+.g {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
+	margin-top: 0;
+}
+
+
+.g2 {
+	width: 49.2%;
+	display: inline-block;
+	&:last-child {
+		margin-right: 0;
+	}
+
+	@media (max-width: $screen-xs-max) {
+		width: 100%;
+		margin-bottom: 30px;
+	}
+}
+
+.g3 {
+	width: 32.5%;
+	display: inline-block;
+
+	@media (max-width: $screen-md-max) {
+		width: 49.2%;
+	}
+
+	@media (max-width: $screen-xs-max) {
+		width: 100%;
+		margin-bottom: 30px;
+	}
+}
+
+.g4 {
+	width: 24.1%;
+	display: inline-block;
+
+	@media (max-width: $screen-lg-max) {
+		width: 49.2%;
+		margin-bottom: 30px;
+	}
+
+	@media (max-width: $screen-xs-max) {
+		width: 100%;
+		margin-bottom: 30px;
+	}
+}
+

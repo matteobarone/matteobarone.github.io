@@ -1,0 +1,54 @@
+footer {
+	padding: 24px 60px;
+	vertical-align: top;
+	background-color: white;
+
+	div {
+		vertical-align: top;
+
+		h5 {
+			font-size: 18px;
+			font-weight: 100;
+		}
+
+		p {
+			font-size: 14px;
+			padding: 30px 0;
+		}
+
+		a.footer-download-link {
+			font-size: 16px;
+			font-weight: 600;
+			border-bottom: 1px solid black;
+		}
+
+		input {
+			margin-top: 20px;
+			width: 90%;
+		}
+
+		button {
+			display: inline-block;
+		}
+
+		div.footer-forgot-password {
+			display: inline-block;
+			width: 50%;
+			margin-left: 15px;
+
+			a {
+				font-size: 14px;
+				line-height: 1em;
+			}
+		}
+	}
+	
+	ul {
+		padding-left: 0;
+	}
+
+	ul.site-map {
+		margin-top: 30px;
+		font-size: 14px;
+	}
+}
