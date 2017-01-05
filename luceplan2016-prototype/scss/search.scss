@@ -140,19 +140,6 @@ body{
     	outline: none;
 	}
 
-
-	.arrow-white{
-		width: 35px;
-		@media (max-width: $screen-sm-max) {
-			width: 25px;
-		}
-	}
-
-	.rotate-arrow{
-		-webkit-transform: rotate(90deg);
-		        transform: rotate(90deg);
-	}
-
 	.filters{
 		position: absolute;
 		bottom: 30px;
@@ -161,24 +148,6 @@ body{
 			position: relative;
 			bottom: auto;
 			margin-top: 30px;
-		}
-		.filters-box{
-			opacity: 0;
-			-webkit-transition: opacity .5s ease;
-			transition: opacity .5s ease;
-			a{
-				color: $text-inactive-color;
-				margin-right: 40px;
-				@media (max-width: $screen-xs-max) {
-					display: block;
-				}
-			}
-			a.call-to-action{
-				color: white;
-			}
-		}
-		.filters-box.show{
-			opacity: 1;
 		}
 	}
 
@@ -191,3 +160,5 @@ body{
 .on{
 	left: 0%;
 }
+
+

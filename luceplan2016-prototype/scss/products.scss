@@ -1,0 +1,27 @@
+.highlight {
+	h3 {
+		font-size: 22px;
+		display: inline-block;
+		margin: 15px 0;
+	}
+	.paginator {
+		display: inline-block;
+	    float: right;
+	    margin: 15px 0;
+
+	    p {
+	    	color: $text-inactive-color;
+	    	font-size: 22px;
+	    }
+	}
+
+	h2 {
+		margin-bottom: 30px;
+	}
+
+	a {
+		font-weight: 600;
+		text-decoration: underline;
+	}
+}
+

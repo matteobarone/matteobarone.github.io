@@ -46,5 +46,71 @@ button {
 	text-align: left;
 }
 
+button.clear-filters {
+	border-bottom: 0;
+	color: $text-inactive-color;
+	font-weight: 100;
+	font-size: 16px;
+	width: 120px;
 
+	width: 48%;
+    text-align: right;
+}
+
+p.filter-label {
+	width: 50%;
+    display: inline-block;
+}
+
+.filters{
+	font-size: 36px;
+
+	
+	.filters-box{
+		opacity: 0;
+		-webkit-transition: opacity .5s ease;
+		transition: opacity .5s ease;
+		a{
+			color: $text-inactive-color;
+			margin-right: 40px;
+			@media (max-width: $screen-xs-max) {
+				display: block;
+			}
+		}
+		a.call-to-action{
+			color: white;
+		}
+		a.call-to-action.black {
+			color: black;
+		}
+	}
+	.filters-box.show{
+		opacity: 1;
+	}
+}
+
+.arrow{
+	width: 35px;
+	@media (max-width: $screen-sm-max) {
+		width: 25px;
+	}
+}
+
+.rotate-arrow{
+	-webkit-transform: rotate(90deg);
+	        transform: rotate(90deg);
+}
+
+
+.item-caption {
+	h5 {
+		float: left;
+	}
+	p {
+		float: right;
+		padding-top: 15px;
+		font-size: 18px;
+		color: $text-inactive-color;
+	}
+}
 

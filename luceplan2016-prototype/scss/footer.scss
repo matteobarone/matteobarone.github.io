@@ -1,5 +1,7 @@
 footer {
+	position: relative;
 	padding: 24px 60px;
+	padding-bottom: 60px;
 	vertical-align: top;
 	background-color: white;
 
@@ -72,6 +74,36 @@ footer {
 		.g2 {
 			@media (max-width: $screen-xs-max) {
 				margin-bottom: 10px;
+			}
+		}
+	}
+
+	section {
+		position: absolute;
+		background-color: black;
+		width: 100%;
+		left: 0;
+		margin-top: 60px;
+		padding: 10px 60px;
+
+		@media (max-width: $screen-sm-max) {
+			margin-top: 20px;
+			padding: 10px 30px;
+		}
+		@media (max-width: $screen-xs-max) {
+			padding: 10px 20px;
+		}
+
+		h6, a {
+			color: white;
+			display: inline-block;
+			width: 24%;
+			font-size: 14px;
+			@media (max-width: $screen-sm-max) {
+				width: 49.2%;
+			}
+			@media (max-width: $screen-xs-max) {
+				width: 100%;
 			}
 		}
 	}
