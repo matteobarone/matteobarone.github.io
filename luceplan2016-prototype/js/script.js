@@ -3,14 +3,15 @@
 if( document.querySelector('.search-container') != null){
 
 	function openCloseSearchPanel(){
-		console.log()
 		document.body.classList.toggle('disable-body');
+		document.documentElement.classList.toggle('disable-body');
 		document.querySelector('.opacize-body').classList.toggle('on');
 		document.querySelector('.search-container').classList.toggle('on');
 	}
 
 	function openCloseMobileNav(){
 		document.body.classList.toggle('disable-body');
+		document.documentElement.classList.toggle('disable-body');
 		document.querySelector('.opacize-body').classList.toggle('on');
 		document.querySelector('.nav-mobile').classList.toggle('on');
 	}
