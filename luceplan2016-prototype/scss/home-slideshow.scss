@@ -17,6 +17,9 @@
 		@media (max-width: $screen-sm-max) {
 			padding: 0 30px;
 		}
+		@media (max-width: $screen-xs-max) {
+			padding: 0 20px;
+		}
 
 		p {
 			font-size: 18px;
@@ -38,9 +41,19 @@
 	}
 
 	.home-carousel-paginator {
+		@media (max-width: $screen-xs-max) {
+			width: 100%;
+    		text-align: right;
+		}
 		p {
 			font-size: 36px;
 			color: $text-inactive-color;
+
+			@media (max-width: $screen-xs-max) {
+				font-size: 22px;
+			}
+
+
 			span {
 				color: white;
 			}

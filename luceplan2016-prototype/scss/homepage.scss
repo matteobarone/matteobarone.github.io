@@ -9,6 +9,7 @@
 	margin-left: -50px;
 	font-size: 14px;
 	color: $text-inactive-color;
+	text-align: center;
 }
 
 section {
@@ -28,6 +29,10 @@ section {
 			font-size: 36px;
 			line-height: 1.2em;
 			letter-spacing: -1px;
+
+			@media (max-width: $screen-md-max) {
+				font-size: 22px;
+			}
 		}
 		h3 {
 			margin: 30px auto;

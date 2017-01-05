@@ -3,6 +3,7 @@
 if( document.querySelector('.search-container') != null){
 
 	function openCloseSearchPanel(){
+		console.log()
 		document.body.classList.toggle('disable-body');
 		document.querySelector('.opacize-body').classList.toggle('on');
 		document.querySelector('.search-container').classList.toggle('on');
@@ -15,6 +16,7 @@ if( document.querySelector('.search-container') != null){
 	}
 
 	document.querySelector('#searchIcon').addEventListener('click', openCloseSearchPanel);
+	document.querySelector('#searchIconMobile').addEventListener('click', openCloseSearchPanel);
 	document.querySelector('#closeSearch').addEventListener('click', openCloseSearchPanel);
 
 	document.querySelector('#hamburger').addEventListener('click', openCloseMobileNav);

@@ -57,7 +57,7 @@ nav {
 	
 	position: absolute;
 	top: 0;
-	right: -90%;
+	left: -90%;
 
 	background-color: #333;
 	font-weight: bold;
@@ -65,7 +65,7 @@ nav {
 
 	z-index: 2;
 
-	transition: right .3s ease;
+	transition: left .3s ease;
 
 	
 	ul{
