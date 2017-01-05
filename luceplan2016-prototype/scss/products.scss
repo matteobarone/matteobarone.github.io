@@ -17,11 +17,22 @@
 
 	h2 {
 		margin-bottom: 30px;
+
+		@media (max-width: $screen-md-max) {
+			font-size: 26px;
+		}
 	}
 
 	a {
 		font-weight: 600;
 		text-decoration: underline;
+	}
+
+	.g2 {
+		@media (max-width: $screen-sm-max) {
+			width: 100%;
+			margin-bottom: 30px;
+		}
 	}
 }
 
