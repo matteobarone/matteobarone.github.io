@@ -68,11 +68,11 @@ nav {
 	transition: left .3s ease;
 
 	@media (max-width: $screen-sm-max) {
-		font-size: 22px;
 		padding: 30px 30px;
 	}
 
 	@media (max-width: $screen-xs-max) {
+		font-size: 22px;
 		padding: 30px 20px;
 	}
 
@@ -109,7 +109,7 @@ nav {
 
 	ul.countries{
 		position: absolute;
-		bottom: 90px;
+		bottom: 120px;
 		li{
 			text-transform: uppercase;
 			font-size: 14px;
@@ -120,7 +120,7 @@ nav {
 
 	ul.social{
 		position: absolute;
-		bottom: 30px;
+		bottom: 60px;
 		li{
 			display: inline-block;
 		}

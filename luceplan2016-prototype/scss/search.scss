@@ -1,9 +1,10 @@
 body{
-	//overflow-x: hidden;
+	/*overflow-x: hidden;*/
 }
 
 .disable-body{
 	overflow: hidden;
+	height: 100vh;
 }
 
 .opacize-body{
@@ -19,6 +20,7 @@ body{
 
 	opacity: 0;
 	visibility: hidden;
+	-webkit-transition: all .3s ease;
 	transition: all .3s ease;
 }
 
@@ -41,6 +43,8 @@ body{
 	font-size: 36px;
 
 	z-index: 2;
+
+	-webkit-transition: left .3s ease;
 
 	transition: left .3s ease;
 
@@ -145,7 +149,8 @@ body{
 	}
 
 	.rotate-arrow{
-		transform: rotate(90deg);
+		-webkit-transform: rotate(90deg);
+		        transform: rotate(90deg);
 	}
 
 	.filters{
@@ -159,6 +164,7 @@ body{
 		}
 		.filters-box{
 			opacity: 0;
+			-webkit-transition: opacity .5s ease;
 			transition: opacity .5s ease;
 			a{
 				color: $text-inactive-color;
