@@ -140,11 +140,22 @@ section {
 		.inside-item {
 			position: relative;
 			height: 300px;
+			@media (max-width: $screen-sm-max) {
+				height: 250px;
+			}
+
+			@media (max-width: $screen-xs-max) {
+				height: auto;
+			}
 			h5 {
 				padding-top: 30px;
 				font-size: 36px;
 				font-weight: 100;
-				line-height: 1.1em;
+
+				@media (max-width: $screen-sm-max) {
+					font-size: 22px;
+					line-height: 1.2em;
+				}
 			}
 			p {
 				font-size: 18px;
@@ -152,6 +163,10 @@ section {
 				margin-top: 30px;
 				padding-right: 20px;
 				letter-spacing: -.5px;
+				@media (max-width: $screen-sm-max) {
+					margin-top: 20px;
+				}
+
 			}
 
 			a.inside-bottom-link {
@@ -159,6 +174,12 @@ section {
 				position: absolute;
 				bottom: 30px;
 				top: auto;
+
+				@media (max-width: $screen-xs-max) {
+					position: relative;
+					top: 15px;
+					bottom: auto;
+				}
 			}
 		}
 

@@ -54,6 +54,10 @@ body{
 		font-size: 22px;
 	}
 
+	@media (max-width: $screen-xs-max) {
+		overflow-y: scroll;
+	}
+
 	section{
 		padding: 0;
 	}
@@ -69,7 +73,8 @@ body{
 
 		width: 73px;
 		height: 73px;
-		@media (max-width: 1200px) {
+
+		@media (max-width: $screen-lg-max) {
 			width: 37px;
 			height: 37px;
 			top: 15px;
@@ -78,14 +83,24 @@ body{
 				height: 37px;
 			}
 		}
+		
 		@media (max-width: $screen-sm-max) {
-			top: 15px;
+			width: 30px;
+			height: 30px;
+			top: 30px;
 			right: 20px;
+			img{
+				width: 30px;
+				height: 30px;
+			}
 		}
 	}
 
 	form{
 		padding-bottom: 30px;
+		@media (max-width: $screen-sm-max) {
+			margin-top: 10px;
+		}
 	}
 
 	input{
@@ -114,6 +129,7 @@ body{
 
 	input[type="submit"]{
 		padding: 0;
+		border-bottom: 0px solid #000;
 	}
 
 	input:focus{
@@ -135,6 +151,12 @@ body{
 	.filters{
 		position: absolute;
 		bottom: 30px;
+
+		@media (max-width: $screen-xs-max) {
+			position: relative;
+			bottom: auto;
+			margin-top: 30px;
+		}
 		.filters-box{
 			opacity: 0;
 			transition: opacity .5s ease;
@@ -154,6 +176,10 @@ body{
 		}
 	}
 
+}
+
+.search-container::-webkit-scrollbar {
+   display: none;
 }
 
 .on{
