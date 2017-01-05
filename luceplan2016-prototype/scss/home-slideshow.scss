@@ -31,7 +31,7 @@
 
 		h2 {
 			font-size: 36px;
-			font-weight: 600;
+			font-weight: $bold-font-weight;
 			color: white;
 			@media (max-width: $screen-xs-max) {
 				font-size: 22px;
@@ -39,7 +39,7 @@
 		}
 		h4 {
 			font-size: 36px;
-			font-weight: 100;
+			font-weight: $base-font-weight;
 			color: white;
 			line-height: 1em;
 			@media (max-width: $screen-xs-max) {

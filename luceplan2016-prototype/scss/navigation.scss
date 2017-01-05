@@ -14,7 +14,7 @@ nav {
 			a {
 				padding: 0 8px;
 				font-size: 18px;
-				font-weight: 400;
+				font-weight: $base-font-weight;
 			}
 		}
 	}
@@ -60,7 +60,7 @@ nav {
 	left: -105%;
 
 	background-color: #333;
-	font-weight: bold;
+	font-weight: $bold-font-weight;
 	font-size: 36px;
 
 	z-index: 2;
@@ -125,7 +125,7 @@ nav {
 		li{
 			text-transform: uppercase;
 			font-size: 14px;
-			font-weight: 100;
+			font-weight: $base-font-weight;
 			color: white;
 		}
 	}
