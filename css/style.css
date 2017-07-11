@@ -219,7 +219,7 @@ section h4{
     margin: 10px 0 5px 0;
 }
 
-section li, section a{
+section li{
     font-size: 16px;
 }
 
@@ -435,6 +435,10 @@ section a{
 .about-content > div h4{
     text-align: left;
     margin: 10px 0;
+}
+
+.about-content > div a{
+    font-size: 16px;
 }
 
 .footer{
