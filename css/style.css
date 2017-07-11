@@ -208,6 +208,7 @@ section h2{
 section h3{
     font-size: 28px;
     letter-spacing: 3px;
+    margin: 20px 0 10px 0;
 }
 
 section h4{
@@ -215,7 +216,7 @@ section h4{
     font-weight: bold;
     text-align: center;
     font-weight: 100;
-    margin: 20px 0 5px 0;
+    margin: 10px 0 5px 0;
 }
 
 section li, section a{
@@ -630,7 +631,6 @@ section a{
 .related-projects article{
     display: inline-block;
     width: 30%;
-    min-height: 350px;
 
     vertical-align: top;
 
@@ -872,7 +872,7 @@ body.dark .description span{
         margin-right: 0;
     }
 
-    .mobile-video-box{
+    .mobile-video-box, .video-link{
         display: none;
     }
 
