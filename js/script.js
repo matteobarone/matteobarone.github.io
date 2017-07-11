@@ -106,7 +106,7 @@ for(var i=0; i<workArticlesInHome.length; i++){
         e.preventDefault();
         var mousePos = {'x': e.layerX, 'y': e.layerY};
         var widthLayer = this.offsetWidth;
-        
+
         var movimentMouseX = (mousePos.x - widthLayer/2)/15;
         var movimentMouseY = (mousePos.y - 150)/15;
 
@@ -128,7 +128,7 @@ function smoothScrollTo(destination, parent, time) {
         return {
             positionY: function () {
                 return (destination - start) * i / ticks + start;
-            }, 
+            },
             isFinished: function () {
                 return i++ >= ticks;
             }
@@ -151,12 +151,7 @@ function selected(elem, parent) {
 }
 
 
+// YEAR IN COPY
 
-
-
-
-
-
-
-
-
+var footerEl = document.querySelector('.footer');
+footerEl.innerHTML = 'Matteo Barone | © ' + new Date().getFullYear();

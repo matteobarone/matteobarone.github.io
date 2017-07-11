@@ -25,14 +25,14 @@ body{
     height: 100vh;
     background-color: #fafafa;
     border: 10px solid #0028ff;
-    
+
     font-family: "Lato", sans-serif;
     font-weight: 300;
     font-size: 20px;
     line-height: 1.2em;
-    
+
     color: #0028ff;
-    
+
     transition: all .3s ease;
 }
 
@@ -189,9 +189,9 @@ header ul.side{
 
 section{
     padding: 0 70px 50px 70px;
-    
+
     font-size: 0;
-    
+
     z-index: 0;
 }
 
@@ -246,9 +246,9 @@ section a{
     display: inline-block;
     width: 47.5%;
     min-height: 350px;
-    
+
     vertical-align: top;
-    
+
     margin-bottom: 4%;
     margin-right: 5%;
 
@@ -364,13 +364,13 @@ section a{
     color: #fafafa;
     background-color: rgb(0,40,255);
     padding: 0;
-    
+
     display: -webkit-box;
-    
+
     display: -webkit-flex;
-    
+
     display: -ms-flexbox;
-    
+
     display: flex;
     -webkit-flex-flow: row nowrap;
     -ms-flex-flow: row nowrap;
@@ -391,7 +391,7 @@ section a{
     width: 50%;
     display: inline-block;
     vertical-align: top;
-    
+
     background: url('../img/about-img.jpg');
     background-size: cover;
     background-position: center;
@@ -414,11 +414,11 @@ section a{
     -webkit-align-items: flex-start;
     -ms-flex-align: start;
     align-items: flex-start;
-    
+
     position: relative;
-    
+
     vertical-align: top;
-    
+
     padding: 30px 50px;
 }
 
@@ -455,18 +455,18 @@ section a{
     text-align: left;
     position: fixed;
     padding: 5px;
-        
+
     background-color: #fafafa;
-        
+
     z-index: 1;
 }
 
 .single-project{
     max-width: 1500px;
     margin: 0 auto;
-    
+
     position: relative;
-    
+
 }
 
 .intro-project{
@@ -493,7 +493,7 @@ section a{
     display: inline-block;
     width: 33%;
     padding: 30px 50px;
-    
+
     vertical-align: top;
 }
 
@@ -509,9 +509,9 @@ section a{
     width: 100%;
     max-width: 800px;
     margin: 0 auto;
-    
+
     padding: 30px 0;
-    
+
     vertical-align: top;
     text-align: center;
 }
@@ -519,6 +519,10 @@ section a{
 .content-project img{
     width: 100%;
     outline: 1px solid #d8d8d8;
+}
+
+.content-project img.no-border {
+  outline: 0px solid;
 }
 
 .content-more-pictures{
@@ -547,6 +551,10 @@ section a{
 
 .content-more-pictures-due img{
     width: 45%;
+}
+
+.content-more-pictures-tre img{
+    width: 30%;
 }
 
 .mobile-video-box{
@@ -579,10 +587,10 @@ section a{
     margin-left: -6px;
     width: 21px;
     height: 29px;
-    
+
     background: url(../img/play.png) center no-repeat;
     background-size: cover;
-    
+
     z-index: 2;
 }
 
@@ -594,12 +602,12 @@ section a{
     margin-left: -10px;
     width: 21px;
     height: 29px;
-    
+
     background: url(../img/pause.png) center no-repeat;
     background-size: cover;
-    
+
     opacity: 1;
-    
+
     z-index: 1;
 }
 
@@ -627,9 +635,9 @@ section a{
     display: inline-block;
     width: 30%;
     min-height: 350px;
-    
+
     vertical-align: top;
-    
+
     margin-bottom: 4%;
     margin-right: 5%;
 }
@@ -711,7 +719,7 @@ body.dark .description span{
 /* Screens smaller than 1280px */
 
 @media(max-width: 1280px){
-    
+
     .about-content{
         padding: 10px;
     }
@@ -724,9 +732,9 @@ body.dark .description span{
 /* Screens smaller than 930px */
 
 @media(max-width: 960px){
-    
+
     /* INDEX */
-    
+
     h1, h2{
         font-size: 2em;
         letter-spacing: 5px;
@@ -738,17 +746,17 @@ body.dark .description span{
         padding: 100px 0;
         text-align: left;
     }
-    
+
     /* PROJECTS */
-    
+
     section h2, section h1{
         font-size: 28px;
     }
-    
+
     section h3{
         font-size: 21px;
     }
-    
+
     section h4{
         font-size: 14px;
     }
@@ -758,10 +766,10 @@ body.dark .description span{
         margin: 0 10%;
         padding: 30px 0;
     }
-    
-    
+
+
     /* ABOUT */
-    
+
     .about{
         display: block;
     }
@@ -785,21 +793,21 @@ body.dark .description span{
     .about-content > div h3, .about-content > div h4{
         text-align: left;
     }
-    
+
     /* SINGLE PROJECT */
-    
+
     .bulbpoint-project{
         width: 100%;
     }
-    
+
     .bulbpoint-project section{
         padding: 20px;
     }
-    
+
     .content-project img{
         width: 100%;
     }
-    
+
     .content-more-pictures{
         width: 100%;
         margin: 0 auto;
@@ -808,7 +816,7 @@ body.dark .description span{
     .content-more-pictures img{
         width: 45%;
         margin-bottom: 20px;
-    }   
+    }
 }
 
 
@@ -821,9 +829,9 @@ body.dark .description span{
         font-size: 1.5em;
         font-weight: 700;
     }
-    
+
     /* PROJECTS */
-    
+
     .projects article a:hover .bg-hover{
         opacity: 0;
     }
@@ -835,7 +843,7 @@ body.dark .description span{
     .projects article a:hover .circle-projects{
         opacity: 0;
     }
-    
+
     .projects article{
         width: 100%;
         margin-right: 0;
@@ -844,13 +852,13 @@ body.dark .description span{
     }
 
     /* ABOUT */
-    
+
     .about-content{
         padding: 10px;
     }
-    
+
     /* SINGLE PROJECT */
-    
+
     .bulbpoint-project{
         padding: 20px 0;
         text-align: center;
@@ -860,18 +868,18 @@ body.dark .description span{
         width: 100%;
         padding: 0;
     }
-    
+
     .related-projects article{
         width: 100%;
 
         margin-bottom: 4%;
         margin-right: 0;
     }
-    
+
     .mobile-video-box{
         display: none;
     }
-    
+
 }
 
 
@@ -879,17 +887,17 @@ body.dark .description span{
 /* Screens smaller than 460px */
 
 @media(max-width: 460px){
-    
+
     /* INDEX */
-    
+
     body{
         border: 5px solid #0028ff;
     }
-    
+
     h1, h2{
         letter-spacing: 5px;
     }
-    
+
     header{
         padding: 0 10px;
     }
@@ -907,18 +915,18 @@ body.dark .description span{
     }
 
     /* PROJECTS */
-    
+
     section{
         padding: 10px;
     }
-    
+
     .projects article{
         width: 100%;
         margin-right: 0;
         min-height: 0;
         margin-bottom: 15%;
     }
-    
+
     /* ABOUT */
 
     .about-content{
@@ -929,7 +937,7 @@ body.dark .description span{
         width: 100%;
         display: block;
     }
-    
+
     .footer{
         font-size: 10px;
         bottom: 20px;
@@ -937,39 +945,39 @@ body.dark .description span{
     }
 
     /* SINGLE PROJECT */
-    
+
     .back-to-projects{
         left: 0;
         top: 0;
         display: block;
-        
+
         padding: 10px;
         width: 100%;
-        
+
         text-align: center;
-        
+
         background-color: #fafafa;
-        
+
         z-index: 1;
     }
-    
+
     .intro-project img.phone{
         max-width: 150px;
     }
-    
+
     .description-project{
         width: 100%;
         padding: 20px 0;
         margin: 0;
     }
-    
+
     .content-more-pictures img{
         width: 100%;
         margin: 20px auto;
-    }  
-    
+    }
+
     .related-projects{
         padding: 0 0 20px 0;
     }
-    
+
 }
