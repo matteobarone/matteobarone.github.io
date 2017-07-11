@@ -276,7 +276,9 @@ section a{
 
 .project{
     width: 100%;
-    height: 350px;
+    /*height: 350px;*/
+    padding-bottom: 70%;
+
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -288,12 +290,6 @@ section a{
     align-items: center;
 
     transition: all .2s ease;
-}
-
-.project a{
-    display: block;
-    width: 100%;
-    height: 300px;
 }
 
 .project.animation-bg{
