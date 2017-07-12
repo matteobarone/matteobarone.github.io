@@ -389,7 +389,7 @@ section a{
     display: inline-block;
     vertical-align: top;
 
-    background: url('../img/about-img.jpg');
+    background: url('./../../img/about-img.jpg');
     background-size: cover;
     background-position: center;
 }
