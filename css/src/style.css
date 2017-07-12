@@ -563,17 +563,17 @@ section a{
     position: relative;
     width: 310px;
     height: 633px;
-    background-image: url(../img/iphone6-mockup.png);
+    background-image: url(./../../img/iphone6-mockup.png);
     background-size: contain;
 }
 
 .samsung-video-box{
-    background-image: url(../img/s7edge-mockup.png);
+    background-image: url(./../../img/s7edge-mockup.png);
     background-size: contain;
 }
 
 .mobile-video-box .circle-projects{
-    background: url(../img/circle.png) center no-repeat;
+    background: url(./../../img/circle.png) center no-repeat;
     background-size: cover;
     -webkit-animation: circle-movement .8s ease .5s infinite alternate;
     animation: circle-movement .8s ease .5s infinite alternate;
@@ -589,7 +589,7 @@ section a{
     width: 21px;
     height: 29px;
 
-    background: url(../img/play.png) center no-repeat;
+    background: url(./../../img/play.png) center no-repeat;
     background-size: cover;
 
     z-index: 2;
@@ -604,7 +604,7 @@ section a{
     width: 21px;
     height: 29px;
 
-    background: url(../img/pause.png) center no-repeat;
+    background: url(./../../img/pause.png) center no-repeat;
     background-size: cover;
 
     opacity: 1;
