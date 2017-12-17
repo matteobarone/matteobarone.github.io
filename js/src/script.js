@@ -20,7 +20,7 @@ if (mobileControllerPlay) {
 }
 
 if (textareaConfigurator) {
-  var stringToWrite = 'mongod > Hello World';
+  var stringToWrite = 'mongo > Hello World ';
   var count = 0;
   var time = 50;
   var t = setTimeout(typeWriter, 300);

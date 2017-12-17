@@ -347,7 +347,7 @@ section a{
     align-items: center;
     height: 40px;
     border-radius: 5px 5px 0 0;
-    box-shadow: 0 0 20px #2f3644;
+    box-shadow: 0 0 40px #2f3644;
 }
 
 .header-code span {
@@ -379,7 +379,7 @@ textarea.code {
     color: #fafafa;
     background-color: #2f3644;
     border-radius: 0 0 5px 5px;
-    box-shadow: 0 8px 20px #2f3644;
+    box-shadow: 0 8px 40px #2f3644;
 }
 
 textarea:focus {
