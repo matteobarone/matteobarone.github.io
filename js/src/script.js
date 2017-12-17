@@ -7,6 +7,7 @@ var description = document.querySelector('.description');
 var heightWind = document.documentElement.clientHeight;
 var elementsToLoad = document.querySelectorAll('.projects article .project');
 var imagesLoaded = 0;
+var textareaConfigurator = document.querySelector('#textarea-configurator');
 
 //Video Controller play/pause in the single project page
 var mobileAtmVideo = document.getElementById("mobile-atm-video");
@@ -18,16 +19,11 @@ if (mobileControllerPlay) {
   mobileControllerPause.addEventListener("click", pauseVid);
 }
 
-function playVid() {
-  mobileAtmVideo.play();
-  mobileControllerPlay.classList.add("no-display");
-  mobileControllerPause.classList.remove("no-display");
-}
-
-function pauseVid() {
-  mobileAtmVideo.pause();
-  mobileControllerPause.classList.add("no-display");
-  mobileControllerPlay.classList.remove("no-display");
+if (textareaConfigurator) {
+  var stringToWrite = 'mongod > Hello World';
+  var count = 0;
+  var time = 50;
+  var t = setTimeout(typeWriter, 300);
 }
 
 
@@ -81,6 +77,28 @@ if (elementsToLoad.length !== 0) {
   });
   // load the first image if in home
   bLazy.load(elementsToLoad[0], false);
+}
+
+function playVid() {
+  mobileAtmVideo.play();
+  mobileControllerPlay.classList.add("no-display");
+  mobileControllerPause.classList.remove("no-display");
+}
+
+function pauseVid() {
+  mobileAtmVideo.pause();
+  mobileControllerPause.classList.add("no-display");
+  mobileControllerPlay.classList.remove("no-display");
+}
+
+function typeWriter() {
+  if (count < stringToWrite.length) {
+    textareaConfigurator.value += stringToWrite[count];
+    count += 1;
+    t = setTimeout(typeWriter, time);
+  } else {
+    clearTimeout(t);
+  }
 }
 
 // FUNCTION FOR SMOOTH SCROLL
