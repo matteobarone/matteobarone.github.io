@@ -13,9 +13,7 @@ const WrapperCards = (props) => (
   <WrapperCardsStyled>
     {props.cards.map((title) =>
     <Card>
-      <Card.Title>
-        {title}
-      </Card.Title>
+      <Card.Title>{title}</Card.Title>
     </Card>
     )}
   </WrapperCardsStyled>
