@@ -1,0 +1,35 @@
+{
+  "projects": [{
+    "title": "Fendi",
+    "year": "2018",
+    "field": "Dev"
+  }, {
+    "title": "Gucci",
+    "year": "2018",
+    "field": "Dev and Design"
+  }, {
+    "title": "Maserati",
+    "year": "2017",
+    "field": "Dev"
+  }, {
+    "title": "Armani",
+    "year": "2017",
+    "field": "Dev"
+  }, {
+    "title": "D&G",
+    "year": "2016",
+    "field": "DevOps"
+  }, {
+    "title": "H&M",
+    "year": "2016",
+    "field": "Dev"
+  }, {
+    "title": "Adidas",
+    "year": "2016",
+    "field": "Dev"
+  }, {
+    "title": "Nike",
+    "year": "2015",
+    "field": "Dev"
+  }]
+}

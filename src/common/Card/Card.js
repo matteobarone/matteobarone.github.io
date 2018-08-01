@@ -9,6 +9,7 @@ const Card = styled.div`
   margin: 30px 0;
   height: 150px;
   border: 4px solid ${props => props.theme.colors.fg};
+  color: ${props => props.theme.colors.fg}
   &:nth-child(4n + 1) {
     grid-column: 3 / 8;
   }

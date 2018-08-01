@@ -11,10 +11,10 @@ const WrapperCardsStyled = styled.div`
 
 const WrapperCards = (props) => (
   <WrapperCardsStyled>
-    {props.cards.map((title) =>
-    <Card>
-      <Card.Title>{title}</Card.Title>
-    </Card>
+    {props.cards.map((project, index) =>
+      <Card key={index}>
+        <Card.Title>{project.title}</Card.Title>
+      </Card>
     )}
   </WrapperCardsStyled>
 );
