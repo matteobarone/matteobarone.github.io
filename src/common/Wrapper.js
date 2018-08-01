@@ -5,6 +5,7 @@ const Wrapper = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: ${props => props.theme.gap.md};
   background-color: ${props => props.theme.colors.bg};
 `;
 
