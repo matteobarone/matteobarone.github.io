@@ -1,24 +1,18 @@
 import React, { Component } from 'react';
-import styled from 'styled-components';
-
-const Wrapper = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  background-color: #FAFAFA;
-`;
-
-const Logo = styled.h1`
-  color: #0028FF;
-`;
+import { ThemeProvider } from 'styled-components';
+import Logo from './common/Logo';
+import Wrapper from './common/Wrapper';
+import theme from './style/theme';
+import './style/style';
 
 class App extends Component {
   render() {
     return (
-      <Wrapper>
-        <Logo>MB</Logo>
-      </Wrapper>
+      <ThemeProvider theme={theme}>
+        <Wrapper>
+          <Logo>MB</Logo>
+        </Wrapper>
+      </ThemeProvider>
     );
   }
 }
