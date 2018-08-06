@@ -17,7 +17,7 @@ class App extends Component {
     return (
       <ThemeProvider theme={theme}>
         <Wrapper>
-          <Logo>MB</Logo>
+          <Logo/>
           <WrapperCards cards={this.data.projects}/>
         </Wrapper>
       </ThemeProvider>
