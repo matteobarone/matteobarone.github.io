@@ -1,8 +1,0 @@
-index
-
-urban
-urban-oneway
-urban-oneway-user
-urban-payment
-urban-payment-credit
-urban-confirmation
