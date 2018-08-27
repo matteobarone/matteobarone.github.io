@@ -5,7 +5,7 @@ var body = document.getElementsByTagName("BODY")[0];
 var scrollNode = document.scrollingElement || document.documentElement;
 var description = document.querySelector('.description');
 var heightWind = document.documentElement.clientHeight;
-var elementsToLoad = document.querySelectorAll('.projects article .project');
+var elementsToLoad = document.querySelectorAll('.b-lazy');
 var imagesLoaded = 0;
 var textareaConfigurator = document.querySelector('#textarea-configurator');
 
