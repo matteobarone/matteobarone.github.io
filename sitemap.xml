@@ -1,33 +1,27 @@
 <?xml version="1.0"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 	<url>
-		<loc>https://matteobarone.it/</loc>
+		<loc>https://matteobarone.github.io/</loc>
+	</url>
+    <url>
+        <loc>https://matteobarone.github.io/fendi-project.html</loc>
+    </url>
+	<url>
+		<loc>https://matteobarone.github.io/luceplan-project.html</loc>
 	</url>
 	<url>
-		<loc>https://www.matteobarone.it/luceplan-project.html</loc>
+		<loc>https://matteobarone.github.io/configurator-project.html</loc>
 	</url>
 	<url>
-		<loc>https://www.matteobarone.it/samsung-project.html</loc>
+		<loc>https://matteobarone.github.io/react/</loc>
 	</url>
 	<url>
-		<loc>https://www.matteobarone.it/nike-project.html</loc>
+		<loc>https://matteobarone.github.io/qwentes-project.html</loc>
 	</url>
 	<url>
-		<loc>https://www.matteobarone.it/atm-project.html</loc>
+		<loc>https://matteobarone.github.io/rayban-project.html</loc>
 	</url>
-	<url>
-		<loc>https://www.matteobarone.it/qwentes-project.html</loc>
-	</url>
-	<url>
-		<loc>https://www.matteobarone.it/rayban-project.html</loc>
-	</url>
-	<url>
-		<loc>https://www.matteobarone.it/rayban-project-video.html</loc>
-	</url>
-	<url>
-		<loc>https://www.matteobarone.it/atm-project-video.html</loc>
-	</url>
-	<url>
-		<loc>https://www.matteobarone.it/samsung-project-video.html</loc>
-	</url>
+    <url>
+        <loc>https://matteobarone.github.io/rayban-project-video.html</loc>
+    </url>
 </urlset>
