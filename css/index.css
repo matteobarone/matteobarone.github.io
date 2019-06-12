@@ -1,0 +1,15 @@
+@import "scaffolidng.css";
+@import "shared/header.css";
+@import "shared/pointer.css";
+
+:root {
+  --primary-color-1: rgb(173, 79, 79);
+  --primary-color-2: rgb(29, 140, 98);
+  --primary-color-3: rgb(235, 230, 141);
+  --primary-color-4: rgb(172, 183, 221);
+  --primary-color-5: rgb(221, 160, 140);
+
+  --neutral-light: #fafafa;
+  --txt-color: #262626;
+  --gap: 16px;
+}

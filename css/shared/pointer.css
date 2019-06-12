@@ -1,0 +1,23 @@
+.pointer {
+  --pointer-size: 20px;
+  --pointer-background: var(--txt-color);
+
+  width: var(--pointer-size);
+  height: var(--pointer-size);
+  border-radius: 50%;
+  border: 2px solid var(--pointer-background);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.pointer::before {
+  content: '';
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background-color: var(--pointer-background);
+}
