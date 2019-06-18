@@ -1,6 +1,7 @@
 @import "scaffolidng.css";
 @import "shared/header.css";
 @import "shared/pointer.css";
+@import "shared/logo.css";
 
 :root {
   --primary-color-1: rgb(173, 79, 79);
@@ -11,5 +12,7 @@
 
   --neutral-light: #fafafa;
   --txt-color: #262626;
-  --gap: 16px;
+  --gap-sm: 8px;
+  --gap-md: 16px;
+  --gap-lg: 24px;
 }

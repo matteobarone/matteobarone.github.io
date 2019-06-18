@@ -1,0 +1,5 @@
+.logo {
+  display: inline-flex;
+  padding: var(--gap-md);
+  border: 1px solid;
+}
