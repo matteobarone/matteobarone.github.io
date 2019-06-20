@@ -1,6 +1,7 @@
 import {TweenMax} from 'gsap';
 import {_createElement} from './util';
 
+const POINTER_SELECTOR = '.pointer';
 const selectableElements = document.querySelectorAll('.is-selectable');
 const pointerElement = _createElement('div', 'pointer');
 const pointerSize = parseInt(window.getComputedStyle(pointerElement).getPropertyValue('--pointer-size'));
@@ -8,7 +9,7 @@ const pointerBorderRadius = parseInt(window.getComputedStyle(pointerElement).get
 let blockMovement = false;
 
 export function pointer() {
-  TweenMax.set('.pointer', {xPercent: -50, yPercent: -50});
+  TweenMax.set(POINTER_SELECTOR, {xPercent: -50, yPercent: -50});
   document.addEventListener('mousemove', _mousemovePointer);
 
   selectableElements.forEach(el => {
@@ -20,7 +21,7 @@ export function pointer() {
 function _mousemovePointer(e) {
   if (!blockMovement) {
     const {x, y} = e;
-    TweenMax.to('.pointer', .3, {x, y});
+    TweenMax.to(POINTER_SELECTOR, .3, {x, y});
   }
 }
 
@@ -28,7 +29,7 @@ function _mouseoverPointer(e) {
   blockMovement = true;
   const {target} = e;
   const {top, left} = target.getBoundingClientRect();
-  TweenMax.to('.pointer', .3, {
+  TweenMax.to(POINTER_SELECTOR, .3, {
     borderRadius: 0,
     xPercent: 0,
     yPercent: 0,
@@ -41,7 +42,7 @@ function _mouseoverPointer(e) {
 
 function _mouseoutPointer() {
   blockMovement = false;
-  TweenMax.to('.pointer', .3, {
+  TweenMax.to(POINTER_SELECTOR, .3, {
     borderRadius: pointerBorderRadius,
     width: pointerSize,
     height: pointerSize,
