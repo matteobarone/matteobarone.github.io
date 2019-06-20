@@ -2,9 +2,12 @@ import {TweenMax} from 'gsap';
 import {_createElement} from './util';
 
 const selectableElements = document.querySelectorAll('.is-selectable');
+const pointerElement = _createElement('div', 'pointer');
+const pointerSize = parseInt(window.getComputedStyle(pointerElement).getPropertyValue('--pointer-size'));
+const pointerBorderRadius = parseInt(window.getComputedStyle(pointerElement).getPropertyValue('--pointer-border-radius'));
+let blockMovement = false;
 
 export function pointer() {
-  _createElement('div', 'pointer');
   TweenMax.set('.pointer', {xPercent: -50, yPercent: -50});
   document.addEventListener('mousemove', _mousemovePointer);
 
@@ -15,14 +18,34 @@ export function pointer() {
 }
 
 function _mousemovePointer(e) {
-  const {x, y} = e;
-  TweenMax.to('.pointer', .3, {x, y});
+  if (!blockMovement) {
+    const {x, y} = e;
+    TweenMax.to('.pointer', .3, {x, y});
+  }
 }
 
-function _mouseoverPointer() {
-  TweenMax.to('.pointer', .3, {className: '+=is-hover', xPercent: -50, yPercent: -50});
+function _mouseoverPointer(e) {
+  blockMovement = true;
+  const {target} = e;
+  const {top, left} = target.getBoundingClientRect();
+  TweenMax.to('.pointer', .3, {
+    borderRadius: 0,
+    xPercent: 0,
+    yPercent: 0,
+    width: target.offsetWidth,
+    height: target.offsetHeight,
+    x: top,
+    y: left,
+  });
 }
 
 function _mouseoutPointer() {
-  TweenMax.to('.pointer', .3, {className: '-=is-hover', xPercent: -50, yPercent: -50});
+  blockMovement = false;
+  TweenMax.to('.pointer', .3, {
+    borderRadius: pointerBorderRadius,
+    width: pointerSize,
+    height: pointerSize,
+    xPercent: -50,
+    yPercent: -50,
+  });
 }

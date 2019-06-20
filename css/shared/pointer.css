@@ -1,10 +1,11 @@
 .pointer {
   --pointer-size: 20px;
+  --pointer-border-radius: 50%;
   --pointer-background: var(--txt-color);
 
   width: var(--pointer-size);
   height: var(--pointer-size);
-  border-radius: 50%;
+  border-radius: var(--pointer-border-radius);
   border: 2px solid var(--pointer-background);
   display: flex;
   justify-content: center;
@@ -19,10 +20,6 @@
   content: '';
   width: 4px;
   height: 4px;
-  border-radius: 50%;
+  border-radius: var(--pointer-border-radius);
   background-color: var(--pointer-background);
-}
-
-.pointer.is-hover {
-  --pointer-size: 30px;
 }
