@@ -9,7 +9,7 @@ const pointerBorderRadius = parseInt(window.getComputedStyle(pointerElement).get
 let blockMovement = false;
 
 export function pointer() {
-  TweenMax.set(POINTER_SELECTOR, {xPercent: -50, yPercent: -50});
+  TweenMax.set(POINTER_SELECTOR, {xPercent: -50, yPercent: -50, x: -20, y: -20});
   document.addEventListener('mousemove', _mousemovePointer);
 
   selectableElements.forEach(el => {
@@ -21,7 +21,7 @@ export function pointer() {
 function _mousemovePointer(e) {
   if (!blockMovement) {
     const {x, y} = e;
-    TweenMax.to(POINTER_SELECTOR, .2, {x, y});
+    TweenMax.to(POINTER_SELECTOR, .1, {x, y});
   }
 }
 
