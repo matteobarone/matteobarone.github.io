@@ -5,7 +5,7 @@
   "scripts": {
     "start": "webpack --config webpack.dev.js & npm run server",
     "build": "NODE_ENV=production webpack --config webpack.prod.js",
-    "server": "live-server --host=localhost"
+    "server": "live-server"
   },
   "author": "Matteo Barone",
   "license": "MIT",

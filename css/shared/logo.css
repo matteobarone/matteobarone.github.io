@@ -1,5 +1,12 @@
 .logo {
   display: inline-flex;
-  padding: var(--gap-md);
+  padding: var(--gap-sm);
   border: 1px solid;
+  position: fixed;
+  top: var(--gap-sm);
+  left: var(--gap-sm);
+  z-index: 5;
+  color: var(--neutral-light);
+  mix-blend-mode: difference;
+  font-size: var(--font-size-md);
 }

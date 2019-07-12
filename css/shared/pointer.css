@@ -1,7 +1,7 @@
 .pointer {
   --pointer-size: 20px;
   --pointer-border-radius: 50%;
-  --pointer-background: var(--txt-color);
+  --pointer-background: var(--neutral-light);
 
   width: var(--pointer-size);
   height: var(--pointer-size);
@@ -11,9 +11,10 @@
   justify-content: center;
   align-items: center;
   position: fixed;
-  z-index: 0;
+  z-index: 2;
   top: 0;
   left: 0;
+  mix-blend-mode: difference;
 }
 
 .pointer::before {
@@ -22,4 +23,5 @@
   height: 4px;
   border-radius: var(--pointer-border-radius);
   background-color: var(--pointer-background);
+  mix-blend-mode: difference;
 }
