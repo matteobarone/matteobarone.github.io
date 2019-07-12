@@ -2,6 +2,7 @@
 <html lang="en-us">
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
   <link rel="stylesheet" href="dist/bundle.css"/>
   <title>Matteo Barone</title>
 </head>
@@ -11,7 +12,12 @@
 <main>
   <div class="main__spacer"></div>
   <div class="main__content">
-    <div class="main__content--block"><img src="assets/img/mountain-m.jpg" alt="m"></div>
+    <div class="main__content--block">
+      <img
+        src="assets/img/mountain-m.jpg" alt="m"
+        srcset="assets/img/mountain-l.jpg 2000w, assets/img/mountain-m.jpg 1000w"
+        sizes="(min-width: 1024px) 2000px, (max-width: 1023px): 1000px">
+    </div>
   </div>
 </main>
 <script src="dist/bundle.js"></script>

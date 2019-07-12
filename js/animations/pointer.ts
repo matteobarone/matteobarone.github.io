@@ -21,7 +21,7 @@ export function pointer() {
 function _mousemovePointer(e) {
   if (!blockMovement) {
     const {x, y} = e;
-    TweenMax.to(POINTER_SELECTOR, .3, {x, y});
+    TweenMax.to(POINTER_SELECTOR, .2, {x, y});
   }
 }
 
