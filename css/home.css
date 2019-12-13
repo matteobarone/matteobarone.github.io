@@ -28,5 +28,9 @@
   min-height: 200px;
   width: 100%;
   margin: var(--gap-sm) 0;
-  background-color: var(--main-txt-color);
+  border: 1px solid var(--main-txt-color);
+}
+
+.home article img {
+  width: 100%;
 }

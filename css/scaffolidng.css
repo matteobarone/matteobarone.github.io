@@ -4,10 +4,6 @@
   box-sizing: border-box;
 }
 
-html, body {
-  height: 100%;
-}
-
 body {
   color: var(--main-txt-color);
   background-color: var(--main-bg-color);
@@ -22,4 +18,13 @@ a {
 
 a:hover, a:active, a:focus {
   text-decoration: underline;
+}
+
+img {
+  opacity: 0;
+  transition: opacity .7s ease;
+}
+
+img.completed {
+  opacity: 1;
 }
