@@ -1,29 +1,29 @@
 @import "scaffolidng.css";
-@import "shared/header.css";
-@import "shared/pointer.css";
-@import "shared/logo.css";
-@import "shared/main.css";
-
-/*
-MEDIA:
-  sm: 560px
-  md: 1024px
-*/
+@import "home.css";
+@import "header.css";
 
 :root {
-  --primary-color-1: rgb(173, 79, 79);
-  --primary-color-2: rgb(29, 140, 98);
-  --primary-color-3: rgb(235, 230, 141);
-  --primary-color-4: rgb(172, 183, 221);
-  --primary-color-5: rgb(221, 160, 140);
-
-  --neutral-light: #fafafa;
-  --txt-color: #262626;
-  --gap-sm: 8px;
-  --gap-md: 16px;
-  --gap-lg: 24px;
+  --primary-light: #eae7ee;
+  --primary-dark: #2f3644;
   
-  --font-size-sm: 16px;
-  --font-size-md: 20px;
-  --font-size-lg: 24px;
+  --main-bg-color: var(--primary-light);
+  --main-txt-color: var(--primary-dark);
+  
+  --gap-lg: 32px;
+  --gap-md: 16px;
+  --gap-sm: 12px;
+  
+  --font-family-primary: Gill Sans, sans-serif;
+  --font-family-secondary: Courier New, monospace;
+  --font-size-xl: 72px;
+  --font-size-lg: 56px;
+  --font-size-md: 18px;
+  --font-size-sm: 14px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --main-bg-color: var(--primary-dark);
+    --main-txt-color: var(--primary-light);
+  }
 }

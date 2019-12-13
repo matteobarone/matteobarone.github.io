@@ -1,0 +1,32 @@
+.home main {
+  height: 85vh;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.home__quote {
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-lg);
+  font-weight: normal;
+}
+
+.home__description {
+  font-family: var(--font-family-secondary);
+  font-size: var(--font-size-md);
+}
+
+.home section {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.home article {
+  min-height: 200px;
+  width: 100%;
+  margin: var(--gap-sm) 0;
+  background-color: var(--main-txt-color);
+}

@@ -6,10 +6,20 @@
 
 html, body {
   height: 100%;
-  cursor: none;
 }
 
-.is-selectable {
-  z-index: 1;
-  position: relative;
+body {
+  color: var(--main-txt-color);
+  background-color: var(--main-bg-color);
+  padding: var(--gap-sm);
+  font-family: var(--font-family-secondary);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:hover, a:active, a:focus {
+  text-decoration: underline;
 }
