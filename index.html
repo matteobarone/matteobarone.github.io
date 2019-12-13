@@ -3,12 +3,12 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="dist/bundle.css"/>
+  <link rel="stylesheet" href="./dist/bundle.css"/>
   <title>Matteo Barone</title>
 </head>
 <body class="home">
   <header>
-    <h1 class="header__logo">MB</h1>
+    <a href="/"><h1 class="header__logo">MB</h1></a>
     <nav>
       <a href="/about">about</a>
       <a href="/contact">contact</a>
@@ -22,13 +22,23 @@
   
   <section>
     <article>
-      <img src="https://images.unsplash.com/photo-1576208260328-cc47418da608?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2734&q=80">
+      <img
+        srcset="img/luceplan-1000w.jpg 1000w, img/luceplan.jpg 2880w"
+        sizes="(min-width: 600px) 2880px, 1000x"
+        src="img/luceplan-1000w.jpg" alt="luceplan">
+    </article>
+    <article>
+      <img
+        srcset="img/qwentes-1000w.jpg 1000w, img/qwentes.jpg 2880w"
+        sizes="(min-width: 600px) 2880px, 1000x"
+        src="img/qwentes-1000w.jpg" alt="qwentes">
+    </article>
+    <article>
+      <img src="img/configurator-1000w.jpg" alt="configurator">
     </article>
     <article></article>
     <article></article>
-    <article></article>
-    <article></article>
   </section>
-  <script src="dist/bundle.js"></script>
+  <script src="./dist/bundle.js"></script>
 </body>
 </html>

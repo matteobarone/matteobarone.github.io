@@ -19,6 +19,9 @@
   --font-size-lg: 56px;
   --font-size-md: 18px;
   --font-size-sm: 14px;
+  
+  --mobile-img: '1000px'; /*reminder for images*/
+  --desktop-img: '2000px'; /*reminder for images*/
 }
 
 @media (prefers-color-scheme: dark) {
