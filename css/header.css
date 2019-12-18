@@ -4,14 +4,13 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: var(--gap-sm) 0;
+  transform: translateY(-110%);
+  transition: transform var(--transition-speed-fast) cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 
 .header__logo {
-  font-size: var(--font-size-md);
+  font-size: var(--font-size-lg);
   font-weight: bold;
   letter-spacing: -3px;
-}
-
-nav a {
-  font-size: var(--font-size-sm);
 }

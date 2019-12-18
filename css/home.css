@@ -1,3 +1,8 @@
+.home main, .home section {
+  opacity: 0;
+  transition: opacity var(--transition-speed-slow) ease var(--transition-speed-super-fast);
+}
+
 .home main {
   height: 85vh;
   display: flex;
@@ -8,13 +13,8 @@
 
 .home__quote {
   font-family: var(--font-family-primary);
-  font-size: var(--font-size-lg);
+  font-size: var(--font-size-xl);
   font-weight: normal;
-}
-
-.home__description {
-  font-family: var(--font-family-secondary);
-  font-size: var(--font-size-md);
 }
 
 .home section {
@@ -28,7 +28,6 @@
   min-height: 200px;
   width: 100%;
   margin: var(--gap-sm) 0;
-  border: 1px solid var(--main-txt-color);
 }
 
 .home article img {

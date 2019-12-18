@@ -1,6 +1,7 @@
 @import "scaffolidng.css";
 @import "home.css";
 @import "header.css";
+@import "footer.css";
 
 :root {
   --primary-light: #eae7ee;
@@ -16,12 +17,16 @@
   --font-family-primary: Gill Sans, sans-serif;
   --font-family-secondary: Courier New, monospace;
   --font-size-xl: 72px;
-  --font-size-lg: 56px;
+  --font-size-lg: 36px;
   --font-size-md: 18px;
   --font-size-sm: 14px;
   
   --mobile-img: '1000px'; /*reminder for images*/
   --desktop-img: '2000px'; /*reminder for images*/
+  
+  --transition-speed-super-fast: .3s;
+  --transition-speed-fast: .7s;
+  --transition-speed-slow: 1.5s;
 }
 
 @media (prefers-color-scheme: dark) {

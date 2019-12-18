@@ -7,7 +7,7 @@
 body {
   color: var(--main-txt-color);
   background-color: var(--main-bg-color);
-  padding: var(--gap-sm);
+  padding: 0 var(--gap-sm);
   font-family: var(--font-family-secondary);
 }
 
@@ -22,9 +22,17 @@ a:hover, a:active, a:focus {
 
 img {
   opacity: 0;
-  transition: opacity .7s ease;
+  transition: opacity var(--transition-speed-slow) ease;
 }
 
 img.completed {
   opacity: 1;
+}
+
+.show--opacity {
+  opacity: 1!important;
+}
+
+.show--translate {
+  transform: translateY(0)!important;;
 }
