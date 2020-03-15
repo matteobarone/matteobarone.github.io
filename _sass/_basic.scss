@@ -8,6 +8,15 @@ header {
   align-items: center;
 }
 
-article {
+section, h4 {
+  width: 100%;
+  max-width: 400px;
+}
 
+section {
+  display: inline-block;
+  margin: 20px 0;
+  img {
+    width: 100%;
+  }
 }
