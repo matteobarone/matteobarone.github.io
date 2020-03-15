@@ -1,0 +1,14 @@
+{
+	"version": 3,
+	"file": "main.css",
+	"sources": [
+		"main.scss",
+		"_sass/_basic.scss"
+	],
+	"sourcesContent": [
+		"@charset \"utf-8\";\n\n// Our variables\n\n// Width of the content area\n$screen-sm-max: 991px;\n$screen-xs-max: 768px;\n\n// Import partials\n@import \"basic\";\n",
+		"body {\n  font-family: monospace;\n}\n\nheader {\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n}\n\narticle {\n\n}\n"
+	],
+	"names": [],
+	"mappings": "ACAA,AAAA,IAAI,CAAC,EACH,WAAW,EAAE,SAAS,GACvB;;AAED,AAAA,MAAM,CAAC,EACL,OAAO,EAAE,IAAI,EACb,eAAe,EAAE,aAAa,EAC9B,WAAW,EAAE,MAAM,GACpB"
+}
