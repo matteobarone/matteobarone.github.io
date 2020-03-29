@@ -1,6 +1,9 @@
 {
-  "main.css": "static/css/main.f034f666.css",
-  "main.css.map": "static/css/main.f034f666.css.map",
-  "main.js": "static/js/main.21519017.js",
-  "main.js.map": "static/js/main.21519017.js.map"
+  "main.css": "static/css/main.b6bb5f69.css",
+  "main.css.map": "static/css/main.b6bb5f69.css.map",
+  "main.js": "static/js/main.a92d6052.js",
+  "main.js.map": "static/js/main.a92d6052.js.map",
+  "static/media/Block.scss": "static/media/Block.d7271c13.scss",
+  "static/media/Chart.scss": "static/media/Chart.9d3835bb.scss",
+  "static/media/Covid19.scss": "static/media/Covid19.ae37c5b3.scss"
 }
