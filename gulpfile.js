@@ -3,11 +3,14 @@ var concat 			  = require('gulp-concat');
 var uglify      	= require('gulp-uglify');
 var minifycss 		= require('gulp-minify-css');
 var notify 			  = require('gulp-notify');
+var sourcemaps    = require('gulp-sourcemaps');
 
 gulp.task('css',function(){
   return gulp.src('./css/src/*.css')
+      .pipe(sourcemaps.init())
       .pipe(concat('bundle.css'))
 	    .pipe(minifycss())
+      .pipe(sourcemaps.write())
       .pipe(gulp.dest('./css/dist/'))
   	  .pipe(notify({
     		title: 'Cool!!!!',
