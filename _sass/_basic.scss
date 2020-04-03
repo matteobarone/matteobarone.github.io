@@ -2,6 +2,14 @@ body {
   font-family: "Courier New", monospace;
 }
 
+img {
+  max-width: 100%;
+}
+
+h2 {
+  margin: 50px 0 20px 0;
+}
+
 header {
   display: flex;
   justify-content: space-between;
@@ -13,11 +21,12 @@ section {
   width: 100%;
   max-width: 400px;
   margin: 20px 0;
-  img {
-    width: 100%;
-  }
 }
 
 article {
   max-width: 1000px;
+  
+  img {
+    margin: 50px 0 20px 0;
+  }
 }
