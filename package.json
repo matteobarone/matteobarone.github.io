@@ -4,6 +4,7 @@
   "description": "Matteo Barone's Portfolio",
   "main": "index.js",
   "scripts": {
+    "preinstall": "npx npm-force-resolutions",
     "start": "gulp & live-server"
   },
   "repository": {
@@ -23,5 +24,8 @@
     "gulp-notify": "^3.0.0",
     "gulp-sourcemaps": "^2.6.5",
     "gulp-uglify": "^3.0.0"
+  },
+  "resolutions": {
+    "graceful-fs": "^4.2.4"
   }
 }
