@@ -3,8 +3,7 @@
   --gap-md: 40px;
   --gap-sm: 10px;
 
-  --font-family-primary: serif;
-  --font-family-secondary: monospace;
+  --font-family: monospace;
 
   --font-size-lg: 2.5em;
   --font-size-md: 1.5em;
@@ -18,13 +17,12 @@ body {
   padding: var(--gap-md);
   box-sizing: border-box;
   max-width: 1280px;
-  font-family: var(--font-family-primary);
+  font-family: var(--font-family);
   color: var(--color-primary);
 }
 
 header {
   position: fixed;
-  font-family: var(--font-family-secondary);
 }
 
 .logo {
@@ -74,10 +72,11 @@ a {
   padding-top: var(--gap-lg);
 }
 
-.marker {
+.marker, a:hover {
   background-color: var(--color-primary);
   color: var(--color-secondary);
   padding: 0 5px;
+  text-decoration: none;
 }
 
 @media screen and (max-width: 768px) {
