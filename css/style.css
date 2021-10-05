@@ -35,7 +35,7 @@ li {
 }
 
 nav li {
-  line-height: 2;
+  font-size: var(--font-size-md);
 }
 
 h1, h2, h3 {
@@ -82,9 +82,45 @@ a {
 @media screen and (max-width: 768px) {
   :root {
     --gap-md: 20px;
+    --gap-lg: 80px;
 
-    --font-size-lg: 2em;
+    --font-size-lg: 1.7em;
     --font-size-md: 1em;
+  }
+
+  body {
+    padding-top: 0;
+  }
+
+  header {
+    position: sticky;
+    top: 0;
+    left: 0;
+    padding: var(--gap-md) 0;
+    background-color: var(--color-secondary);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  nav {
+    display: flex;
+  }
+
+  nav li {
+    margin: 0 var(--gap-md);
+  }
+
+  nav li:last-child {
+    margin: 0;
+  }
+
+  h3 {
+    line-height: 1.7em;
+  }
+
+  .logo {
+    margin: 0;
   }
   
   .spacer-left {
